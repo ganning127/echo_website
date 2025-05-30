@@ -1,10 +1,15 @@
+"use client";
 import Image from "next/image";
 import { cn } from "@/lib/utils";
+import { useState } from "react";
+import { RxHamburgerMenu } from "react-icons/rx";
 
 export const NavBar = () => {
+  const [isOpen, setIsOpen] = useState(false);
+
   return (
     <nav className="">
-      <div className="flex w-full justify-center items-center">
+      <div className="hidden lg:flex w-full justify-center items-center">
         <Image
           src="/navbar_logo.png"
           width={200}
@@ -26,6 +31,50 @@ export const NavBar = () => {
             />
           );
         })}
+      </div>
+
+      <div className="flex items-center justify-between px-4 py-3 lg:hidden bg-[#013161]">
+        <Image
+          src="/navbar_logo.png"
+          width={150}
+          height={10}
+          alt="EdEcho logo"
+          className="color"
+        />
+
+        {/* Hamburger Button */}
+        <button
+          onClick={() => setIsOpen(!isOpen)}
+          className="hover:cursor-pointer"
+        >
+          {isOpen ? (
+            <RxHamburgerMenu className="w-8 h-8 text-[#FFD87A] rotate-90" />
+          ) : (
+            <RxHamburgerMenu className="w-8 h-8 text-[#FFD87A]" />
+          )}
+        </button>
+
+        {/* Mobile Menu */}
+        {isOpen && (
+          <div className="absolute top-16 left-0 w-full bg-[#013161] z-10">
+            <div className="flex flex-col items-center gap-2 p-4">
+              {NAV_CONTENT.map((item) => {
+                return (
+                  <a
+                    href={item.href}
+                    key={item.href}
+                    className={cn(
+                      "text-white font-heading hover:bg-blue-400 w-full text-center transition-colors rounded-md",
+                      item.title === "Play" ? "text-[36px]" : "text-[20px]"
+                    )}
+                  >
+                    <h4>{item.title}</h4>
+                  </a>
+                );
+              })}
+            </div>
+          </div>
+        )}
       </div>
     </nav>
   );
