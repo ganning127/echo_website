@@ -1,4 +1,7 @@
+import { Container } from "@/components/Container";
+import { Footer } from "@/components/Footer";
 import { NavBar } from "@/components/NavBar";
+import { FeaturedActivities } from "@/components/Sections/FeaturedActivities";
 import Image from "next/image";
 
 export default function Home() {
@@ -8,8 +11,8 @@ export default function Home() {
         <NavBar />
       </div>
       <div className="bg-white h-2"></div>
-      <main className="bg-[#329D3C] flex justify-center items-center p-8">
-        <div className="flex flex-col md:flex-row bg-white rounded-xl overflow-hidden shadow-lg max-w-6xl w-full">
+      <Container className="bg-[#329D3C]">
+        <div className="flex flex-col md:flex-row bg-white rounded-xl overflow-hidden shadow-lg">
           <div className="w-full md:w-1/3">
             <Image
               src="/run_img.png"
@@ -35,7 +38,16 @@ export default function Home() {
             </p>
           </div>
         </div>
-      </main>
+
+        <div>
+          <h2 className="text-center text-[48px] text-white mt-16">
+            Featured Activities
+          </h2>
+          <FeaturedActivities />
+        </div>
+      </Container>
+
+      <Footer />
     </>
   );
 }

@@ -3,6 +3,7 @@ import Image from "next/image";
 import { cn } from "@/lib/utils";
 import { useState } from "react";
 import { RxHamburgerMenu } from "react-icons/rx";
+import { NAV_CONTENT } from "./NavContent";
 
 export const NavBar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -79,34 +80,6 @@ export const NavBar = () => {
     </nav>
   );
 };
-
-const NAV_CONTENT = [
-  {
-    title: "About",
-    href: "/about",
-  },
-  {
-    title: "Characters",
-    href: "/characters",
-  },
-  {
-    title: "Activities",
-    href: "/activities",
-  },
-  {
-    title: "Outreach",
-    href: "/outreach",
-  },
-  {
-    title: "Music",
-    href: "/music",
-  },
-  {
-    title: "Play",
-    href: "/play",
-    darker: true,
-  },
-];
 
 const NavLinkBox = ({
   title,
