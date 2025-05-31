@@ -1,7 +1,6 @@
 import Image from "next/image";
 import { Button } from "../ui/button";
 import { useState } from "react";
-import { cn } from "@/lib/utils";
 
 export const NewsletterSection = () => {
   const [email, setEmail] = useState("");
