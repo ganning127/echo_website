@@ -3,7 +3,6 @@ import { Mail, Instagram } from "lucide-react";
 import { NAV_CONTENT } from "../NavBar/NavContent";
 
 export const Footer = () => {
-  console.log(NAV_CONTENT);
   return (
     <footer className="bg-[#1473d2] text-white px-8 py-6">
       <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center md:items-start gap-6">
