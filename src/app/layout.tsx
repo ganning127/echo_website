@@ -2,15 +2,15 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 const desc =
-  "The Early Cardiovascular Health Outreach (ECHOS) was founded alongside the UCLA Women's Cardiovascular Center in July 2017";
+  "The Early Cardiovascular Health Outreach (ECHO) was founded alongside the UCLA Women's Cardiovascular Center in July 2017";
 export const metadata: Metadata = {
   title: {
-    template: "%s | Early Cardiovascular Health Outreach (ECHOS)",
-    default: "Early Cardiovascular Health Outreach (ECHOS)",
+    template: "%s | Early Cardiovascular Health Outreach (ECHO)",
+    default: "Early Cardiovascular Health Outreach (ECHO)",
   },
   description: desc,
   openGraph: {
-    title: "Early Cardiovascular Health Outreach (ECHOS)",
+    title: "Early Cardiovascular Health Outreach (ECHO)",
     description: desc,
     url: "edecho.org",
     siteName: "ECHO",
