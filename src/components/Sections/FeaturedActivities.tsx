@@ -9,10 +9,14 @@ import featuredActivities from "@/lib/activities.json";
 import { ActivityCard } from "../Cards/ActivityCard";
 
 export const FeaturedActivities = () => {
+  const homepageActivities = featuredActivities.filter((activity) =>
+    activity.tags?.includes("home")
+  );
+
   return (
     <Carousel className="">
       <CarouselContent>
-        {featuredActivities.map((activity, index) => {
+        {homepageActivities.map((activity, index) => {
           return (
             <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/3">
               <ActivityCard activity={activity} />

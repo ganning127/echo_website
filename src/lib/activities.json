@@ -3,19 +3,31 @@
     "title": "There's always time for care",
     "description": "Vienna has quite a way with words, check out some of her poetry!",
     "link": "/",
-    "image": "/act_care.png"
+    "image": "/act_care.png",
+    "tags": [
+      "home",
+      "poetry"
+    ]
   },
   {
     "title": "Dodge the goo!",
     "description": "Plaqtrick has left behind some big messes in the house. Help Echo navigate around the ooey-gooey puddles of ick!",
     "link": "/",
-    "image": "/act_dodge.png"
+    "image": "/act_dodge.png",
+    "tags": [
+      "home",
+      "game"
+    ]
   },
   {
     "title": "Dodge the goo!",
     "description": "Plaqtrick has left behind some big messes in the house. Help Echo navigate around the ooey-gooey puddles of ick!",
     "link": "/",
-    "image": "/act_painting.png"
+    "image": "/act_painting.png",
+    "tags": [
+      "game",
+      "home"
+    ]
   },
   {
     "title": "There's always time for care",

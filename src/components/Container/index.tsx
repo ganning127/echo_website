@@ -7,7 +7,7 @@ export const Container = ({
 }) => {
   return (
     <main className={className}>
-      <div className="p-8 max-w-6xl w-full mx-auto">{children}</div>
+      <div className="p-8 max-w-7xl w-full mx-auto">{children}</div>
     </main>
   );
 };

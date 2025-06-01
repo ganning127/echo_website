@@ -1,63 +1,66 @@
 import Image from "next/image";
+import { FadeInWhenVisible } from "../Animation/FadeInWhenVisible";
 
 export const AboutSection = () => {
   return (
     <section className="flex flex-col gap-32">
-      <div className="flex flex-col md:flex-row items-start gap-12">
-        <div className="flex-1 space-y-6">
-          <div>
-            <h2 className="text-[36px]   mb-1">MISSION</h2>
-            <p className="text-[24px]">
-              We are committed to creating innovative approaches to protect the
-              heart health of our communities.
-            </p>
+      <FadeInWhenVisible>
+        <div className="flex flex-col md:flex-row items-start gap-12">
+          <div className="flex-1 space-y-6">
+            <div>
+              <h2 className="text-[36px]   mb-1">MISSION</h2>
+              <p className="text-[24px]">
+                We are committed to creating innovative approaches to protect
+                the heart health of our communities.
+              </p>
+            </div>
+            <div>
+              <h2 className="text-[36px]  mb-1">VISION</h2>
+              <p className="text-[24px]">
+                We envision a future where young people and their families are
+                empowered with the knowledge and tools needed to achieve
+                lifelong heart health through education, research, and advocacy.
+              </p>
+            </div>
+            <div>
+              <h2 className="text-[36px]   mb-1">LEADERSHIP</h2>
+              <p className="text-[24px]">
+                The ECHO team is spread far and wide across the nation. The
+                project is guided by a dedicated and diverse team of leaders
+                passionate about science, technology, and art.
+              </p>
+            </div>
           </div>
-          <div>
-            <h2 className="text-[36px]  mb-1">VISION</h2>
-            <p className="text-[24px]">
-              We envision a future where young people and their families are
-              empowered with the knowledge and tools needed to achieve lifelong
-              heart health through education, research, and advocacy.
-            </p>
-          </div>
-          <div>
-            <h2 className="text-[36px]   mb-1">LEADERSHIP</h2>
-            <p className="text-[24px]">
-              The ECHO team is spread far and wide across the nation. The
-              project is guided by a dedicated and diverse team of leaders
-              passionate about science, technology, and art.
-            </p>
+
+          <div className="w-full md:w-1/3 flex justify-center md:justify-end">
+            <Image
+              src="/circle_logo.png"
+              alt="ECHO Logo"
+              width={160}
+              height={160}
+              className="w-auto h-auto"
+            />
           </div>
         </div>
+      </FadeInWhenVisible>
 
-        <div className="w-full md:w-1/3 flex justify-center md:justify-end">
-          <Image
-            src="/circle_logo.png"
-            alt="ECHO Logo"
-            width={160}
-            height={160}
-            className="w-auto h-auto"
-          />
-        </div>
-      </div>
-
-      <div className="text-center">
+      <FadeInWhenVisible>
         <h2 className="text-[#08204E] text-[48px]">MEET THE TEAM</h2>
         <div className="mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-10">
           {TEAM_MEMBERS.map((member, index) => {
             return <MemberCard key={index} member={member} />;
           })}
         </div>
-      </div>
+      </FadeInWhenVisible>
 
-      <div>
+      <FadeInWhenVisible>
         <h2 className="text-[#08204E] text-[48px] text-center">
           FOUNDER&apos;S STORY
         </h2>
         <div>
           <FoundersStory />
         </div>
-      </div>
+      </FadeInWhenVisible>
     </section>
   );
 };
@@ -99,7 +102,7 @@ export const FoundersStory = () => {
   return (
     <section className=" md:px-20 font-body">
       <p className="text-center max-w-4xl mx-auto text-base text-gray-700 mb-16">
-        Kimberly’s connection to heart health awareness is deeply personal.
+        Kimberly&apos;s connection to heart health awareness is deeply personal.
         Since high school, she dreamt of attending the U.S. Naval Academy, but
         her early hypertension diagnosis disqualified her from attending.
         Although she felt sad, she turned her disappointment into determination:
@@ -113,9 +116,9 @@ export const FoundersStory = () => {
           <li key={index} className={`mb-10 ms-4`}>
             <div className="absolute w-3 h-3 bg-[#00488D] rounded-full mt-1.5 -start-1.5"></div>
             <time className="mb-1 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">
-              <h4>{event.year}</h4>
+              <p className="font-bold">{event.year}</p>
             </time>
-            <div className="h-12 bg-gray-200"></div>
+            <div className="h-12 bg-gray-200 my-2"></div>
 
             <p className="mb-4 text-base font-normal text-gray-500 dark:text-gray-400">
               {event.text.split("\n").map((line, i) => (
@@ -141,6 +144,7 @@ const MemberCard = ({
     icon: string;
   };
 }) => {
+  const iconSize = 50;
   return (
     <div className="flex flex-row items-center gap-4">
       <div className="relative">
@@ -151,16 +155,25 @@ const MemberCard = ({
           height={200}
           className="h-24 w-24 object-cover rounded-lg"
         />
-        <Image
+        {/* <Image
           src={member.icon}
           alt={`${member.name} icon`}
-          width={50}
-          height={50}
-          className="-right-4 -bottom-2 absolute"
-        />
+          width={iconSize}
+          height={iconSize}
+          className="-right-10 -bottom-6 absolute"
+        /> */}
       </div>
       <div className="text-left">
-        <h3 className="text-[24px]">{member.name}</h3>
+        <div className="flex flex-row items-center gap-2">
+          <Image
+            src={member.icon}
+            alt={`${member.name} icon`}
+            width={iconSize}
+            height={iconSize}
+            className=""
+          />
+          <h3 className="text-[36px]">{member.name}</h3>
+        </div>
         <p className="text-[20px] text-gray-600">{member.role}</p>
       </div>
     </div>
@@ -194,7 +207,7 @@ const TEAM_MEMBERS = [
   },
   {
     name: "Ronit Ben-Joseph",
-    role: "Narrative Designer",
+    role: "Narrative Designer / Writer",
     image: "/people/ronit.jpg",
     icon: "/people/icons/ronit.png",
   },

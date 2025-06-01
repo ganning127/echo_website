@@ -1,6 +1,7 @@
 import Image from "next/image";
 import { Button } from "../ui/button";
 import { useState } from "react";
+import { FadeInWhenVisible } from "../Animation/FadeInWhenVisible";
 
 export const NewsletterSection = () => {
   const [email, setEmail] = useState("");
@@ -32,7 +33,7 @@ export const NewsletterSection = () => {
   };
 
   return (
-    <>
+    <FadeInWhenVisible>
       <h1 className="text-center text-[48px] text-[#013161]">
         Join Our Newsletter
       </h1>
@@ -96,6 +97,6 @@ export const NewsletterSection = () => {
           </div>
         )}
       </div>
-    </>
+    </FadeInWhenVisible>
   );
 };

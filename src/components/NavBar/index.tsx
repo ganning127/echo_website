@@ -4,19 +4,22 @@ import { cn } from "@/lib/utils";
 import { useState } from "react";
 import { RxHamburgerMenu } from "react-icons/rx";
 import { NAV_CONTENT } from "./NavContent";
+import Link from "next/link";
 
 export const NavBar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <nav className="">
+    <nav className="sticky top-0 z-50">
       <div className="hidden lg:flex w-full justify-center items-center">
-        <Image
-          src="/navbar_logo.png"
-          width={200}
-          height={10}
-          alt="EdEcho logo"
-        />
+        <Link href="/">
+          <Image
+            src="/navbar_logo.png"
+            width={200}
+            height={200}
+            alt="EdEcho logo"
+          />
+        </Link>
         {NAV_CONTENT.map((item, index) => {
           const isLeft = index === 0;
           const isRight = index === NAV_CONTENT.length - 1;
@@ -35,13 +38,15 @@ export const NavBar = () => {
       </div>
 
       <div className="flex items-center justify-between px-4 py-3 lg:hidden bg-[#013161]">
-        <Image
-          src="/navbar_logo.png"
-          width={150}
-          height={10}
-          alt="EdEcho logo"
-          className="color"
-        />
+        <Link href="/">
+          <Image
+            src="/navbar_logo.png"
+            width={150}
+            height={10}
+            alt="EdEcho logo"
+            className="color"
+          />
+        </Link>
 
         {/* Hamburger Button */}
         <button
