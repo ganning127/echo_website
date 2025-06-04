@@ -1,13 +1,27 @@
+"use client";
+import { useState } from "react";
 import Image from "next/image";
 import { FadeInWhenVisible } from "../Animation/FadeInWhenVisible";
 
 export const HeartConnectionSection = () => {
+  const [heartbeatImage, setHeartbeatImage] = useState(
+    "/60 MPH HEART BEAT.gif"
+  );
+
+  const handleImageSwap = () => {
+    setHeartbeatImage((prev) =>
+      prev === "/60 MPH HEART BEAT.gif"
+        ? "/120 MPH HEART BEAT.gif"
+        : "/60 MPH HEART BEAT.gif"
+    );
+  };
+
   return (
     <section className="bg-[#ffffff] w-full pb-20">
       <FadeInWhenVisible>
         <div className="pt-10 w-5/6 justify-self-center columns-2 flex flex-col-reverse md:flex-row items-start gap-10">
           <div className="w-[100%]">
-            <h4 className="text-2xl">Music Break:</h4>
+            <h4 className="text-[48px]">Music Break:</h4>
             As you listen, notice how your body responds.
             <ul className="list-disc ml-10">
               <li>Is your heart beating faster or slower?</li>
@@ -27,7 +41,7 @@ export const HeartConnectionSection = () => {
             <br />
             <p>
               Did you know that different types of music can cause different
-              physical reactions? A song can affect your heart!{" "}
+              physical reactions? A song can affect your heart!
             </p>
             <br />
             <p>For example:</p>
@@ -57,17 +71,18 @@ export const HeartConnectionSection = () => {
           <div>
             <Image
               className="rounded-sm"
-              src="/60 MPH HEART BEAT.gif"
-              width="700"
+              src={heartbeatImage}
+              width={700}
+              height={400}
               alt="heart connection"
-              height="400"
             />
             <Image
-              className="m-auto relative bottom-[20vw] w-[8vw] md:bottom-[6vw] md:w-[2vw]"
+              className="m-auto relative bottom-[20vw] w-[8vw] md:bottom-[7vw] md:w-[2vw] cursor-pointer"
               src="/Music_Icon.png"
-              width="40"
+              width={40}
+              height={40}
               alt="music button"
-              height="40"
+              onClick={handleImageSwap}
             />
           </div>
         </div>
