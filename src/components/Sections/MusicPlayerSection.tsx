@@ -1,6 +1,6 @@
 "use client";
 import Image from "next/image";
-import { useState } from "react";
+import { useRef, useState } from "react";
 import { FadeInWhenVisible } from "../Animation/FadeInWhenVisible";
 import { MusicButtonGroup } from "../ui/MusicButtonGroup";
 
@@ -21,18 +21,61 @@ const moreDetails: Record<string, string> = {
     " It is much slower and looser without a drum kit keeping time. The piano grounds the music while a simple melody in the celeste gives a sense of calm. The soft locust sound brings reminders of how the natural world feels at night when we are about to fall asleep. The full instrumentation includes marimba, piano, celeste, and a locust sound. The sound world was inspired by the Rockabye Baby! lullaby covers of popular music for babies to fall asleep to.",
 };
 
+const songName: Record<string, string> = {
+  Refocus: "Echo's Reflection",
+  Create: "Echo's Fantasy",
+  Move: "Echo's Dance",
+  Relax: "Echo's Lullaby",
+};
+
 export const MusicPlayerSection = () => {
   const [selection, setSelection] = useState<string | null>(null);
+  const [isPlaying, setIsPlaying] = useState(false); // ✅ track play state
+  const audioRef = useRef<HTMLAudioElement | null>(null);
+
+  const handleSelect = (track: string, src: string) => {
+    setSelection(track);
+    if (audioRef.current) {
+      audioRef.current.src = src;
+      audioRef.current.play();
+      setIsPlaying(true);
+    }
+  };
+
+  const togglePlay = () => {
+    if (audioRef.current) {
+      if (audioRef.current.paused) {
+        audioRef.current.play();
+        setIsPlaying(true);
+      } else {
+        audioRef.current.pause();
+        setIsPlaying(false);
+      }
+    }
+  };
 
   return (
     <>
+      {/* Overlay Button */}
+      {selection && (
+        <button
+          onClick={togglePlay}
+          className="fixed top-[5%] lg:top-4 left-[45%] lg:left-4 z-50 bg-[#1473d2] lg:bg-[#013161]  
+         hover:text-[#000000] lg:hover:text-white text-white px-4 py-2 hover:bg-[#FFD87A] rounded lg:hover:bg-[#1473d2] transition"
+        >
+          {isPlaying ? "Pause Music" : "Play Music"}
+        </button>
+      )}
+
+      <audio ref={audioRef} />
       <section className="w-full pb-20">
         <FadeInWhenVisible>
-          <div className="grid grid-cols-1 md:grid-cols-5 pt-10 w-5/6 justify-self-center flex-col-reverse md:flex-row items-start gap-10">
+          <div className="grid grid-cols-1 md:grid-cols-5 pt-10 w-5/6 justify-self-center flex-col-reverse md:flex-row items-start gap-10 lg:gap-30">
             {/* Window */}
-            <div className="col-span-2">
+            <div className="col-span-3 md:col-span-2">
               <Image
                 src="/Entire Window.png"
+                className="md:m-0 m-auto"
                 width="700"
                 alt="Window displaying morning sunshine"
                 height="400"
@@ -40,15 +83,15 @@ export const MusicPlayerSection = () => {
             </div>
 
             {/* Button group and signage */}
-            <div className="justify-contents-center col-span-3 text-[13px] md:text-xl flex flex-wrap">
-              <div className="w-full grid grid-cols-1 md:grid-cols-4">
-                <MusicButtonGroup onSelect={setSelection} />
+            <div className="col-span-3 text-[13px] md:text-xl flex flex-wrap">
+              <div className="justify-contents-center w-full grid grid-cols-1 md:grid-cols-4">
+                <MusicButtonGroup onSelect={handleSelect} />
               </div>
-              <div className="w-full pt-6">
+              <div className="w-full pt-10">
                 <Image
-                  className="m-auto"
-                  src="/Rooster Signage.png"
-                  width="300"
+                  className=" m-auto"
+                  src="/Rooster Sign.png"
+                  width="350"
                   alt="rooster sign"
                   height="40"
                 />
@@ -73,16 +116,16 @@ export const MusicPlayerSection = () => {
               height="70"
             />
             {selection && (
-              <div className="absolute top-0 left-[20vw] w-full h-full flex items-center justify-center">
+              <div className="absolute top-0 left-[21vw] w-full h-full flex items-center justify-center">
                 <div className="relative">
                   <Image
                     src="/Radio Bubble.png"
                     alt="Popup"
-                    width={600}
-                    height={400}
+                    width={700}
+                    height={450}
                     className="rounded-md"
                   />
-                  <p className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-black text-center text-sm md:text-lg font-semibold">
+                  <p className="absolute pl-[20px] pr-[20px] top-1/2 left-[20%] transform -translate-y-1/2 text-black text-center text-sm lg:text-lg font-semibold">
                     {popupTexts[selection]}
                   </p>
                 </div>
@@ -92,7 +135,7 @@ export const MusicPlayerSection = () => {
 
           {/* Oranges */}
           <div className="justify-contents-center col-span-2 text-[13px] md:text-xl flex flex-wrap">
-            <div className="relative w-full pt-6 invisible md:visible md:bottom-[100px]">
+            <div className="relative w-[60%] lg:w-full pt-6 invisible md:visible md:bottom-[100px]">
               <Image
                 className="m-auto"
                 src="/Oranges.png"
@@ -107,9 +150,12 @@ export const MusicPlayerSection = () => {
 
       {/* 🟨 New Section below the radio/oranges/tabletop */}
       {selection && (
-        <section className="w-full m-auto p-10 bg-[#dB8A39] text-center">
-          <div className="w-5/6 m-auto p-10 bg-[#ffffff] text-center">
-            <h2 className="text-2xl font-bold mb-4">Song info: {selection}</h2>
+        <section className="w-full m-auto pb-10 bg-[#dB8A39] text-center">
+          <div className="w-5/6 m-auto p-10 rounded-md bg-[#ffffff] text-center">
+            <h2 className="text-2xl font-bold mb-4">
+              Song Name: {songName[selection]}
+            </h2>
+            <h3 className="text-lg text-[#000000] pb-5">Mood: {selection}</h3>
             <p className="text-lg text-gray-700">{moreDetails[selection]}</p>
           </div>
         </section>

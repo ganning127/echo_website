@@ -21,7 +21,7 @@ export const HeartConnectionSection = () => {
       <FadeInWhenVisible>
         <div className="pt-10 w-5/6 justify-self-center columns-2 flex flex-col-reverse md:flex-row items-start gap-10">
           <div className="w-[100%]">
-            <h4 className="text-[48px]">Music Break:</h4>
+            <h4 className="text-[48px]">Music Break</h4>
             As you listen, notice how your body responds.
             <ul className="list-disc ml-10">
               <li>Is your heart beating faster or slower?</li>

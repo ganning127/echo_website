@@ -1,49 +1,34 @@
-// musicbuttongroup.tsx
-"use client";
-import { useRef } from "react";
-
 interface MusicButtonGroupProps {
-  onSelect: (selection: string) => void;
+  onSelect: (selection: string, src: string) => void;
 }
 
 export const MusicButtonGroup = ({ onSelect }: MusicButtonGroupProps) => {
-  const audioRef = useRef<HTMLAudioElement | null>(null);
-
-  const handleClick = (src: string, selection: string) => {
-    onSelect(selection);
-    if (audioRef.current) {
-      audioRef.current.src = src;
-      audioRef.current.play();
-    }
-  };
-
   return (
     <>
       <button
-        className="p-5 border-[#301b00] border-4 border-double bg-[#c59fe1]"
-        onClick={() => handleClick("/mp3s/ECHO_refocusMusic.mp3", "Refocus")}
+        className="p-1 lg:p-5 font-heading border-[#4a2a02] border-8 border-double bg-[#c59fe1]"
+        onClick={() => onSelect("Refocus", "/mp3s/ECHO_refocusMusic.mp3")}
       >
         Refocus
       </button>
       <button
-        className="p-5 border-[#301b00] border-4 border-double bg-[#aacce7]"
-        onClick={() => handleClick("/mp3s/ECHO_createMusic.mp3", "Create")}
+        className="p-1 lg:p-5 font-heading border-[#4a2a02] border-8 border-double bg-[#aacce7]"
+        onClick={() => onSelect("Create", "/mp3s/ECHO_createMusic.mp3")}
       >
         Create
       </button>
       <button
-        className="p-5 border-[#301b00] border-4 border-double bg-[#f8c89f]"
-        onClick={() => handleClick("/mp3s/ECHO_moveMusic.mp3", "Move")}
+        className="p-1 lg:p-5 font-heading border-[#4a2a02] border-8 border-double bg-[#f8c89f]"
+        onClick={() => onSelect("Move", "/mp3s/ECHO_moveMusic.mp3")}
       >
         Move
       </button>
       <button
-        className="p-5 border-[#301b00] border-4 border-double bg-[#d16666]"
-        onClick={() => handleClick("/mp3s/ECHO_relaxMusic.mp3", "Relax")}
+        className="p-1 lg:p-5 font-heading border-[#4a2a02] border-8 border-double bg-[#d16666]"
+        onClick={() => onSelect("Relax", "/mp3s/ECHO_relaxMusic.mp3")}
       >
         Relax
       </button>
-      <audio ref={audioRef} className="hidden" />
     </>
   );
 };

@@ -11,7 +11,7 @@ export default function Music() {
       <NavBar />
       <div className="mt-10">
         <Image
-          className="w-small justify-self-center"
+          className="w-md justify-self-center"
           src="/Sign.png"
           alt="music sign"
           width="300"
