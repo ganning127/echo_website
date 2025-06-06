@@ -9,7 +9,9 @@ export const OutreachVideoSection = () => {
           <div className="pt-10 w-4/6 justify-self-center grid grid-cols-1 md:grid-cols-5 gap-10 lg:gap-30">
             <div className="col-span-3 md:col-span-5 lg:col-span-2 lg:order-1 order-2 pb-5 mb-5">
               <br />
-              <h3 className="text-[30px]">8 Minute Phone Call</h3>
+              <h3 className="text-[30px] text-[#013161]">
+                8 Minute Phone Call
+              </h3>
               <p>
                 Did you know loneliness can increase the risk for premature
                 death as much as smoking up to 15 cigarettes a day?

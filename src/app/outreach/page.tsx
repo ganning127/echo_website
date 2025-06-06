@@ -9,17 +9,16 @@ export default function Outreach() {
     <section className="bg-[#ECCDDC]">
       <NavBar />
       {/*Curtains, lights, door */}
-      {/*
+
       <div className="">
         <Image
-          className="absolute left-0 top-0 lg:mt-[-10px] sm:mt-20 w-2/6 sm:w-2/6 lg:w-2/6 z-20"
+          className="visible md:invisible absolute left-0 top-[15%] lg:mt-[-10px] sm:mt-20 w-2/6 sm:w-2/6 lg:w-2/6 z-20"
           src="/Lights.png"
           alt="Lights"
           width="500"
           height="100"
         />
       </div>
-      */}
       <div className="">
         <Image
           className="absolute left-0 w-auto mt-20 invisible sm:visible sm:h-4/6 lg:h-6/6 max-h-[600px]"
@@ -27,15 +26,6 @@ export default function Outreach() {
           alt="door"
           width="100"
           height="100"
-        />
-      </div>
-      <div className="">
-        <Image
-          className="absolute md:mt-40 right-0 top-0 w-auto invisible sm:visible sm:h-3/6 lg:h-4/6 max-h-[400px]"
-          src="/Curtains.png"
-          alt="curtains"
-          width="200"
-          height="500"
         />
       </div>
       {/* Sign */}
@@ -48,9 +38,19 @@ export default function Outreach() {
           height="329"
         />
       </div>
+      <div className="">
+        <Image
+          className="absolute md:mt-40 right-0 top-25 sm:top-0 w-auto visible z-0 h-1/4 sm:h-3/6 lg:h-4/6 max-h-[400px]"
+          src="/Curtains.png"
+          alt="curtains"
+          width="200"
+          height="500"
+        />
+      </div>
+
       <div className="m-auto">
         <Image
-          className="m-auto visible sm:invisible justify-self-center sm:w-[1px] w-[70%] mt-5"
+          className="relative m-auto visible sm:invisible justify-self-center sm:w-[1px] w-[70%] mt-5 z-20 rounded-md"
           src="/8MinuteCallProject-Mobile.svg"
           alt="logo"
           width="1440"

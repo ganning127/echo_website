@@ -5,14 +5,14 @@ import { FadeInWhenVisible } from "../Animation/FadeInWhenVisible";
 
 export const HeartConnectionSection = () => {
   const [heartbeatImage, setHeartbeatImage] = useState(
-    "/60 MPH HEART BEAT.gif"
+    "/60_MPH_Infographic.gif"
   );
 
   const handleImageSwap = () => {
     setHeartbeatImage((prev) =>
-      prev === "/60 MPH HEART BEAT.gif"
-        ? "/120 MPH HEART BEAT.gif"
-        : "/60 MPH HEART BEAT.gif"
+      prev === "/60_MPH_Infographic.gif"
+        ? "/120_MPH_Infographic.gif"
+        : "/60_MPH_Infographic.gif"
     );
   };
 
@@ -78,7 +78,7 @@ export const HeartConnectionSection = () => {
             />
             <Image
               className="m-auto relative bottom-[20vw] w-[8vw] md:bottom-[7vw] md:w-[2vw] cursor-pointer"
-              src="/Music_Icon.png"
+              src="/Music Icon.png"
               width={40}
               height={40}
               alt="music button"
