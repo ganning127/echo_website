@@ -2,7 +2,7 @@
   {
     "title": "There's always time for care",
     "description": "Vienna has quite a way with words, check out some of her poetry!",
-    "link": "/",
+    "link": "/make/Vienna's_Poem.pdf",
     "image": "/act_care.png",
     "tags": [
       "home",
@@ -12,7 +12,7 @@
   {
     "title": "Dodge the goo!",
     "description": "Plaqtrick has left behind some big messes in the house. Help Echo navigate around the ooey-gooey puddles of ick!",
-    "link": "/",
+    "link": "/make/Echo's_House_Maze.pdf",
     "image": "/act_dodge.png",
     "tags": [
       "home",
@@ -20,31 +20,13 @@
     ]
   },
   {
-    "title": "Dodge the goo!",
-    "description": "Plaqtrick has left behind some big messes in the house. Help Echo navigate around the ooey-gooey puddles of ick!",
-    "link": "/",
+    "title": "Recipe!",
+    "description": "Recipe description!",
+    "link": "/make/Recipe_What a Cute-Cucumber.pdf",
     "image": "/act_painting.png",
     "tags": [
-      "game",
+      "recipe",
       "home"
     ]
-  },
-  {
-    "title": "There's always time for care",
-    "description": "Vienna has quite a way with words, check out some of her poetry!",
-    "link": "/",
-    "image": "/act_care.png"
-  },
-  {
-    "title": "Dodge the goo!",
-    "description": "Plaqtrick has left behind some big messes in the house. Help Echo navigate around the ooey-gooey puddles of ick!",
-    "link": "/",
-    "image": "/act_care.png"
-  },
-  {
-    "title": "Dodge the goo!",
-    "description": "Plaqtrick has left behind some big messes in the house. Help Echo navigate around the ooey-gooey puddles of ick!",
-    "link": "/",
-    "image": "/act_painting.png"
   }
 ]
