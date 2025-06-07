@@ -235,4 +235,10 @@ const TEAM_MEMBERS = [
     image: "/people/brian.jpg",
     icon: "/people/icons/brian.png",
   },
+  {
+    name: "Ben Conard",
+    role: "Board Member",
+    image: "/people/ben.jpg",
+    icon: "/people/icons/ben.png",
+  },
 ];
