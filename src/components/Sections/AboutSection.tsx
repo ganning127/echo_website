@@ -68,34 +68,85 @@ export const AboutSection = () => {
 export const FoundersStory = () => {
   const events = [
     {
-      year: "2014",
+      year: "July 4, 2014",
       text: "July 2014 Dad receives life saving procedure after heart attack on a family vacation",
-      side: "left",
+      img: "/timeline/dad_procedure.png",
     },
     {
-      year: "2015",
+      year: "July 10, 2015",
       text: "U.S. Naval Academy Medical Disqualification for High Blood Pressure",
-      side: "right",
+      img: "/timeline/naval_disqual.png",
     },
     {
-      year: "2016",
+      year: "July 27, 2015",
       text: "Started UCLA career over summer, prior to Fall quarter",
-      side: "left",
+      img: "/timeline/started_ucla.png",
     },
     {
-      year: "2017",
-      text: "May Met Dr. Marcella Press in the catheterization lab at UCLA hospital\n\nJuly Co-founded the Early Cardiovascular Health Outreach SMS (ECHOS) alongside the UCLA Women’s Cardiovascular Center\n\nSeptember First scientific research poster presentation at the UCLA Cardiovascular Symposium",
-      side: "right",
+      year: "May 16, 2017",
+      text: "May Met Dr. Marcella Press in the catheterization lab at UCLA hospital\n\nJuly Co-founded the Early Cardiovascular Health Outreach SMS (ECHOS) alongside the UCLA Women's Cardiovascular Center",
+      img: "/timeline/met_dr.png",
     },
     {
-      year: "2018",
-      text: "March Awarded the UCLA Babara Streisand Research Fellowship\n\nDecember Selected for the 2019 Undergraduate Research Fellows Program (URFP) and scholarship from the Wasserman Endowment",
-      side: "left",
+      year: "July 25, 2017",
+      text: "Co-founded the Early Cardiovascular Health Outreach SMS (ECHOS) alongside the UCLA Women's Cardiovascular Center ",
+      img: "/echo_logo.png",
     },
     {
-      year: "2019",
-      text: "May UCLA Undergraduate Research Poster Day",
-      side: "right",
+      year: "September 25, 2017",
+      text: "First scientific research poster presentation at the UCLA Cardiovascular Symposium",
+      img: "/timeline/first_poster.png",
+    },
+    {
+      year: "September 25, 2017",
+      text: "Awarded the UCLA Babara Streisand Research Fellowship",
+      img: "/timeline/babara_streisand.png",
+    },
+    {
+      year: "December 19, 2018",
+      text: "Selected for the 2019 Undergraduate Research Fellows Program (URFP) and scholarship from the Wasserman Endowment",
+      img: "/timeline/urfp.png",
+    },
+    {
+      year: "May 21, 2019",
+      text: "UCLA Undergraduate Research Poster Day",
+      img: "/timeline/poster_day.png",
+    },
+    {
+      year: "May 15, 2021",
+      text: "Abstract accepted to American College of Cardiology",
+    },
+    {
+      year: "July 13, 2021",
+      text: "Published first manuscript of ECHOS research findings",
+    },
+    {
+      year: "August 12, 2022",
+      text: "Defended Master's Thesis on ECHOS",
+      img: "/timeline/def_masters.png",
+    },
+    {
+      year: "November, 2022",
+      text: "$10,000 Ambition Accelerator Winner at First Pitch Competition at Taco Bell Foundation in Irvine, Ca.",
+      img: "/timeline/tbf_pitch.png",
+    },
+    {
+      year: "February 2023",
+      text: "Received the Hershey Company Heartwarming Young Hero's Grant",
+      img: "/timeline/hershey.png",
+    },
+    {
+      year: "April 29, 2023",
+      text: "Shared the meaning behind a healthy heart for Global Youth Service Day",
+    },
+    {
+      year: "October 5, 2023",
+      text: "Finalist at Pitch Competition of the UCLA Health Innovation Challenge Health Equity Track",
+    },
+    {
+      year: "2025",
+      text: "Earned a Master's in Public Health ",
+      img: "/timeline/masters_ph.png",
     },
   ];
 
@@ -112,13 +163,22 @@ export const FoundersStory = () => {
       </p>
 
       <ol className="relative border-s border-[#00488D]">
-        {events.map((event, index) => (
+        {events.reverse().map((event, index) => (
           <li key={index} className={`mb-10 ms-4`}>
             <div className="absolute w-3 h-3 bg-[#00488D] rounded-full mt-1.5 -start-1.5"></div>
-            <time className="mb-1 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">
+            <time className="text-sm font-normal leading-none text-gray-400 dark:text-gray-500">
               <p className="font-bold">{event.year}</p>
             </time>
-            <div className="h-12 bg-gray-200 my-2"></div>
+
+            {event.img && (
+              <Image
+                src={event.img}
+                alt={`${event.year} image`}
+                width={200}
+                height={100}
+                className="h-auto w-auto object-cover rounded-lg my-2"
+              />
+            )}
 
             <p className="mb-4 text-base font-normal text-gray-500 dark:text-gray-400">
               {event.text.split("\n").map((line, i) => (
