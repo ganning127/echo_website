@@ -84,7 +84,7 @@ export const FoundersStory = () => {
     },
     {
       year: "May 16, 2017",
-      text: "May Met Dr. Marcella Press in the catheterization lab at UCLA hospital\n\nJuly Co-founded the Early Cardiovascular Health Outreach SMS (ECHOS) alongside the UCLA Women's Cardiovascular Center",
+      text: "May Met Dr. Marcella Press in the catheterization lab at UCLA hospital",
       img: "/timeline/met_dr.png",
     },
     {
@@ -176,7 +176,7 @@ export const FoundersStory = () => {
                 alt={`${event.year} image`}
                 width={200}
                 height={100}
-                className="h-auto w-auto object-cover rounded-lg my-2"
+                className="h-auto w-64 object-cover rounded-lg my-2"
               />
             )}
 
