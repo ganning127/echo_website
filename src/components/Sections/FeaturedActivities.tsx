@@ -14,7 +14,7 @@ export const FeaturedActivities = () => {
   );
 
   return (
-    <Carousel className="">
+    <Carousel className="px-0 lg:px-12">
       <CarouselContent>
         {homepageActivities.map((activity, index) => {
           return (
@@ -24,8 +24,8 @@ export const FeaturedActivities = () => {
           );
         })}
       </CarouselContent>
-      <CarouselPrevious className="bg-[#00A6C5] text-white left-2 lg:-left-12" />
-      <CarouselNext className="bg-[#00A6C5] text-white right-2 lg:-right-12" />
+      <CarouselPrevious className="bg-[#00A6C5] text-white left-2 lg:-left-0" />
+      <CarouselNext className="bg-[#00A6C5] text-white right-2 lg:-right-0" />
     </Carousel>
   );
 };

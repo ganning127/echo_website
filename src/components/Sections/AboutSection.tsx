@@ -152,7 +152,7 @@ export const FoundersStory = () => {
 
   return (
     <section className=" md:px-20 font-body">
-      <p className="text-center max-w-4xl mx-auto text-base text-gray-700 mb-16">
+      <p className="text-center max-w-4xl mx-auto text-[20px] text-gray-700 mb-16">
         Kimberly&apos;s connection to heart health awareness is deeply personal.
         Since high school, she dreamt of attending the U.S. Naval Academy, but
         her early hypertension diagnosis disqualified her from attending.
@@ -163,7 +163,7 @@ export const FoundersStory = () => {
       </p>
 
       <ol className="relative border-s border-[#00488D]">
-        {events.reverse().map((event, index) => (
+        {events.map((event, index) => (
           <li key={index} className={`mb-10 ms-4`}>
             <div className="absolute w-3 h-3 bg-[#00488D] rounded-full mt-1.5 -start-1.5"></div>
             <time className="text-sm font-normal leading-none text-gray-400 dark:text-gray-500">
@@ -182,7 +182,7 @@ export const FoundersStory = () => {
 
             <p className="mb-4 text-base font-normal text-gray-500 dark:text-gray-400">
               {event.text.split("\n").map((line, i) => (
-                <span key={i} className="block">
+                <span key={i} className="block text-[20px]">
                   {line}
                 </span>
               ))}
