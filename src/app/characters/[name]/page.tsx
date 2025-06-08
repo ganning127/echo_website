@@ -16,7 +16,7 @@ export default function About() {
 
       <Container>
         <Suspense fallback={<div>Loading...</div>}>
-          <CharactersMain />
+          <CharactersDetails />
         </Suspense>
       </Container>
 
