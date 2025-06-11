@@ -4,7 +4,7 @@ import { ComposerNoteCard } from "../Cards/ComposerNoteCard";
 
 export const ComposerNoteSection = () => {
   return (
-    <section className="bg-[#dB8A39] w-full  pb-20">
+    <section className="bg-[#dB8A39] w-full pb-20 pt-[3vw]">
       <FadeInWhenVisible>
         <div className="w-5/6 justify-self-center flex flex-col md:flex-row bg-white rounded-xl overflow-hidden shadow-lg">
           <div className="w-full md:w-1/4">

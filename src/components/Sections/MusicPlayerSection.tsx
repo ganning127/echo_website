@@ -6,7 +6,7 @@ import { MusicButtonGroup } from "../ui/MusicButtonGroup";
 
 const popupTexts: Record<string, string> = {
   Refocus: "This track is designed to ground and focus your energies.",
-  Create: "This track is the most complex by far.",
+  Create: "This track is designed to inspire your imagination.",
   Move: "This track is designed to get you on your feet.",
   Relax: "This track is meant to calm you by bringing your heart rate down.",
 };
@@ -61,7 +61,7 @@ export const MusicPlayerSection = () => {
         <button
           onClick={togglePlay}
           className="fixed top-[5%] lg:top-4 left-[45%] lg:left-4 z-50 bg-[#1473d2] lg:bg-[#013161]  
-         hover:text-[#000000] lg:hover:text-white text-white px-4 py-2 hover:bg-[#FFD87A] rounded lg:hover:bg-[#1473d2] transition"
+         hover:text-[#000000] lg:hover:text-white text-white px-4 py-2 hover:bg-[#FFD87A] rounded lg:hover:bg-[#1473d2] transition text-[1vw]"
         >
           {isPlaying ? "Pause Music" : "Play Music"}
         </button>
@@ -84,17 +84,35 @@ export const MusicPlayerSection = () => {
 
             {/* Button group and signage */}
             <div className="col-span-3 text-[13px] md:text-xl flex flex-wrap">
-              <div className="justify-contents-center w-full grid grid-cols-1 md:grid-cols-4">
+              <div className="text-[1.5vw] justify-contents-center w-full grid grid-cols-1 md:grid-cols-4">
                 <MusicButtonGroup onSelect={handleSelect} />
               </div>
               <div className="w-full pt-10">
-                <Image
-                  className=" m-auto"
-                  src="/Rooster Sign.png"
-                  width="350"
-                  alt="rooster sign"
-                  height="40"
-                />
+                {/* 🟨 New Section below the radio/oranges/tabletop */}
+                {selection && (
+                  <section className="w-full m-auto lg:pb-20">
+                    <div className="m-auto rounded-md">
+                      <h2 className="text-[5vw] sm:text-[3vw] lg:text-[2vw]  font-bold mb-4">
+                        Song Name: {songName[selection]}
+                      </h2>
+                      <h3 className="text-[5vw] sm:text-[3vw] lg:text-[2vw] text-[#000000] pb-5">
+                        Mood: {selection}
+                      </h3>
+                      <p className="text-[5vw] sm:text-[3vw] lg:text-[1.5vw] text-gray-700">
+                        {moreDetails[selection]}
+                      </p>
+                    </div>
+                  </section>
+                )}
+                {!selection && (
+                  <Image
+                    className="m-auto"
+                    src="/Rooster Sign.png"
+                    width="350"
+                    alt="rooster sign"
+                    height="40"
+                  />
+                )}
               </div>
             </div>
           </div>
@@ -108,15 +126,15 @@ export const MusicPlayerSection = () => {
         {/* Radio, oranges, tabletop */}
         <div className="grid grid-cols-1 md:grid-cols-4 pt-10 w-5/6 justify-self-center flex-col-reverse md:flex-row items-start gap-10 bg-[url(/front countertop.png)]">
           {/* Radio */}
-          <div className="justify-contents-center col-span-2 relative bottom-[100px] md:bottom-[200px] lg:bottom-[300px] w-[200px] md:w-[200px] lg:w-[350px]">
+          <div className="justify-contents-center col-span-2 relative bottom-[100px] md:bottom-[200px] lg:bottom-[300px] w-[200px] md:w-[200px] lg:w-[25vw]">
             <Image
               src="/Radio.png"
-              width="350"
+              width="500"
               alt="orange radio"
               height="70"
             />
             {selection && (
-              <div className="absolute top-0 left-[21vw] w-full h-full flex items-center justify-center">
+              <div className="absolute top-15 left-[35vw] lg:left-[20vw] w-full h-full flex items-center justify-center">
                 <div className="relative">
                   <Image
                     src="/Radio Bubble.png"
@@ -125,7 +143,7 @@ export const MusicPlayerSection = () => {
                     height={450}
                     className="rounded-md"
                   />
-                  <p className="absolute pl-[20px] pr-[20px] top-1/2 left-[20%] transform -translate-y-1/2 text-black text-center text-sm lg:text-lg font-semibold">
+                  <p className="absolute pl-[20px] pr-[20px] top-1/2 left-[20%] transform -translate-y-1/2 text-black text-center text-sm lg:text-[1.5vw] font-semibold">
                     {popupTexts[selection]}
                   </p>
                 </div>
@@ -147,19 +165,6 @@ export const MusicPlayerSection = () => {
           </div>
         </div>
       </section>
-
-      {/* 🟨 New Section below the radio/oranges/tabletop */}
-      {selection && (
-        <section className="w-full m-auto pb-10 bg-[#dB8A39] text-center">
-          <div className="w-5/6 m-auto p-10 rounded-md bg-[#ffffff] text-center">
-            <h2 className="text-2xl font-bold mb-4">
-              Song Name: {songName[selection]}
-            </h2>
-            <h3 className="text-lg text-[#000000] pb-5">Mood: {selection}</h3>
-            <p className="text-lg text-gray-700">{moreDetails[selection]}</p>
-          </div>
-        </section>
-      )}
     </>
   );
 };
