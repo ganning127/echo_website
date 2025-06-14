@@ -28,7 +28,9 @@ export const MinuteChallengeSection = () => {
               <div className="flex flex-col gap-2 text-[4vw] sm:text-[1.3vw]">
                 <div className="flex items-center gap-2 text-md font-bold">
                   <Mail className="w-4 h-4" />
-                  <a href="mailto:edecho.org@gmail.com">edecho.org@gmail.com</a>
+                  <a href="mailto:the8minutecallproject@gmail.com">
+                    the8minutecallproject@gmail.com
+                  </a>
                 </div>
                 <div className="flex items-center gap-2 text-md font-bold">
                   <Instagram className="w-4 h-4" />

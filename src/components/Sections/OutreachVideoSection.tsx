@@ -10,7 +10,7 @@ export const OutreachVideoSection = () => {
             <div className="col-span-3 md:col-span-5 lg:col-span-2 lg:order-1 order-2 pb-5 mb-5 text-[4vw] sm:text-[1.5vw]">
               <br />
               <h3 className="text-[30px] text-[#013161]">
-                8 Minute Call Project
+                The 8 Minute Call Project
               </h3>
               <p>
                 Did you know loneliness can increase the risk for premature
@@ -54,7 +54,7 @@ export const OutreachVideoSection = () => {
           <div>
             <Image
               className="relative object-contain w-full mt-[-30px]"
-              src="/CouchOutreach.png"
+              src="/Outreach Couch.png"
               alt="door"
               width="800"
               height="100"

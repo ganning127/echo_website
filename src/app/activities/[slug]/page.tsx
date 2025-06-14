@@ -7,7 +7,8 @@ import { useEffect, useState } from "react";
 import { NavBar } from "@/components/NavBar";
 import { Footer } from "@/components/Footer";
 import React from "react";
-import { Link } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import Link from "next/link";
 
 export default function ActivityPage({
   params,
@@ -33,24 +34,30 @@ export default function ActivityPage({
     <section className="w-full bg-[#B77372]">
       <NavBar />
       <div className="w-5/6 m-auto">
-        <Link
-          href="/activities"
-          className=" mt-3 relative text-[3vw] sm:text-[1vw] inline-block bg-[#7C2D36] hover:bg-[#013161] text-white px-6 py-3 rounded font-heading transition"
-        >
-          ← All Activities
-        </Link>
+        <Button className="mt-3 bg-[#7C2D36] hover:bg-[#013161] p-5">
+          <Link
+            href="/activities"
+            className=" relative text-[3vw] sm:text-[1vw] inline-block text-white rounded font-heading transition"
+          >
+            ← All Activities
+          </Link>
+        </Button>
       </div>
       <div className="pt-5 pb-5 w-5/6 m-auto text-center">
-        <h1 className="text-3xl font-bold mb-4">{activity.title}</h1>
-        <p className="mb-4 w-5/6 m-auto text-black text-[2vw]">
+        <h1 className="text-[8vw] sm:text-[4vw] text-black mb-4 w-5/6 md:w-6/6 m-auto">
+          {activity.title}
+        </h1>
+        <p className="pb-3 text-black text-[4vw] sm:text-[1.5vw] md:text-[2vw] w-4/6 md:w-5/6 m-auto">
           {activity.description}
         </p>
-        <Link
-          href={activity.link}
-          className="mb-10 inline-block bg-[#7C2D36] hover:bg-[#013161] text-white px-6 py-3 rounded font-heading transition"
-        >
-          Download Activity
-        </Link>
+        <Button className="bg-[#7C2D36] hover:bg-[#013161] mb-10">
+          <Link
+            href={activity.link}
+            className=" inline-block text-white rounded font-heading transition"
+          >
+            Download Activity
+          </Link>
+        </Button>
         <Image
           src={activity.preview}
           alt={activity.title}
@@ -62,7 +69,7 @@ export default function ActivityPage({
       <div className="pb-10">
         <Image
           className="absolute md:mt-40 left-0 top-30 w-auto visible z-0 h-[60vw] lg:h-[40vw] max-h-[500px]"
-          src="/Activities window Left.png"
+          src="/Activities Window Left.png"
           alt="window"
           width="200"
           height="500"

@@ -13,7 +13,9 @@ export const AllActivities = () => {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const [isSortDropdownOpen, setIsSortDropdownOpen] = useState(false);
 
-  const [sortOrder, setSortOrder] = useState<"asc" | "desc" | "none">("none");
+  const [sortOrder, setSortOrder] = useState<
+    "asc" | "desc" | "order-asc" | "order-desc" | "none"
+  >("none");
 
   const allTags = useMemo(() => {
     const tagSet = new Set<string>();
@@ -41,6 +43,10 @@ export const AllActivities = () => {
       result.sort((a, b) => a.title.localeCompare(b.title));
     } else if (sortOrder === "desc") {
       result.sort((a, b) => b.title.localeCompare(a.title));
+    } else if (sortOrder === "order-asc") {
+      result.sort((a, b) => (a.order ?? 0) - (b.order ?? 0));
+    } else if (sortOrder === "order-desc") {
+      result.sort((a, b) => (b.order ?? 0) - (a.order ?? 0));
     }
 
     return result;
@@ -98,7 +104,7 @@ export const AllActivities = () => {
         </button>
 
         {isDropdownOpen && (
-          <div className="absolute z-10 mt-2 bg-white border border-gray-300 rounded shadow-lg p-4 max-h-64 overflow-y-auto w-64">
+          <div className="absolute z-10 mt-2 bg-white border border-gray-300 rounded shadow-lg p-4 overflow-y-auto w-40">
             {allTags.map((tag) => (
               <label key={tag} className="flex items-center mb-2">
                 <input
@@ -124,7 +130,7 @@ export const AllActivities = () => {
         </button>
 
         {isSortDropdownOpen && (
-          <div className="absolute z-10 mt-2 bg-white border border-gray-300 rounded shadow-lg p-4 w-64">
+          <div className="absolute z-10 mt-2 bg-white border border-gray-300 rounded shadow-lg p-4 w-40">
             <label className="flex items-center mb-2">
               <input
                 type="checkbox"
@@ -136,7 +142,7 @@ export const AllActivities = () => {
               />
               Alphabetical (A → Z)
             </label>
-            <label className="flex items-center">
+            <label className="flex items-center mb-2">
               <input
                 type="checkbox"
                 className="mr-2"
@@ -146,6 +152,32 @@ export const AllActivities = () => {
                 }
               />
               Alphabetical (Z → A)
+            </label>
+            <label className="flex items-center mb-2">
+              <input
+                type="checkbox"
+                className="mr-2"
+                checked={sortOrder === "order-asc"}
+                onChange={() =>
+                  setSortOrder((prev) =>
+                    prev === "order-asc" ? "none" : "order-asc"
+                  )
+                }
+              />
+              Oldest
+            </label>
+            <label className="flex items-center">
+              <input
+                type="checkbox"
+                className="mr-2"
+                checked={sortOrder === "order-desc"}
+                onChange={() =>
+                  setSortOrder((prev) =>
+                    prev === "order-desc" ? "none" : "order-desc"
+                  )
+                }
+              />
+              Newest
             </label>
           </div>
         )}

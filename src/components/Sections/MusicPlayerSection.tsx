@@ -85,10 +85,10 @@ export const MusicPlayerSection = () => {
 
             {/* Button group and signage */}
             <div className="col-span-3 text-[13px] md:text-xl flex flex-wrap">
-              <div className="text-[1.5vw] justify-contents-center w-full grid grid-cols-1 md:grid-cols-4">
+              <div className="text-[1.5vw] justify-contents-center w-full grid grid-cols-1 md:grid-cols-4 order-2 md:order-1">
                 <MusicButtonGroup onSelect={handleSelect} />
               </div>
-              <div className="w-full pt-10">
+              <div className="w-full pt-10 order-1 md:order-2">
                 {/* 🟨 New Section below the radio/oranges/tabletop */}
                 {selection && (
                   <section className="w-full m-auto lg:pb-20">
@@ -107,7 +107,7 @@ export const MusicPlayerSection = () => {
                 )}
                 {!selection && (
                   <Image
-                    className="m-auto"
+                    className="m-auto mb-5"
                     src="/Rooster Sign.png"
                     width="350"
                     alt="rooster sign"

@@ -16,8 +16,8 @@ export default function Activities() {
           width="300"
           height="100"
         /> */}
-        <h1 className="text-4xl text-black">Activities</h1>
-        <p className="text-black">
+        <h1 className="text-[8vw] sm:text-[4vw] text-black">Activities</h1>
+        <p className="text-black text-[4vw] sm:text-[1.5vw] md:text-[2vw] w-3/6 m-auto">
           Click on an activity to learn more about it!
         </p>
         <div className="relative z-20">
@@ -27,7 +27,7 @@ export default function Activities() {
       <div className="pb-10">
         <Image
           className="absolute md:mt-40 left-0 top-30 w-auto visible z-0 h-[60vw] lg:h-[40vw] max-h-[500px]"
-          src="/Activities window Left.png"
+          src="/Activities Window Left.png"
           alt="window"
           width="200"
           height="500"
