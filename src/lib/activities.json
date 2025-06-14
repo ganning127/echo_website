@@ -1,6 +1,8 @@
 [
   {
     "title": "There's always time for care",
+    "slug": "theres-always-time-for-care",
+    "preview":"/ActivityPreview/Vienna's_Poem.png", 
     "description": "Vienna has quite a way with words, check out some of her poetry!",
     "link": "/make/Vienna's_Poem.pdf",
     "image": "/act_care.png",
@@ -11,6 +13,8 @@
   },
   {
     "title": "Dodge the goo!",
+    "slug": "Dodge-the-goo",
+    "preview":"/ActivityPreview/Echo's_House_Maze.png",
     "description": "Plaqtrick has left behind some big messes in the house. Help Echo navigate around the ooey-gooey puddles of ick!",
     "link": "/make/Echo's_House_Maze.pdf",
     "image": "/act_dodge.png",
@@ -21,6 +25,8 @@
   },
   {
     "title": "What A Cute-Cumber",
+    "slug": "What-A-Cute-Cumber",
+    "preview":"/ActivityPreview/Recipe_What a Cute-Cucumber.png",
     "description": "Artie is sharing some of his favorite recipes with us. Check out his cookbook to get your own inner chef inspired!",
     "link": "/make/Recipe_What a Cute-Cucumber.pdf",
     "image": "/act_painting.png",

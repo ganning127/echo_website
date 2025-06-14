@@ -6,14 +6,14 @@ import { MusicButtonGroup } from "../ui/MusicButtonGroup";
 
 const popupTexts: Record<string, string> = {
   Refocus: "This track is designed to ground and focus your energies.",
-  Create: "This track is the most complex by far.",
+  Create: "This track is designed to inspire your imagination.",
   Move: "This track is designed to get you on your feet.",
   Relax: "This track is meant to calm you by bringing your heart rate down.",
 };
 
 const moreDetails: Record<string, string> = {
   Refocus:
-    "The tempo is not too fast to hype up your heartbeat, but not too slow to make you sleepy; it strikes a balance to feel as though the music is moving forward steadily with the drum kit providing stability. The melody is simple so as not to distract but fade into the background allowing your brain to focus. More detail: The full instrumentation includes guitar, piano, celeste, and drum kit. The guitar provides a naturalistic and relaxed energy. The melody in the piano is doubled in the celeste providing a little shimmer to the sound.",
+    "The tempo is not too fast to hype up your heartbeat, but not too slow to make you sleepy; it strikes a balance to feel as though the music is moving forward steadily with the drum kit providing stability. The melody is simple so as not to distract but fade into the background allowing your brain to focus. The full instrumentation includes guitar, piano, celeste, and drum kit. The guitar provides a naturalistic and relaxed energy. The melody in the piano is doubled in the celeste providing a little shimmer to the sound.",
   Create:
     "Instead of grounding you, it is meant to evoke the fantastic and the ethereal with a full string section and highly active drum kit expanding the realm of possibility and giving the energy to dream and create. The full instrumentation includes a solo violin, marimba, drum kit, and full string orchestra. The inclusion of the string orchestra makes this track very different from everything else you hear throughout Echoville. The larger ensemble takes up more sonic space, daring you to dream bigger. The solo violin melody soars above the orchestra, adding another dimension to the string sound and contrasting with the shorter, more frequent marimba hits and active drum kit.",
   Move: "Solidly up tempo, the beat is meant to put you roughly in the target heart rate zone. The melody is light and carefree, bringing joy to however you choose to move. The full instrumentation includes two guitars, strummed dulcimer, celeste, and drums. The guitar chords and drums provide the energy of the track, keeping you moving and on your feet. The melody is doubled in the second guitar and strummed dulcimer making the stand out against the first guitar. The celeste brings a countermelody, weaving between the gaps of the melody like a partner dance. ",
@@ -37,6 +37,7 @@ export const MusicPlayerSection = () => {
     setSelection(track);
     if (audioRef.current) {
       audioRef.current.src = src;
+      audioRef.current.loop = true;
       audioRef.current.play();
       setIsPlaying(true);
     }
@@ -72,7 +73,7 @@ export const MusicPlayerSection = () => {
         <FadeInWhenVisible>
           <div className="grid grid-cols-1 md:grid-cols-5 pt-10 w-5/6 justify-self-center flex-col-reverse md:flex-row items-start gap-10 lg:gap-30">
             {/* Window */}
-            <div className="col-span-3 md:col-span-2">
+            <div className="col-span-3 md:col-span-2 hidden sm:block">
               <Image
                 src="/Entire Window.png"
                 className="md:m-0 m-auto"
@@ -84,17 +85,35 @@ export const MusicPlayerSection = () => {
 
             {/* Button group and signage */}
             <div className="col-span-3 text-[13px] md:text-xl flex flex-wrap">
-              <div className="justify-contents-center w-full grid grid-cols-1 md:grid-cols-4">
+              <div className="text-[1.5vw] justify-contents-center w-full grid grid-cols-1 md:grid-cols-4">
                 <MusicButtonGroup onSelect={handleSelect} />
               </div>
               <div className="w-full pt-10">
-                <Image
-                  className=" m-auto"
-                  src="/Rooster Sign.png"
-                  width="350"
-                  alt="rooster sign"
-                  height="40"
-                />
+                {/* 🟨 New Section below the radio/oranges/tabletop */}
+                {selection && (
+                  <section className="w-full m-auto lg:pb-20">
+                    <div className="m-auto rounded-md">
+                      <h2 className="text-[5vw] sm:text-[3vw] lg:text-[2vw]  font-bold mb-4">
+                        Song Name: {songName[selection]}
+                      </h2>
+                      <h3 className="text-[5vw] sm:text-[3vw] lg:text-[2vw] text-[#000000] pb-5">
+                        Mood: {selection}
+                      </h3>
+                      <p className="text-[5vw] sm:text-[3vw] lg:text-[1.5vw] text-gray-700">
+                        {moreDetails[selection]}
+                      </p>
+                    </div>
+                  </section>
+                )}
+                {!selection && (
+                  <Image
+                    className="m-auto"
+                    src="/Rooster Sign.png"
+                    width="350"
+                    alt="rooster sign"
+                    height="40"
+                  />
+                )}
               </div>
             </div>
           </div>
@@ -147,19 +166,6 @@ export const MusicPlayerSection = () => {
           </div>
         </div>
       </section>
-
-      {/* 🟨 New Section below the radio/oranges/tabletop */}
-      {selection && (
-        <section className="w-full m-auto pb-10 bg-[#dB8A39] text-center">
-          <div className="w-5/6 m-auto p-10 rounded-md bg-[#ffffff] text-center">
-            <h2 className="text-2xl font-bold mb-4">
-              Song Name: {songName[selection]}
-            </h2>
-            <h3 className="text-lg text-[#000000] pb-5">Mood: {selection}</h3>
-            <p className="text-lg text-gray-700">{moreDetails[selection]}</p>
-          </div>
-        </section>
-      )}
     </>
   );
 };

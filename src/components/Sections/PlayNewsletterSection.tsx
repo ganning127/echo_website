@@ -33,14 +33,14 @@ export const PlayNewsletterSection = () => {
 
   return (
     <FadeInWhenVisible>
-      <h1 className="text-center text-3xl text-[#013161] pb-3">
+      <h1 className="text-center text-[6vw] sm:text-[2.5vw] text-[#013161] pb-3">
         Keep up with all things Echo!
       </h1>
 
       <div className="text-center  mx-auto flex flex-col md:flex-row items-center gap-8">
         {/* Left content */}
         <div className="flex-1 text-black">
-          <p className="text-lg leading-relaxed">
+          <p className="text-[4.5vw] sm:text-[1.5vw] leading-relaxed">
             Sign up for our newsletter: The Echoville Pulse
           </p>
         </div>

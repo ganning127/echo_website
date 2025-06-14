@@ -4,13 +4,13 @@ import Image from "next/image";
 export const OutreachVideoSection = () => {
   return (
     <>
-      <section className="w-full sm:mt-[25%] md:mt-[15%]">
+      <section className="w-full sm:mt-[25%] md:mt-[10%] lg:mt-[1%]">
         <FadeInWhenVisible>
-          <div className="pt-10 w-4/6 justify-self-center grid grid-cols-1 md:grid-cols-5 gap-10 lg:gap-30">
-            <div className="col-span-3 md:col-span-5 lg:col-span-2 lg:order-1 order-2 pb-5 mb-5">
+          <div className="pt-10 w-5/6 justify-self-center grid grid-cols-1 md:grid-cols-5 gap-10 lg:gap-30">
+            <div className="col-span-3 md:col-span-5 lg:col-span-2 lg:order-1 order-2 pb-5 mb-5 text-[4vw] sm:text-[1.5vw]">
               <br />
               <h3 className="text-[30px] text-[#013161]">
-                8 Minute Phone Call
+                8 Minute Call Project
               </h3>
               <p>
                 Did you know loneliness can increase the risk for premature
@@ -32,18 +32,18 @@ export const OutreachVideoSection = () => {
               </p>
             </div>
             <div className="col-span-3 md:col-span-5 lg:col-span-3 z-0 justify-self-center lg:order-1 order-1">
-              <div className="bg-[#D7BDE7] border-[#7B5AA1] border-20 border-double w-full lg:w-[50vw] max-w-[560px]">
+              <div className="bg-[#D7BDE7] border-[#7B5AA1] border-20 border-double w-full lg:w-[50vw]">
                 <iframe
-                  className="w-full lg:h-[315px] md:h-[250px] h-[150px]"
+                  className="w-full lg:h-[30vw] md:h-[250px] h-[150px]"
                   width="560"
                   height="315"
-                  src="https://www.youtube.com/embed/Y-x0efG1seA?si=i8UmNnyQAhPUEczG"
+                  src="https://www.youtube.com/embed/qpmOABYdZbU?si=gXVG_Ob1gu0EqIit"
                   title="YouTube video player"
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen"
                 ></iframe>
               </div>
               <Image
-                className="relative w-[50vw] m-auto max-w-[560px]"
+                className="relative w-[50vw] m-auto"
                 src="/EntertainmentCenter.png"
                 alt="entertainment center"
                 width="800"
@@ -54,7 +54,7 @@ export const OutreachVideoSection = () => {
           <div>
             <Image
               className="relative object-contain w-full mt-[-30px]"
-              src="/Couch.png"
+              src="/CouchOutreach.png"
               alt="door"
               width="800"
               height="100"

@@ -12,13 +12,14 @@ export default function Outreach() {
 
       <div className="">
         <Image
-          className="visible md:invisible absolute left-0 top-[15%] lg:mt-[-10px] sm:mt-20 w-2/6 sm:w-2/6 lg:w-2/6 z-20"
+          className="visible md:invisible absolute left-0 top-[10%] lg:mt-[-10px] sm:mt-21 w-2/6 sm:w-2/6 lg:w-2/6 z-20"
           src="/Lights.png"
           alt="Lights"
           width="500"
           height="100"
         />
       </div>
+      {/*
       <div className="">
         <Image
           className="absolute left-0 w-auto mt-20 invisible sm:visible sm:h-4/6 lg:h-6/6 max-h-[600px]"
@@ -28,11 +29,12 @@ export default function Outreach() {
           height="100"
         />
       </div>
+      */}
       {/* Sign */}
       <div className="">
         <Image
-          className="invisible sm:visible absolute md:w-full justify-self-center md:top-17 lg:top-0"
-          src="/8MinuteCallProject.svg"
+          className="invisible sm:visible absolute md:w-full justify-self-center md:top-17 lg:top-0 mt-[-2%]"
+          src="/OutreachSignLights.svg"
           alt="logo"
           width="1440"
           height="329"
@@ -48,14 +50,8 @@ export default function Outreach() {
         />
       </div>
 
-      <div className="m-auto">
-        <Image
-          className="relative m-auto visible sm:invisible justify-self-center sm:w-[1px] w-[70%] mt-5 z-20 rounded-md"
-          src="/8MinuteCallProject-Mobile.svg"
-          alt="logo"
-          width="1440"
-          height="329"
-        />
+      <div className="relative m-auto text-[7vw] text-[#013161] text-center visible sm:invisible justify-self-center sm:w-[1px] w-[70%] mt-5 z-20 rounded-md">
+        <h1>Outreach</h1>
       </div>
       {/* 8 minute call video section*/}
       <OutreachVideoSection />

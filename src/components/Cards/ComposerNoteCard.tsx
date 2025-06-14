@@ -4,7 +4,7 @@ export const ComposerNoteCard = () => {
       <h2 className="text-[48px] font-bold text-black mb-4">
         Composer&apos;s Note
       </h2>
-      <p className="text-[17px] text-base leading-relaxed">
+      <p className="text-[3.5vw] sm:text-[1.5vw] text-base leading-relaxed">
         I’ve always known that I wanted to compose music that speaks to people.
         I write for both large and small ensembles, for the stage and the
         screen. My compositions are designed to inspire and connect with anyone
@@ -17,7 +17,7 @@ export const ComposerNoteCard = () => {
         world.
       </p>
       <br></br>
-      <p>
+      <p className="text-[3.5vw] sm:text-[1.5vw]">
         ECHO has been a joy and privilege to work on, especially with this team
         of amazing and kind-hearted individuals. I never imagined having the
         opportunity to write music (backed by science!) to create healthier
