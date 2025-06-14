@@ -7,6 +7,7 @@ import { useEffect, useState } from "react";
 import { NavBar } from "@/components/NavBar";
 import { Footer } from "@/components/Footer";
 import React from "react";
+import { Link } from "lucide-react";
 
 export default function ActivityPage({
   params,
@@ -32,25 +33,24 @@ export default function ActivityPage({
     <section className="w-full bg-[#B77372]">
       <NavBar />
       <div className="w-5/6 m-auto">
-        <a
+        <Link
           href="/activities"
           className=" mt-3 relative text-[3vw] sm:text-[1vw] inline-block bg-[#7C2D36] hover:bg-[#013161] text-white px-6 py-3 rounded font-heading transition"
         >
           ← All Activities
-        </a>
+        </Link>
       </div>
       <div className="pt-5 pb-5 w-5/6 m-auto text-center">
         <h1 className="text-3xl font-bold mb-4">{activity.title}</h1>
         <p className="mb-4 w-5/6 m-auto text-black text-[2vw]">
           {activity.description}
         </p>
-        <a
+        <Link
           href={activity.link}
-          download
           className="mb-10 inline-block bg-[#7C2D36] hover:bg-[#013161] text-white px-6 py-3 rounded font-heading transition"
         >
           Download Activity
-        </a>
+        </Link>
         <Image
           src={activity.preview}
           alt={activity.title}
