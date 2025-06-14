@@ -33,10 +33,7 @@
     "title": "There's always time for care",
     "description": "Vienna has quite a way with words, check out some of her poetry!",
     "link": "/",
-    "image": "/act_care.png",
-    "tags": [
-      "vienna"
-    ]
+    "image": "/act_care.png"
   },
   {
     "title": "Dodge the goo!",
@@ -52,10 +49,6 @@
     "title": "Dodge the goo!",
     "description": "Plaqtrick has left behind some big messes in the house. Help Echo navigate around the ooey-gooey puddles of ick!",
     "link": "/",
-    "image": "/act_painting.png",
-    "tags": [
-      "echo",
-      "plaqtrick"
-    ]
+    "image": "/act_painting.png"
   }
 ]
