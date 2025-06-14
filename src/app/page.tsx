@@ -14,23 +14,21 @@ export default function Home() {
       <div className="bg-white h-2"></div>
       <Container className="bg-[#329D3C]">
         <FadeInWhenVisible>
-          <a href="/play">
-            <div className="flex flex-col md:flex-row bg-white rounded-xl overflow-hidden shadow-lg hover:bg-green-200 transition-colors">
-              <div className="w-full md:w-1/3">
-                <Image
-                  src="/run_img.png"
-                  alt="Welcome to Echoville"
-                  width={400}
-                  height={300}
-                  className="w-full h-full object-cover"
-                />
-              </div>
-
-              <div className="w-full md:w-2/3 p-6">
-                <WelcomeCard />
-              </div>
+          <div className="flex flex-col md:flex-row bg-white rounded-xl overflow-hidden shadow-lg">
+            <div className="w-full md:w-1/3">
+              <Image
+                src="/run_img.png"
+                alt="Welcome to Echoville"
+                width={400}
+                height={300}
+                className="w-full h-full object-cover"
+              />
             </div>
-          </a>
+
+            <div className="w-full md:w-2/3 p-6">
+              <WelcomeCard />
+            </div>
+          </div>
         </FadeInWhenVisible>
 
         <FadeInWhenVisible>

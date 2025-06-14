@@ -1,3 +1,5 @@
+import { Button } from "../ui/button";
+
 export const WelcomeCard = () => {
   return (
     <>
@@ -13,6 +15,17 @@ export const WelcomeCard = () => {
         <strong>mindfulness</strong>,<strong> nutrition</strong>,{" "}
         <strong>rest</strong>, and <strong>movement</strong>.
       </p>
+
+      <div className="text-center">
+        <a href="/about" target="_blank">
+          <Button
+            variant="outline"
+            className="mt-2 text-[24px] bg-[#00A6C5] text-white font-heading"
+          >
+            Learn More
+          </Button>
+        </a>
+      </div>
     </>
   );
 };

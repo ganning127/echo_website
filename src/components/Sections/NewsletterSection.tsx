@@ -42,10 +42,11 @@ export const NewsletterSection = () => {
         {/* Left content */}
         <div className="flex-1 text-black">
           <p className="text-[24px] leading-relaxed">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore Lorem ipsum dolor sit amet,
-            consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-            labore
+            Extra! Extra! Read all about it!
+            <br />
+            Sign up for our newsletter and keep up with all the latest updates!
+            Everything from game production to what our team members are up to
+            can all be found in our monthly newsletter.
           </p>
         </div>
 
@@ -61,30 +62,32 @@ export const NewsletterSection = () => {
         </div>
       </div>
 
-      <div className="mt-6">
+      <div className="mt-2">
         {!success && (
           <>
-            <input
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
-              type="email"
-              placeholder="Your email here"
-              className="w-full px-4 py-3 rounded-md text-black bg-white placeholder-gray-400 ring-2 ring-yellow-400"
-            />
+            <div className="md:w-128 mx-auto">
+              <input
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+                type="email"
+                placeholder="Your email here"
+                className="w-full px-4 py-3 rounded-md text-black bg-white placeholder-gray-400 ring-2 ring-yellow-400"
+              />
 
-            <div className="text-center">
-              <Button
-                disabled={!email || loading}
-                className={
-                  "mt-4 hover:bg-[#ad7e0c] bg-[#FFD87A] transition-colors"
-                }
-                size="lg"
-                onClick={handleSubmit}
-              >
-                <h5 className="text-[24px] text-black">
-                  {loading ? "Loading..." : "Join!"}
-                </h5>
-              </Button>
+              <div className="text-center">
+                <Button
+                  disabled={!email || loading}
+                  className={
+                    "mt-4 hover:bg-[#ad7e0c] bg-[#FFD87A] transition-colors"
+                  }
+                  size="lg"
+                  onClick={handleSubmit}
+                >
+                  <h5 className="text-[24px] text-black">
+                    {loading ? "Loading..." : "Join!"}
+                  </h5>
+                </Button>
+              </div>
             </div>
           </>
         )}
