@@ -2,28 +2,23 @@ import { NavBar } from "@/components/NavBar";
 import { Container } from "@/components/Container";
 import { Suspense } from "react";
 import { Footer } from "@/components/Footer";
-import { CharactersDetails } from "@/components/Sections/CharactersDetails";
+import { CharactersMain } from "@/components/Sections/CharactersMain";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Characters",
 };
-
-type PageProps = {
-  params: {
-    name: string;
-  };
-};
-
-export default function CharacterPage({ params }: PageProps) {
+export default function About() {
   return (
     <>
       <NavBar />
+
       <Container>
         <Suspense fallback={<div>Loading...</div>}>
-          <CharactersDetails name={params.name} />
+          <CharactersMain />
         </Suspense>
       </Container>
+
       <Footer />
     </>
   );
