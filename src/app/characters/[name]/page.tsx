@@ -4,27 +4,36 @@ import { Suspense } from "react";
 import { Footer } from "@/components/Footer";
 import { CharactersDetails } from "@/components/Sections/CharactersDetails";
 import { Metadata } from "next";
+import characters from "@/lib/characters.json";
 
 export const metadata: Metadata = {
   title: "Characters",
 };
 
-type PageProps = {
-  params: {
-    name: string;
-  };
-};
+export default async function CharacterPage(props: {
+  params: Promise<{ name: string }>; // params is a Promise here
+}) {
+  const params = await props.params; // await params
+  const { name } = params;
 
-export default function CharacterPage({ params }: PageProps) {
   return (
     <>
-      <NavBar />
+      <nav className="bg-[#DBECF1] w-full">
+        <NavBar />
+      </nav>
+
       <Container>
         <Suspense fallback={<div>Loading...</div>}>
-          <CharactersDetails name={params.name} />
+          <CharactersDetails name={name} />
         </Suspense>
       </Container>
       <Footer />
     </>
   );
+}
+
+export async function generateStaticParams() {
+  return characters.map((char) => ({
+    name: char.name.toLowerCase(),
+  }));
 }
