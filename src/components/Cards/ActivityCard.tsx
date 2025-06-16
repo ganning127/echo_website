@@ -44,7 +44,7 @@ export const ActivityCard = ({
         <p className="text-[15px] text-gray-700 line-clamp-2">
           {activity.description}
         </p>
-        <a href={activity.link} target="_blank">
+        <a href={activity.link}>
           <Button
             variant="outline"
             className="mt-4 text-[24px] bg-[#00A6C5] text-white font-heading"

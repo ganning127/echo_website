@@ -25,11 +25,11 @@ export const Footer = () => {
           <div className="flex items-center gap-2 text-sm">
             <Instagram className="w-4 h-4" />
             <a
-              href="https://instagram.com/edechoorg"
+              href="https://instagram.com"
               target="_blank"
               rel="noopener noreferrer"
             >
-              @edechoorg
+              @Instagram
             </a>
           </div>
         </div>
