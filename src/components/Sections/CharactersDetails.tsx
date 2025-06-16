@@ -32,7 +32,7 @@ export const CharactersDetails = ({ name }: Props) => {
             <Link
               key={index}
               href={`/characters/${char.name.toLowerCase()}`}
-              className="relative w-[120px] h-[160px] md:w-[150px] md:h-[200px] group"
+              className="relative w-[150px] h-[200px] group"
             >
               <Image
                 src={`/characters/${char.name.toLowerCase()}_pic.png`}
@@ -56,17 +56,15 @@ export const CharactersDetails = ({ name }: Props) => {
         <div className="bg-[#DBECF1] bg-[url('/characters/background.png')] bg-cover bg-center bg-no-repeat p-8">
           <div className="flex flex-col md:flex-row items-start gap-12">
             <div className="flex-1 space-y-6">
-              <div className="bg-white rounded-2xl overflow-hidden w-full p-8">
-                <div>
-                  <h2 className="text-[36px] mb-1 text-[#00488D]">{chosenCharacter.name}</h2>
-                  <h2 className="text-[#00488D]">{chosenCharacter.pronouns}</h2>
-                  <p
-                    className="text-[24px]"
-                    dangerouslySetInnerHTML={{
-                      __html: chosenCharacter.description,
-                    }}
-                  />
-                </div>
+              <div>
+                <h2 className="text-[36px] mb-1">{chosenCharacter.name}</h2>
+                <h2>{chosenCharacter.pronouns}</h2>
+                <p
+                  className="text-[24px]"
+                  dangerouslySetInnerHTML={{
+                    __html: chosenCharacter.description,
+                  }}
+                />
               </div>
             </div>
 
@@ -89,8 +87,7 @@ export const CharactersDetails = ({ name }: Props) => {
           <div className="flex flex-col md:flex-row items-start gap-12">
             {/* Fun Facts */}
             <div className="flex-1 space-y-6">
-              <div className="bg-white rounded-2xl overflow-hidden w-full p-8">
-              <h2 className="text-[36px] mb-1 text-[#00488D]">FUN FACTS!</h2>
+              <h2 className="text-[36px] mb-1">FUN FACTS!</h2>
               <p className="text-[24px]">
                 <strong>Color:</strong> {chosenCharacter.color}
               </p>
@@ -102,15 +99,14 @@ export const CharactersDetails = ({ name }: Props) => {
               </p>
               {chosenCharacter.catchphrase && (
                 <p className="text-[24px] italic">
-                  &quot;{chosenCharacter.catchphrase}&quot;
+                  "{chosenCharacter.catchphrase}"
                 </p>
               )}
-            </div>
             </div>
 
             {/* Character Activities */}
             <div className="flex-1 space-y-6">
-              <h2 className="text-[36px] mb-1 text-[#00488D]">
+              <h2 className="text-[36px] mb-1 text-black">
                 GET TO KNOW THE CHARACTER BETTER!
               </h2>
               <CharacterActivities characterName={chosenCharacter.name} />

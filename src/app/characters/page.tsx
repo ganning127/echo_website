@@ -11,11 +11,9 @@ export const metadata: Metadata = {
 export default function About() {
   return (
     <>
-      <nav className="bg-[#DBECF1] w-full">
-        <NavBar />
-      </nav>
-      
-      <Container className="bg-[#DBECF1]">
+      <NavBar />
+
+      <Container>
         <Suspense fallback={<div>Loading...</div>}>
           <CharactersMain />
         </Suspense>
