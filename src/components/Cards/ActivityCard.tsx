@@ -13,6 +13,7 @@ export const ActivityCard = ({
     description: string;
     image: string;
     link: string;
+    slug: string;
   };
 }) => {
   if (activity.tags) {
@@ -44,7 +45,7 @@ export const ActivityCard = ({
         <p className="text-[15px] text-gray-700 line-clamp-2">
           {activity.description}
         </p>
-        <a href={activity.link}>
+        <a href={`/activities/${activity.slug}`} target="_blank">
           <Button
             variant="outline"
             className="mt-4 text-[24px] bg-[#00A6C5] text-white font-heading"

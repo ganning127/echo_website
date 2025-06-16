@@ -1,61 +1,41 @@
 [
   {
     "title": "There's always time for care",
+    "slug": "theres-always-time-for-care",
+    "preview":"/ActivityPreview/Vienna's_Poem.png", 
     "description": "Vienna has quite a way with words, check out some of her poetry!",
-    "link": "/",
+    "link": "/make/Vienna's_Poem.pdf",
     "image": "/act_care.png",
+    "order": 1,
     "tags": [
       "home",
       "poetry"
     ]
   },
   {
-    "title": "Dodge the goo!",
+    "title": "Dodge the goo",
+    "slug": "Dodge-the-goo",
+    "preview":"/ActivityPreview/Dodge_the_goo_maze.png",
     "description": "Plaqtrick has left behind some big messes in the house. Help Echo navigate around the ooey-gooey puddles of ick!",
-    "link": "/",
+    "link": "/make/Dodge_the_goo_maze.pdf",
     "image": "/act_dodge.png",
+    "order": 2,
     "tags": [
       "home",
       "game"
     ]
   },
   {
-    "title": "Dodge the goo!",
-    "description": "Plaqtrick has left behind some big messes in the house. Help Echo navigate around the ooey-gooey puddles of ick!",
-    "link": "/",
+    "title": "What A Cute-Cumber",
+    "slug": "What-A-Cute-Cumber",
+    "preview":"/ActivityPreview/Recipe_What a Cute-Cucumber.png",
+    "description": "Artie is sharing some of his favorite recipes with us. Check out his cookbook to get your own inner chef inspired!",
+    "link": "/make/Recipe_What a Cute-Cucumber.pdf",
     "image": "/act_painting.png",
+    "order": 3,
     "tags": [
-      "game",
+      "recipe",
       "home"
-    ]
-  },
-  {
-    "title": "There's always time for care",
-    "description": "Vienna has quite a way with words, check out some of her poetry!",
-    "link": "/",
-    "image": "/act_care.png",
-    "tags": [
-      "vienna"
-    ]
-  },
-  {
-    "title": "Dodge the goo!",
-    "description": "Plaqtrick has left behind some big messes in the house. Help Echo navigate around the ooey-gooey puddles of ick!",
-    "link": "/",
-    "image": "/act_care.png",
-    "tags": [
-      "echo",
-      "plaqtrick"
-    ]
-  },
-  {
-    "title": "Dodge the goo!",
-    "description": "Plaqtrick has left behind some big messes in the house. Help Echo navigate around the ooey-gooey puddles of ick!",
-    "link": "/",
-    "image": "/act_painting.png",
-    "tags": [
-      "echo",
-      "plaqtrick"
     ]
   }
 ]
