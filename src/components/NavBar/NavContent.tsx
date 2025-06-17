@@ -5,7 +5,7 @@ export const NAV_CONTENT = [
   },
   {
     title: "Characters",
-    href: "/characters",
+    href: "/characters/",
   },
   {
     title: "Activities",

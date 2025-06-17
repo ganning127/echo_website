@@ -1,0 +1,42 @@
+[
+    {
+        "name": "Echo",
+        "pronouns": "They/Them",
+        "description": "Echo is the Mayor of Echoville. Acutally, they're more than that. Echo is the EMBODIMENT of Echoville- literally! Unsure of how it all happened, Echo was once swooped up in a mysterious vortex and landed INSIDE Echoville- the land inside their body! <br> <br> Echo is an adventurous soul, the perfect candidate to become a great leader in Echoville! It takes determination and resolve to make Echoville a safe, exciting, and efficient place. With surprises, games, and rewards galore, Echo is on their toes and wanting to explore!",
+        "image": "/characters/echo.png",
+        "color": "As blue as the sky, because the sky's the limit for this adventurer!",
+        "items": "A phone directly connected to their heart, to keep all friends and family near and dear.",
+        "hobbies": "Exploring, hanging out with friends, playing outside (Echo especially enjoys a fast-paced round of 4 square!)",
+        "catchphrase": ""
+    },
+    {
+        "name": "Plaqtrick",
+        "pronouns": "He/Him",
+        "description": "Plaqtrick is the 'Bad Boy,' and not in the cool mysterious way. He's just BAD! He's a clingy, sourpuss that is all up in Echo's business. All he wants to do is cause mayhem and strife in Echoville. Even when Echo tells him to go away and to stop his nonsense and trouble, Plaqtrick is relentless in his hullabaloo! <br> <br> Plaqtrick is all about being STICKY! He's always leaves behind giant sticky messes and steals with his sticky fingers. He tries to dodge Echo to stay out of trouble but he's never fast enough! Echo and friends are constantly following his gooey trail, putting an end to anything that he's schemed.",
+        "image": "/characters/plaqtrick.png",
+        "color": "Ooey, gooey-yellow!",
+        "items": "Plaqtrick has some sticky fingers... he might swipe some stuff without being noticed!",
+        "hobbies": "Causing a ruckus and making a scene! Street art... but really he's more into vandalism and littering.",
+        "catchphrase": "'I AM the sticky situation!'"
+    },
+    {
+        "name": "Artie",
+        "pronouns": "He/Him",
+        "description": "Artie holds an important title in Echoville: Co-Head of Transportation. His job is to oversee the efficiency of travelling around Echoville. He's great at envisioning the layout of roads and invents ways to make traveling about the journey, not just the destination! Fun fact: Artie hikes each road he helps build, so he can see what the journey is like on foot. <br> <br> Artie is famous for radiating a fun-loving energy everywhere he goes! His sense of humor always fills up a room with laughter. With his passion for good vibes, there's never a dull moment when he's around!",
+        "image": "/characters/artie.png",
+        "color": "Red as bright as the energy he brings into any room he enters!",
+        "items": "Phone, handheld game console.",
+        "hobbies": "Hiking, comedy, dancing, cooking, video games, spending time with his friends.",
+        "catchphrase": "'Good vibes!'"
+    },
+    {
+        "name": "Vienna",
+        "pronouns": "She/Her",
+        "description": "Vienna holds an important title in Echoville: Co-Head of Transportation. Her job is to draw the blueprints for all new roads and paths in Echoville. Her analytical mind and sharp eye make her a great leader, ensuring that everything is being built according to plan. She values the gratification of a job well done, and is always ready to offer a helping hand and encouragement! <br> <br> Vienna loves to learn and will be the first to jump on an adventure to explore the unknown. She extends her passion to all her friends, always inviting them along and sharing anything that she learns with them.",
+        "image": "/characters/vienna.png",
+        "color": "A darkened snow blue that matches her deep, vibrant intelligence!",
+        "items": "Phone, sketch pad and pencil.",
+        "hobbies": "Scavenger hunts, solving mysteries, reading, writing poetry, painting, traveling.",
+        "catchphrase": "'A mystery is just an adventure not yet embarked on.'"
+    }
+]
