@@ -10,7 +10,7 @@ export const CharactersMain = () => {
           <div className="flex-1 space-y-6">
             {/* Centered h2 on small screens only */}
             <div className="w-full flex justify-center md:hidden">
-              <h2 className="text-[36px] mb-1 text-center">Characters</h2>
+              <h2 className="text-[36px] mb-1 text-center text-[#00488D]">Characters</h2>
             </div>
           </div>
         </div>
