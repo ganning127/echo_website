@@ -22,6 +22,5 @@ export const NAV_CONTENT = [
   {
     title: "Play",
     href: "/play",
-    darker: true,
   },
 ];

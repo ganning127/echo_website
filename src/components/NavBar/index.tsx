@@ -29,7 +29,6 @@ export const NavBar = () => {
               key={item.href}
               title={item.title}
               href={item.href}
-              darker={item.darker}
               isLeft={isLeft}
               isRight={isRight}
             />

@@ -69,7 +69,7 @@ export const FoundersStory = () => {
   const events = [
     {
       year: "July 4, 2014",
-      text: "July 2014 Dad receives life saving procedure after heart attack on a family vacation",
+      text: "Dad receives life saving procedure after heart attack on a family vacation",
       img: "/timeline/dad_procedure.png",
     },
     {
@@ -84,13 +84,13 @@ export const FoundersStory = () => {
     },
     {
       year: "May 16, 2017",
-      text: "May Met Dr. Marcella Press in the catheterization lab at UCLA hospital",
+      text: "Met Dr. Marcella Press in the catheterization lab at UCLA hospital",
       img: "/timeline/met_dr.png",
     },
     {
       year: "July 25, 2017",
       text: "Co-founded the Early Cardiovascular Health Outreach SMS (ECHOS) alongside the UCLA Women's Cardiovascular Center ",
-      img: "/echo_logo.png",
+      img: "/timeline/orig_echo_logo.png",
     },
     {
       year: "September 25, 2017",
@@ -127,7 +127,7 @@ export const FoundersStory = () => {
     },
     {
       year: "November, 2022",
-      text: "$10,000 Ambition Accelerator Winner at First Pitch Competition at Taco Bell Foundation in Irvine, Ca.",
+      text: "Ambition Accelerator Winner at First Pitch Competition at Taco Bell Foundation in Irvine, Ca.",
       img: "/timeline/tbf_pitch.png",
     },
     {
@@ -145,7 +145,7 @@ export const FoundersStory = () => {
     },
     {
       year: "2025",
-      text: "Earned a Master's in Public Health ",
+      text: "Earned a Master's in Public Health at Charles R. Drew University of Medicine and Science",
       img: "/timeline/masters_ph.png",
     },
   ];
@@ -268,7 +268,7 @@ const TEAM_MEMBERS = [
   {
     name: "Ronit Ben-Joseph",
     role: "Narrative Designer / Writer",
-    image: "/people/ronit.jpg",
+    image: "/people/ro.jpg",
     icon: "/people/icons/ronit.png",
   },
   {

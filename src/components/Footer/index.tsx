@@ -32,6 +32,12 @@ export const Footer = () => {
               @edechoorg
             </a>
           </div>
+
+          <div>
+            <p className="text-sm">
+              &copy; 2025 Early Cardiovascular Health Outreach
+            </p>
+          </div>
         </div>
 
         {/* Right Section - Navigation Links */}
