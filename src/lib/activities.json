@@ -9,7 +9,8 @@
     "order": 1,
     "tags": [
       "home",
-      "poetry"
+      "poetry",
+      "vienna"
     ]
   },
   {
@@ -22,7 +23,8 @@
     "order": 2,
     "tags": [
       "home",
-      "game"
+      "game",
+      "plaqtrick"
     ]
   },
   {
@@ -35,7 +37,8 @@
     "order": 3,
     "tags": [
       "recipe",
-      "home"
+      "home",
+      "artie"
     ]
   }
 ]

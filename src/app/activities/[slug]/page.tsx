@@ -37,7 +37,7 @@ export default function ActivityPage({
         <Button className="mt-3 bg-[#7C2D36] hover:bg-[#013161] p-5">
           <Link
             href="/activities"
-            className=" relative text-[3vw] sm:text-[1vw] inline-block text-white rounded font-heading transition"
+            className=" relative text-[5vw] md:text-[2vw] inline-block text-white rounded font-heading transition"
           >
             ← All Activities
           </Link>
@@ -53,7 +53,7 @@ export default function ActivityPage({
         <Button className="bg-[#7C2D36] hover:bg-[#013161] mb-10">
           <Link
             href={activity.link}
-            className=" inline-block text-white rounded font-heading transition"
+            className=" inline-block text-white rounded font-heading transition text-[5vw] md:text-[2vw]"
           >
             Download Activity
           </Link>
@@ -66,6 +66,16 @@ export default function ActivityPage({
           className="rounded mb-6 m-auto z-20 relative"
         />
       </div>
+      <div className="w-5/6 m-auto">
+        <Button className="mt-3 bg-[#7C2D36] hover:bg-[#013161] p-5">
+          <Link
+            href="/activities"
+            className=" relative text-[5vw] md:text-[2vw] inline-block text-white rounded font-heading transition"
+          >
+            ← All Activities
+          </Link>
+        </Button>
+      </div>
       <div className="pb-10">
         <Image
           className="absolute md:mt-40 left-0 top-30 w-auto visible z-0 h-[60vw] lg:h-[40vw] max-h-[500px]"
@@ -77,7 +87,7 @@ export default function ActivityPage({
 
         <Image
           className="absolute md:mt-40 right-0 top-30 w-auto visible z-0 h-[60vw] lg:h-[40vw] max-h-[500px]"
-          src="/Activities window Right.png"
+          src="/Activities Window Right.png"
           alt="window"
           width="200"
           height="500"

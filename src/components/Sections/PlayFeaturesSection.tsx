@@ -7,7 +7,7 @@ export const PlayFeaturesSection = () => {
       <section className="bg-[#ffffff] w-full pb-20 mt-[-5px]">
         <FadeInWhenVisible>
           <div className="text-[5vw] sm:text-[2vw] w-5/6 m-auto">
-            <h1 className="text-center text-3xl mt-0 lg:mt-20 md:pt-20 text-[#013161] pb-5">
+            <h1 className="text-center text-[6vw] sm:text-[2.5vw] mt-0 lg:mt-20 md:pt-20 text-[#013161] pb-5">
               Echoville: The Heart Chambers (Coming Soon)
             </h1>
             <p>

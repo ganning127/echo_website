@@ -12,7 +12,7 @@ export default function Play() {
         <div>
           <NavBar />
           <Image
-            className="relative md:absolute top-0 z-0 w-auto lg:mt-0 md:mt-[10%]"
+            className="relative md:absolute top-0 z-0 w-auto lg:mt-0 md:mt-[10%] w-full"
             src="/PlayBanner.png"
             alt="door"
             width="1400"

@@ -35,7 +35,7 @@ export default function Activities() {
 
         <Image
           className="absolute md:mt-40 right-0 top-30 w-auto visible z-0 h-[60vw] lg:h-[40vw] max-h-[500px]"
-          src="/Activities window Right.png"
+          src="/Activities Window Right.png"
           alt="window"
           width="200"
           height="500"

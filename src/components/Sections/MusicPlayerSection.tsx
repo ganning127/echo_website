@@ -61,8 +61,8 @@ export const MusicPlayerSection = () => {
       {selection && (
         <button
           onClick={togglePlay}
-          className="fixed top-[5%] lg:top-4 left-[45%] lg:left-4 z-50 bg-[#1473d2] lg:bg-[#013161]  
-         hover:text-[#000000] lg:hover:text-white text-white px-4 py-2 hover:bg-[#FFD87A] rounded lg:hover:bg-[#1473d2] transition"
+          className="fixed top-[5vw] sm:top-[3vw] lg:top-4 left-[45%] lg:left-4 z-50 bg-[#1473d2] lg:bg-[#013161]  
+         hover:text-[#000000] lg:hover:text-white text-white px-4 py-2 hover:bg-[#FFD87A] rounded lg:hover:bg-[#1473d2] transition md:text-[2vw] text-[4vw]"
         >
           {isPlaying ? "Pause Music" : "Play Music"}
         </button>
