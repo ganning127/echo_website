@@ -1,10 +1,77 @@
 import Image from "next/image";
 import { FadeInWhenVisible } from "../Animation/FadeInWhenVisible";
 
+const FourPillarsListItem = ({
+  title,
+  value,
+}: {
+  title: string;
+  value: string;
+}) => {
+  return (
+    <li className="text-[24px]">
+      <p className="">
+        <span className="font-bold">{title}: </span>
+        {value}
+      </p>
+    </li>
+  );
+};
+
+const PillarImage = ({ src }: { src: string }) => {
+  return (
+    <div className="relative w-full aspect-square">
+      <Image
+        src={src}
+        alt={src.split("/").pop()?.split(".")[0] || "Pillar Image"}
+        fill
+        className="object-contain"
+        sizes="(max-width: 640px) 50vw, (max-width: 1024px) 25vw, 200px"
+      />
+    </div>
+  );
+};
+
 export const MissionSection = () => {
   const imageSize = 120;
   return (
     <section className="bg-white md:px-20 text-[#012C5D] space-y-16">
+      <FadeInWhenVisible>
+        <div className="flex flex-col items-start gap-6">
+          <h2 className="text-2xl font-bold text-[48px]">Our Four Pillars</h2>
+
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 w-full">
+            <PillarImage src="/pillars/mind.png" />
+            <PillarImage src="/pillars/eat.png" />
+            <PillarImage src="/pillars/sleep.png" />
+            <PillarImage src="/pillars/move.png" />
+          </div>
+
+          <p className="text-[24px]">
+            Here in Echoville, we have four main pillars that reflect our
+            values:
+          </p>
+          <ul className="list-disc ml-8">
+            <FourPillarsListItem
+              title="Mind-Well"
+              value="The actions we take and the words we say have a great impact on our quality of life. Being one with our emotions helps us set up a basis of serenity. "
+            />
+            <FourPillarsListItem
+              title="Eat-Well"
+              value="Eating balanced meals and snacks is a great way to feel energized and strong. Some important food groups are: fruits, vegetables, grains, proteins, and dairy."
+            />
+            <FourPillarsListItem
+              title="Sleep-Well"
+              value="Our bodies work hard to keep us up and moving. Allowing ourselves time to sleep is essential to replenish the energy we spend during the day."
+            />
+            <FourPillarsListItem
+              title="Move-Well"
+              value="Movement is an exciting way to keep our bodies healthy and strong. Running, jumping, dancing, walking, any movement is good… The possibilities of movement are endless!"
+            />
+          </ul>
+        </div>
+      </FadeInWhenVisible>
+
       <FadeInWhenVisible>
         <div className="flex flex-col md:flex-row items-start gap-6">
           <div className="flex-1">
