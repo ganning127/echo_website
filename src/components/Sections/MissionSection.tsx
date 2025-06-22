@@ -1,7 +1,7 @@
 import Image from "next/image";
 import { FadeInWhenVisible } from "../Animation/FadeInWhenVisible";
 
-const FourPillarsListItem = ({
+const TitleValueListItem = ({
   title,
   value,
 }: {
@@ -51,20 +51,20 @@ export const MissionSection = () => {
             Here in Echoville, we have four main pillars that reflect our
             values:
           </p>
-          <ul className="list-disc ml-8">
-            <FourPillarsListItem
+          <ul className="list-disc pl-8 space-y-3">
+            <TitleValueListItem
               title="Mind-Well"
               value="The actions we take and the words we say have a great impact on our quality of life. Being one with our emotions helps us set up a basis of serenity. "
             />
-            <FourPillarsListItem
+            <TitleValueListItem
               title="Eat-Well"
               value="Eating balanced meals and snacks is a great way to feel energized and strong. Some important food groups are: fruits, vegetables, grains, proteins, and dairy."
             />
-            <FourPillarsListItem
+            <TitleValueListItem
               title="Sleep-Well"
               value="Our bodies work hard to keep us up and moving. Allowing ourselves time to sleep is essential to replenish the energy we spend during the day."
             />
-            <FourPillarsListItem
+            <TitleValueListItem
               title="Move-Well"
               value="Movement is an exciting way to keep our bodies healthy and strong. Running, jumping, dancing, walking, any movement is good… The possibilities of movement are endless!"
             />
@@ -98,26 +98,30 @@ export const MissionSection = () => {
           <div className="flex-1">
             <h2 className="text-2xl font-bold mb-4 text-[48px]">CONTENT</h2>
             <ul className="list-disc pl-5 space-y-3">
-              <li>
-                <h5 className="inline">HOW THE HEART WORKS:</h5> Explore how
-                your heart beats, pumps, and powers your body with fun visuals
-                and mini-games.
-              </li>
-              <li>
-                <h5 className="inline">HEALTHY HABITS:</h5> Bite-sized lessons
-                on nutrition, physical activity, stress, and sleep — and how
-                they affect heart health. This information shows how everyday
-                choices protect the heart.
-              </li>
-              <li>
-                <h5 className="inline">BEYOND THE BODY:</h5> Understand how
-                where you live, play, and learn can shape your heart health.
-              </li>
-              <li>
-                <h5 className="inline">LEVEL UP YOUR LEARNING:</h5> Extra games,
+              <TitleValueListItem
+                title="How the heart works"
+                value="Explore how your
+                heart beats, pumps, and powers your body with fun visuals and
+                mini-games."
+              />
+              <TitleValueListItem
+                title="Healthy habits"
+                value="Bite-sized lessons on
+                nutrition, physical activity, stress, and sleep — and how they
+                affect heart health. This information shows how everyday choices
+                protect the heart."
+              />
+              <TitleValueListItem
+                title="Beyond the body"
+                value="Understand how where
+                you live, play, and learn can shape your heart health."
+              />
+              <TitleValueListItem
+                title="Level up your learning"
+                value="Extra games,
                 tools, and real-world missions to test your heart health
-                knowledge.
-              </li>
+                knowledge."
+              />
             </ul>
           </div>
           <Image
@@ -134,7 +138,7 @@ export const MissionSection = () => {
         <div className="flex flex-col md:flex-row items-start gap-6 text-[24px]">
           <div className="flex-1">
             <h2 className="text-2xl font-bold mb-4 text-[48px]">GOALS</h2>
-            <ul className="list-disc pl-5 space-y-3">
+            <ul className="list-disc pl-8 space-y-3">
               <li>
                 Deliver engaging, science-based content on cardiovascular
                 anatomy and function.
@@ -172,19 +176,24 @@ export const MissionSection = () => {
             <h2 className="text-2xl font-bold mb-4 text-[#012C5D] text-[48px]">
               OUTCOME
             </h2>
-            <ul className="list-disc pl-5 space-y-3">
-              <li>
-                <strong>Empowered Choices:</strong> Make informed decisions
-                about food, activity, and wellness.
-              </li>
-              <li>
-                <strong>Youth Advocacy:</strong> Gain tools to speak out about
-                heart health.
-              </li>
-              <li>
-                <strong>Community Action:</strong> Lead a heart health
-                initiative — from walkathons to awareness posters.
-              </li>
+            <ul className="list-disc pl-8 space-y-3">
+              <TitleValueListItem
+                title="Empowered Choices"
+                value="Make informed decisions
+                about food, activity, and wellness."
+              />
+
+              <TitleValueListItem
+                title="Youth Advocacy"
+                value="Gain tools to speak out about
+                heart health."
+              />
+
+              <TitleValueListItem
+                title="Community Action"
+                value="Lead a heart health
+                initiative — from walkathons to awareness posters."
+              />
             </ul>
           </div>
           <Image
