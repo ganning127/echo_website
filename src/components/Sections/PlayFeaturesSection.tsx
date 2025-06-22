@@ -12,12 +12,12 @@ export const PlayFeaturesSection = () => {
             </h1>
             <p>
               Plaqtrick has a slimy, sinister plan and will stop at nothing
-              until all of Echoville is doused in his ooey gooey glop! Join
-              Echo, Artie, and Vienna as they gather the knowledge and skills
-              needed to build a heart healthy city and protect themselves from
+              until all of Echoville is doused in his ooey gooey glop! As Echo,
+              you&apos;ll adventure with Artie and Vienna gathering wisdom and
+              skills to build a heart healthy city and defend the citizens from
               Plaqtrick&apos;s sticky schemes. Explore the four chambers of the
               heart, complete challenges, and take part in real life activities
-              to get your blood-pumping.
+              to get your blood pumping.
             </p>
             <br></br>
             <p>
@@ -42,11 +42,9 @@ export const PlayFeaturesSection = () => {
                 Dynamic characters
               </h3>
               <p className="text-[5vw] sm:text-[2vw]">
-                Players will join Echo in getting to know all the citizens of
-                Echoville. (Add something about like going on
-                adventures/challenges) Each character has an important role in
-                heart health and must work together to keep Echoville running
-                efficiently.
+                Play as Echo and get to know all the citizens of Echoville. Each
+                character has an important role and striking personality that
+                makes their city an efficient and unique place!
               </p>
             </div>
           </div>
@@ -59,7 +57,7 @@ export const PlayFeaturesSection = () => {
               <p className="text-[5vw] sm:text-[2vw]">
                 Incorporating short bursts of real-life movement into the
                 in-game play keeps players on their toes- literally! Learning
-                about how to keep your heart pumping strong is important, but
+                about how to keep your heart pumping strongly is important, but
                 putting that knowledge to use is life changing!
               </p>
             </div>
@@ -89,10 +87,10 @@ export const PlayFeaturesSection = () => {
                 Contemporary learning
               </h3>
               <p className="text-[5vw] sm:text-[2vw]">
-                Art and education are entwined in Echoville! Players will be
+                Play and education are entwined in Echoville! Players will be
                 able to explore new lands and discover more about their own
                 anatomy, all while being immersed in a world of creativity and
-                color!
+                discovery.
               </p>
             </div>
           </div>

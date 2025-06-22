@@ -255,7 +255,7 @@ const TEAM_MEMBERS = [
   },
   {
     name: "Emilia Hernandez",
-    role: "Web Designer",
+    role: "Web Designer/Programmer",
     image: "/people/emilia.jpg",
     icon: "/people/icons/emilia.png",
   },
