@@ -20,6 +20,10 @@ export const NAV_CONTENT = [
     href: "/music",
   },
   {
+    title: "Donate",
+    href: "https://example.com/",
+  },
+  {
     title: "Play",
     href: "/play",
   },

@@ -107,8 +107,11 @@ const NavLinkBox = ({
     roundedClass = "border-l-2";
   }
 
+  const isExternalLink =
+    href.startsWith("http://") || href.startsWith("https://");
+
   return (
-    <a href={href}>
+    <Link href={href} target={isExternalLink ? "_blank" : "_self"}>
       <div
         className={cn(
           "border-[#0F4C75] p-4 text-white px-6",
@@ -120,6 +123,6 @@ const NavLinkBox = ({
       >
         <h2 className="text-xl">{title}</h2>
       </div>
-    </a>
+    </Link>
   );
 };

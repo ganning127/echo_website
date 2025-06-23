@@ -1,6 +1,7 @@
 import Image from "next/image";
-import { Mail, Instagram } from "lucide-react";
+import { Mail, Instagram, Newspaper } from "lucide-react";
 import { NAV_CONTENT } from "../NavBar/NavContent";
+import Link from "next/link";
 
 export const Footer = () => {
   return (
@@ -31,6 +32,11 @@ export const Footer = () => {
             >
               @edechoorg
             </a>
+          </div>
+
+          <div className="flex items-center gap-2 text-sm">
+            <Newspaper className="w-4 h-4" />
+            <Link href={"/about?tab=newsletter"}>Newsletter</Link>
           </div>
 
           <div>
