@@ -25,7 +25,7 @@ export const ComposerNoteCard = () => {
         as much as I’ve enjoyed imagining how it sounds :)
       </p>
       <br></br>
-      <p>-Bella Rose Kelly</p>
+      <p className="text-[3.5vw] sm:text-[1.5vw]">-Bella Rose Kelly</p>
     </>
   );
 };

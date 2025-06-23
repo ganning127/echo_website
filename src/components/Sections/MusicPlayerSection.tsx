@@ -28,6 +28,13 @@ const songName: Record<string, string> = {
   Relax: "Echo's Lullaby",
 };
 
+const pillarDetails: Record<string, { label: string; image: string }> = {
+  Refocus: { label: "Mind Well", image: "/pillars/mind.png" },
+  Create: { label: "Eat Well", image: "/pillars/eat.png" },
+  Move: { label: "Move Well", image: "/pillars/move.png" },
+  Relax: { label: "Sleep Well", image: "/pillars/sleep.png" },
+};
+
 export const MusicPlayerSection = () => {
   const [selection, setSelection] = useState<string | null>(null);
   const [isPlaying, setIsPlaying] = useState(false); // ✅ track play state
@@ -96,9 +103,18 @@ export const MusicPlayerSection = () => {
                       <h2 className="text-[5vw] sm:text-[3vw] lg:text-[2vw]  font-bold mb-4">
                         Song Name: {songName[selection]}
                       </h2>
-                      <h3 className="text-[5vw] sm:text-[3vw] lg:text-[2vw] text-[#000000] pb-5">
-                        Mood: {selection}
-                      </h3>
+                      <div className="flex items-center gap-2 mb-4">
+                        <span className="font-heading text-[5vw] sm:text-[3vw] lg:text-[2vw] text-[#000000] font-medium">
+                          Mood: {selection}
+                        </span>{" "}
+                        <Image
+                          src={pillarDetails[selection].image}
+                          alt={pillarDetails[selection].label}
+                          width={30}
+                          height={30}
+                          className="inline-block"
+                        />
+                      </div>
                       <p className="text-[5vw] sm:text-[3vw] lg:text-[1.5vw] text-gray-700">
                         {moreDetails[selection]}
                       </p>
