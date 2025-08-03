@@ -55,6 +55,12 @@ export const Footer = () => {
               </a>
             );
           })}
+          <a href={"/privacyPolicy"}>
+            <h6 className="text-[24px]">Privacy Policy</h6>
+          </a>
+          <a href={"/TermsandConditions"}>
+            <h6 className="text-[24px]">Terms and Conditions</h6>
+          </a>
         </div>
       </div>
     </footer>

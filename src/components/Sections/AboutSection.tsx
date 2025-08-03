@@ -278,6 +278,12 @@ const TEAM_MEMBERS = [
     icon: "/people/icons/ganning.png",
   },
   {
+    name: "Aaron Hill",
+    role: "Game Developer",
+    image: "/people/aaron.png",
+    icon: "/people/icons/aaron.png",
+  },
+  {
     name: "Bella Rose Kelly",
     role: "Music Composer",
     image: "/people/bella.jpg",
