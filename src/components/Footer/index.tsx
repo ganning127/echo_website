@@ -1,9 +1,8 @@
 "use client";
 
 import Image from "next/image";
-import { Mail, Instagram, Newspaper } from "lucide-react";
+import { Mail, Instagram } from "lucide-react";
 import { NAV_CONTENT } from "../NavBar/NavContent";
-import Link from "next/link";
 import { NewsletterStripFooter } from "../Sections/NewsletterStripFooter";
 
 export const Footer = () => {
