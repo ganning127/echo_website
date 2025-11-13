@@ -43,7 +43,7 @@ export const MissionSection = () => {
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 w-full">
             <PillarImage src="/pillars/mind.png" />
             <PillarImage src="/pillars/eat.png" />
-            <PillarImage src="/pillars/sleep.png" />
+            <PillarImage src="/pillars/rest well.png" />
             <PillarImage src="/pillars/move.png" />
           </div>
 
@@ -61,7 +61,7 @@ export const MissionSection = () => {
               value="Eating balanced meals and snacks is a great way to feel energized and strong. Some important food groups are: fruits, vegetables, grains, proteins, and dairy."
             />
             <TitleValueListItem
-              title="Sleep-Well"
+              title="Rest-Well"
               value="Our bodies work hard to keep us up and moving. Allowing ourselves time to sleep is essential to replenish the energy we spend during the day."
             />
             <TitleValueListItem
