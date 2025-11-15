@@ -286,7 +286,7 @@ const TEAM_MEMBERS = [
   {
     name: "Jamie Morales",
     role: "Illustrator",
-    image: "/people/Jamie.png",
+    image: "/people/Jamie.jpg",
     icon: "/people/icons/echo_logo.png",
   },
   {
