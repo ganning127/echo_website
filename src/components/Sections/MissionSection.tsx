@@ -62,7 +62,7 @@ export const MissionSection = () => {
             />
             <TitleValueListItem
               title="Rest-Well"
-              value="Our bodies work hard to keep us up and moving. Allowing ourselves time to sleep is essential to replenish the energy we spend during the day."
+              value="Our bodies work hard to keep us up and moving. Allowing ourselves time to rest is essential to replenish the energy we spend during the day."
             />
             <TitleValueListItem
               title="Move-Well"
@@ -107,7 +107,7 @@ export const MissionSection = () => {
               <TitleValueListItem
                 title="Healthy habits"
                 value="Bite-sized lessons on
-                nutrition, physical activity, stress, and sleep — and how they
+                nutrition, physical activity, stress, and rest — and how they
                 affect heart health. This information shows how everyday choices
                 protect the heart."
               />
