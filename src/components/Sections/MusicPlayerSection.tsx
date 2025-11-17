@@ -32,7 +32,7 @@ const pillarDetails: Record<string, { label: string; image: string }> = {
   Refocus: { label: "Mind Well", image: "/pillars/mind.png" },
   Create: { label: "Eat Well", image: "/pillars/eat.png" },
   Move: { label: "Move Well", image: "/pillars/move.png" },
-  Relax: { label: "Sleep Well", image: "/pillars/sleep.png" },
+  Relax: { label: "Rest Well", image: "/pillars/rest well.png" },
 };
 
 export const MusicPlayerSection = () => {

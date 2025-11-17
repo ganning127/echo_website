@@ -284,6 +284,12 @@ const TEAM_MEMBERS = [
     icon: "/people/icons/aaron.png",
   },
   {
+    name: "Jamie Morales",
+    role: "Illustrator",
+    image: "/people/Jamie.jpg",
+    icon: "/people/icons/echo_logo.png",
+  },
+  {
     name: "Bella Rose Kelly",
     role: "Music Composer",
     image: "/people/bella.jpg",
