@@ -123,9 +123,9 @@ export default function EchoExplorers() {
                 </Button>
               </a>
             </div>
-            <div className="col-span-2">
+            <div className="col-span-2 flex justify-end">
               <Image
-                src="/How to register.png"
+                src="/Program_Registration.png"
                 alt="Registration"
                 width={535}
                 height={385}
