@@ -2,9 +2,9 @@
 import { useState } from "react";
 import { ChevronDown } from "lucide-react";
 
-interface FAQItem {
+export interface FAQItem {
   question: string;
-  answer: JSX.Element;
+  answer: React.ReactNode;
 }
 
 export default function Accordion({ items }: { items: FAQItem[] }) {
