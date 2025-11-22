@@ -19,7 +19,7 @@ export default function EchoExplorers() {
       </nav>
       <Suspense fallback={<div>Loading...</div>}>
         <div className="bg-[#00488D]">
-          <h1 className="text-5xl text-white pb-10 mx-auto text-center pt-5">
+          <h1 className="text-5xl text-white pb-10 mx-auto text-center pt-12 sm:pt-5">
             ECHO Explorers Program
           </h1>
         </div>
