@@ -29,7 +29,7 @@ export default function FAQSection() {
           </p>
 
           <p>
-            <strong>4.</strong> You will receive an email confirming your
+            <strong>5.</strong> You will receive an email confirming your
             enrollment with an order number—please keep this for your records.
           </p>
 
