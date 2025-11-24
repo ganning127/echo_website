@@ -26,9 +26,6 @@ export default function Play() {
           </div>
           <div className="relative">
             <PlayFeaturesSection />
-            <div className="w-3/6 m-auto pb-10 ">
-              <PlayNewsletterSection />
-            </div>
             <Footer />
           </div>
         </div>

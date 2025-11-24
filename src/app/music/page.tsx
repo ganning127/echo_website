@@ -4,6 +4,19 @@ import Image from "next/image";
 import { HeartConnectionSection } from "@/components/Sections/HeartConnectionSection";
 import { ComposerNoteSection } from "@/components/Sections/ComposerNoteSection";
 import { MusicPlayerSection } from "@/components/Sections/MusicPlayerSection";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "ECHO Music | Heart-Healthy Songs & Soundtracks",
+  description:
+    "Jump into ECHO’s music — songs and soundtracks that teach kids about heart health, movement, mindfulness, and rest through melody.",
+  keywords: [
+    "ECHO music",
+    "heart health songs",
+    "educational music for kids",
+    "cardiovascular wellness through music",
+  ],
+};
 
 export default function Music() {
   return (

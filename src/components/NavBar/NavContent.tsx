@@ -8,6 +8,10 @@ export const NAV_CONTENT = [
     href: "/characters",
   },
   {
+    title: "Program",
+    href: "/program/echo-explorers",
+  },
+  {
     title: "Activities",
     href: "/activities",
   },

@@ -6,7 +6,15 @@ import { Metadata } from "next";
 import characters from "@/lib/characters.json";
 
 export const metadata: Metadata = {
-  title: "Characters",
+  title: "ECHO Characters | Meet the Heart Health Heroes",
+  description:
+    "Meet the ECHO characters — friendly guides in Echoville who help children understand heart health, nutrition, rest, and movement.",
+  keywords: [
+    "ECHO characters",
+    "heart health heroes",
+    "Echoville guides",
+    "kids health education characters",
+  ],
 };
 
 export default async function CharacterPage(props: {
