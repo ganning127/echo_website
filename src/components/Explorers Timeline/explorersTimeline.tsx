@@ -79,25 +79,19 @@ const weeks = [
 
 export const ExplorersTimeline = () => {
   const scrollRef = useRef<HTMLDivElement | null>(null);
+  const itemRef = useRef<HTMLDivElement | null>(null);
 
   const scroll = (direction: "left" | "right") => {
-    if (scrollRef.current) {
-      // Responsive scroll amount
-      let amount = 950; // default for desktop
+    if (!scrollRef.current || !itemRef.current) return;
 
-      if (window.innerWidth < 480) {
-        amount = 280; // mobile (very small screens)
-      } else if (window.innerWidth < 768) {
-        amount = 400; // mobile large / small tablet
-      } else if (window.innerWidth < 1024) {
-        amount = 650; // tablets
-      }
+    const itemWidth = itemRef.current.offsetWidth; // TRUE width on any device
+    const gap = 24; // Tailwind gap-6 → 24px
+    const scrollAmount = itemWidth + gap;
 
-      scrollRef.current.scrollBy({
-        left: direction === "left" ? -amount : amount,
-        behavior: "smooth",
-      });
-    }
+    scrollRef.current.scrollBy({
+      left: direction === "left" ? -scrollAmount : scrollAmount,
+      behavior: "smooth",
+    });
   };
 
   return (
@@ -107,11 +101,11 @@ export const ExplorersTimeline = () => {
         Program Timeline
       </h2>
 
-      {/* Yellow line behind items */}
+      {/* Yellow Line */}
       <div
         className="absolute left-0 right-0 top-[35%] h-2 bg-[#FFD87A] z-0"
         style={{ transform: "translateY(-50%)" }}
-      ></div>
+      />
 
       {/* Left Arrow */}
       <button
@@ -121,17 +115,17 @@ export const ExplorersTimeline = () => {
         <ChevronLeft className="w-6 h-6 text-[#00488D]" />
       </button>
 
-      {/* Scrollable container */}
+      {/* Carousel */}
       <div
         ref={scrollRef}
         className="flex gap-6 overflow-x-auto scroll-smooth px-16 snap-x snap-mandatory scrollbar-hide relative z-10"
       >
-        {weeks.map((week) => (
+        {weeks.map((week, index) => (
           <div
             key={week.number}
+            ref={index === 0 ? itemRef : null} // measure THIS element
             className="flex-shrink-0 w-72 rounded-3xl p-6 snap-center bg-transparent"
           >
-            {/* Icon */}
             <Image
               src={week.imgSrc}
               alt={`Week ${week.number}`}
@@ -142,7 +136,7 @@ export const ExplorersTimeline = () => {
             <p className="text-center text-[#00488D] text-lg font-heading leading-snug mt-5 rounded-2xl p-5">
               {week.subtitle}
             </p>
-            {/* Text */}
+
             <div className="bg-[#dbecf1] w-1/2 mx-auto text-center rounded-full">
               <p className="text-center text-[#00488D] text-sm p-2 rounded-2xl">
                 {week.date}
