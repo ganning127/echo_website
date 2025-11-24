@@ -14,7 +14,7 @@ export const metadata: Metadata = {
 export default function EchoExplorers() {
   return (
     <>
-      <nav className="bg-[#DBECF1]">
+      <nav className="bg-[#DBECF1] sticky top-0 z-50">
         <NavBar />
       </nav>
       <Suspense fallback={<div>Loading...</div>}>
@@ -57,23 +57,28 @@ export default function EchoExplorers() {
             <div className="col-span-1 mx-auto text-center flex justify-end">
               <Image
                 src="/Echo Explorers.png"
-                alt="ECHO Logo"
+                alt="Explorer Character"
                 width={740}
                 height={565}
-                className="m-auto pb-5 sm:w-auto w-[50%]"
+                className="m-auto pb-5 w-full max-w-[350px] lg:max-w-[420px] xl:max-w-[480px]"
               />
             </div>
           </section>
 
-          <section className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-6 px-5 sm:px-0">
+          <section className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-5 gap-6 px-5 sm:px-0">
             <div className="bg-white  rounded-2xl p-8 transition delay-150 duration-300 ease-in-out hover:-translate-y-1 hover:scale-105">
               <h3 className="text-2xl  text-[#00488D] mb-2">Registration</h3>
               <p className="text-lg">Opens December 15, 2025</p>
             </div>
 
             <div className="bg-white  rounded-2xl p-8 transition delay-150 duration-300 ease-in-out hover:-translate-y-1 hover:scale-105">
+              <h3 className="text-2xl text-[#00488D] mb-2">Location</h3>
+              <p className="text-lg">Island Pacific Academy</p>
+              <p className="text-lg">909 Haumea St, Kapolei, HI 96707</p>
+            </div>
+            <div className="bg-white  rounded-2xl p-8 transition delay-150 duration-300 ease-in-out hover:-translate-y-1 hover:scale-105">
               <h3 className="text-2xl text-[#00488D] mb-2">Schedule</h3>
-              <p className="text-lg">10 weeks, Mondays</p>
+              <p className="text-lg">10 weeks, Mondays,</p>
               <p className="text-lg">3:00 p.m. – 4:00 p.m.</p>
             </div>
 
@@ -110,7 +115,7 @@ export default function EchoExplorers() {
               <ExplorersTimeline />
             </section>
           </div>
-          <section className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-6 py-10 px-5 sm:px-0">
+          <section className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-1 py-10 px-5 sm:px-0">
             <div className="col-span-2">
               <h2 className="text-3xl text-[#00488D] mb-4">How to Register</h2>
               <p className="mb-3 text-lg">
@@ -124,7 +129,7 @@ export default function EchoExplorers() {
                 . If you already have an account, simply log in and select{" "}
                 <b>“Spring Enrichment 2026.”</b>
               </p>
-              <p className="text-lg">
+              <p className="text-lg mb-3">
                 Once you submit your enrollment, you will receive an email
                 confirming your completed enrollment with your order number.
               </p>
@@ -154,8 +159,8 @@ export default function EchoExplorers() {
                 src="/Program_Registration.png"
                 alt="Registration"
                 width={535}
-                height={385}
-                className="right-0 sm:m-0 pb-5"
+                height={285}
+                className="pb-5 w-full max-w-[500px] h-auto object-contain"
               />
             </div>
           </section>
