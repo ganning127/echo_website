@@ -127,7 +127,7 @@ export default function EchoExplorers() {
                   CAMPBRAIN platform
                 </a>
                 . If you already have an account, simply log in and select{" "}
-                <b>“Spring Enrichment 2026”</b> then{" "}
+                <b>“Spring Enrichment 2026,”</b> then{" "}
                 <b>&quot;Echo Explorers.&quot;</b>
               </p>
               <p className="text-lg mb-3">
