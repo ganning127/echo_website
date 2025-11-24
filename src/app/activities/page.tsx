@@ -2,6 +2,19 @@ import { Footer } from "@/components/Footer";
 import { NavBar } from "@/components/NavBar";
 import { AllActivities } from "@/components/Sections/AllActivities";
 import Image from "next/image";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "ECHO Activities | Games & Learning for Heart Health",
+  description:
+    "Explore ECHO’s fun activities — interactive games, recipes, and exercises to help kids learn about cardiovascular health through play.",
+  keywords: [
+    "ECHO activities",
+    "health games for kids",
+    "heart health exercises",
+    "nutrition recipes for children",
+  ],
+};
 
 export default function Activities() {
   return (

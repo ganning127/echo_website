@@ -2,9 +2,24 @@ import { WelcomeCard } from "@/components/Cards/WelcomeCard";
 import { Container } from "@/components/Container";
 import { Footer } from "@/components/Footer";
 import { NavBar } from "@/components/NavBar";
+import { Metadata } from "next";
+
 import { FeaturedActivities } from "@/components/Sections/FeaturedActivities";
 import Image from "next/image";
 import { FadeInWhenVisible } from "@/components/Animation/FadeInWhenVisible";
+
+export const metadata: Metadata = {
+  title: "ECHO | Early Cardiovascular Health Outreach",
+  description:
+    "Welcome to ECHOVILLE — the land inside your body! ECHO helps kids learn heart-healthy habits through mindfulness, movement, nutrition, and rest.",
+  keywords: [
+    "ECHO health education",
+    "heart health for kids",
+    "cardiovascular outreach",
+    "healthy habits",
+    "early cardiovascular education",
+  ],
+};
 
 export default function Home() {
   return (

@@ -3,6 +3,19 @@ import { NavBar } from "@/components/NavBar";
 import { MinuteChallengeSection } from "@/components/Sections/MinuteChallengeSection";
 import { OutreachVideoSection } from "@/components/Sections/OutreachVideoSection";
 import Image from "next/image";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "ECHO Outreach | Community Heart Health Education",
+  description:
+    "See how ECHO brings cardiovascular health education into communities and schools, offering resources, events, and programs to support kids and families.",
+  keywords: [
+    "ECHO outreach",
+    "community health education",
+    "heart health in schools",
+    "cardiovascular outreach program",
+  ],
+};
 
 export default function Outreach() {
   return (

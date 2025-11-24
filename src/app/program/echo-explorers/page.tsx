@@ -9,6 +9,15 @@ import FAQSection from "@/components/Echo Explorers FAQ/FAQ";
 
 export const metadata: Metadata = {
   title: "Echo Explorers",
+  description:
+    "Learn about the 10-week Echo Explorers program that teaches heart-healthy habits through interactive activities, games, and more.",
+  keywords: [
+    "Echo Explorers",
+    "Heart Health",
+    "Kids Program",
+    "Education",
+    "Health Program",
+  ],
 };
 
 export default function EchoExplorers() {
@@ -157,7 +166,7 @@ export default function EchoExplorers() {
             </div>
             <div className="col-span-2 flex justify-end">
               <Image
-                src="/Program_Registration.png"
+                src="/Echo_Explorers_Program_Registration.png"
                 alt="Registration"
                 width={535}
                 height={285}
