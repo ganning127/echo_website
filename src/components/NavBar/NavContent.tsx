@@ -4,12 +4,12 @@ export const NAV_CONTENT = [
     href: "/about",
   },
   {
-    title: "Program",
-    href: "/program/echo-explorers",
-  },
-  {
     title: "Characters",
     href: "/characters",
+  },
+  {
+    title: "Program",
+    href: "/program/echo-explorers",
   },
   {
     title: "Activities",
