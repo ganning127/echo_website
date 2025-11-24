@@ -84,11 +84,15 @@ export default function FAQSection() {
         >
           <Button
             variant="outline"
-            className="mt-4 text-[20px] px-10 py-6 hover:text-white hover:bg-[#00488D] bg-[#00A6C5] text-white font-heading"
+            className="mt-4 text-[30px] px-10 py-6 hover:text-white hover:bg-[#00488D] bg-[#00A6C5] text-white font-heading"
           >
             Register Now
           </Button>
         </a>
+
+        <p className="pt-5">
+          You will be redirected to ipaauxiliary.campbrainregistration.com
+        </p>
       </div>
     </section>
   );

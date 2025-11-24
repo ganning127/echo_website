@@ -14,12 +14,12 @@ export const metadata: Metadata = {
 export default function EchoExplorers() {
   return (
     <>
-      <nav className="bg-[#00488D]">
+      <nav className="bg-[#DBECF1]">
         <NavBar />
       </nav>
       <Suspense fallback={<div>Loading...</div>}>
         <div className="bg-[#00488D]">
-          <h1 className="text-5xl text-white pb-10 mx-auto text-center pt-12 sm:pt-5">
+          <h1 className="text-5xl text-white pb-10 mx-auto text-center pt-12 sm:pt-10">
             ECHO Explorers Program
           </h1>
         </div>
@@ -33,18 +33,25 @@ export default function EchoExplorers() {
               <p className="text-gray-700 leading-relaxed mb-4 text-xl">
                 For 10-weeks, Explorers will learn heart-healthy habits and they
                 will see how to utilize this knowledge to help themselves and
-                others. Each week introduces a new topic through interactive
-                learning, games, and creative activities. They will explore
-                mindfulness, the importance of taking breaks, staying active,
-                and eating nutritious foods through our four pillars:{" "}
+                others.
+              </p>
+              <p className="text-gray-700 leading-relaxed mb-4 text-xl">
+                {" "}
+                Each week introduces a new topic through interactive learning,
+                games, and creative activities. They will explore mindfulness,
+                the importance of taking breaks, staying active, and eating
+                nutritious foods through our four pillars:{" "}
                 <a
                   className="text-[#00488D] underline"
                   href="/about?tab=mission"
                 >
                   Mind-Well, Rest-Well, Move-Well, and Eat-Well
                 </a>
-                . By the end of the program, Explorers will have become leaders
-                in their community by organizing their own Heart Health Fair!
+                .{" "}
+              </p>
+              <p className="text-gray-700 leading-relaxed mb-4 text-xl">
+                By the end of the program, Explorers will have become leaders in
+                their community by organizing their own Heart Health Fair!
               </p>
             </div>
             <div className="col-span-1 mx-auto text-center flex justify-end">
@@ -88,11 +95,14 @@ export default function EchoExplorers() {
             >
               <Button
                 variant="outline"
-                className=" transition delay-150 duration-300 ease-in-out hover:-translate-y-1 hover:scale-105 mt-4 text-[20px] px-10 py-6 hover:text-white hover:bg-[#00488D] bg-[#00A6C5] text-white font-heading"
+                className=" transition delay-150 duration-300 ease-in-out hover:-translate-y-1 hover:scale-105 mt-4 text-[30px] px-10 py-6 hover:text-white hover:bg-[#00488D] bg-[#00A6C5] text-white font-heading"
               >
                 Register Now
               </Button>
             </a>
+            <p className="pt-5">
+              You will be redirected to ipaauxiliary.campbrainregistration.com
+            </p>
           </div>
 
           <div className="bg-[#E8F6FA]">
@@ -117,6 +127,9 @@ export default function EchoExplorers() {
               <p className="text-lg">
                 Once you submit your enrollment, you will receive an email
                 confirming your completed enrollment with your order number.
+              </p>
+
+              <p className="text-lg">
                 Please keep a record of your order number so that we may best
                 assist you if you need to make changes to your enrollment.
               </p>
@@ -129,7 +142,7 @@ export default function EchoExplorers() {
                 >
                   <Button
                     variant="outline"
-                    className=" transition delay-150 duration-300 ease-in-out hover:-translate-y-1 hover:scale-105 mt-4 text-[20px] px-10 py-6 hover:text-white hover:bg-[#00488D] bg-[#00A6C5] text-white font-heading"
+                    className=" transition delay-150 duration-300 ease-in-out hover:-translate-y-1 hover:scale-105 mt-4 text-[30px] px-10 py-6 hover:text-white hover:bg-[#00488D] bg-[#00A6C5] text-white font-heading"
                   >
                     Register Now
                   </Button>
