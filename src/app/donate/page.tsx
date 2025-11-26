@@ -22,14 +22,16 @@ export default function Donate() {
       <Suspense fallback={<div>Loading...</div>}>
         <h1 className="mt-5 text-5xl text-center mx-auto mb-5">Donate</h1>
         <div className="grid-cols-2 grid mx-auto">
-          <div className="max-w-lg mx-auto col-span-1 py-[32px] px-[16px]">
+          <div className="max-w-lg mx-auto col-span-2 sm:col-span-1 py-[32px] px-[16px]">
             <div className="bg-[#dfdffb] rounded-2xl p-5">
               <p className="mb-5 text-3xl font-heading">
                 Thank you for choosing to support Early Cardiovascular Health
                 Outreach.
               </p>
               <p className=" pb-5 text-lg">
-                Your contribution helps us nurture young hearts.
+                Your generosity strengthens our youth-centered programs and
+                activities shaping heart healthy habits that will last a
+                lifetime.
               </p>
               <p className="text-lg">
                 {" "}
@@ -40,14 +42,15 @@ export default function Donate() {
               </p>
             </div>
           </div>
-          <div className="col-span-1">
+          <div className="col-span-2 sm:col-span-1">
             <ZeffyDonationForm />
           </div>
         </div>
-        <div className="max-w-6xl pb-10 text-center mx-auto">
+        <div className="max-w-6xl px-5 sm:px-0 pb-10 text-center mx-auto">
           <p>If you would like to mail your donation, please send it to: </p>
           <p>Early Cardiovascular Health Outreach</p> <p>PO Box 970944</p>{" "}
-          <p>Waipahu, HI 96797</p>
+          <p className="mb-1">Waipahu, HI 96797</p>
+          <br></br>
           <p>
             {" "}
             Your gift is deductible for federal income tax purposes subject to
