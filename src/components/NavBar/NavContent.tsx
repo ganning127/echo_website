@@ -16,10 +16,6 @@ export const NAV_CONTENT = [
     href: "/activities",
   },
   {
-    title: "Outreach",
-    href: "/outreach",
-  },
-  {
     title: "Music",
     href: "/music",
   },

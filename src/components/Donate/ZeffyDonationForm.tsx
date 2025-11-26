@@ -6,7 +6,7 @@ export default function ZeffyDonationForm() {
       style={{
         position: "relative",
         overflow: "hidden",
-        height: "450px",
+        height: "500px",
         width: "100%",
       }}
     >
