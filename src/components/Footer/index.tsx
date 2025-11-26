@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import { Mail, Instagram } from "lucide-react";
+import { Mail, Instagram, Linkedin } from "lucide-react";
 import { NAV_CONTENT } from "../NavBar/NavContent";
 import { NewsletterStripFooter } from "../Sections/NewsletterStripFooter";
 
@@ -34,14 +34,24 @@ export const Footer = () => {
               <Mail className="w-4 h-4" />
               <a href="mailto:edecho.org@gmail.com">edecho.org@gmail.com</a>
             </div>
-            <div className="flex items-center gap-2 text-sm">
+            <div className="flex items-center gap-2 text-sm pb-3">
               <Instagram className="w-4 h-4" />
               <a
                 href="https://instagram.com/edechoorg"
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                @edechoorg
+                @EdEchoOrg
+              </a>
+            </div>
+            <div className="flex items-center gap-2 text-sm">
+              <Linkedin className="w-4 h-4" />
+              <a
+                href="https://www.linkedin.com/company/early-cardiovascular-health-outreach"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                ECHO
               </a>
             </div>
           </div>
@@ -110,6 +120,13 @@ export const Footer = () => {
               className="w-10 h-10 bg-[#FFD87A] rounded-full flex items-center justify-center hover:opacity-80 transition"
             >
               <Mail className="w-5 h-5 text-black" />
+            </a>
+            {/* LinkedIn */}
+            <a
+              href="https://www.linkedin.com/company/early-cardiovascular-health-outreach"
+              className="w-10 h-10 bg-[#FFD87A] rounded-full flex items-center justify-center hover:opacity-80 transition"
+            >
+              <Linkedin className="w-5 h-5 text-black" />
             </a>
           </div>
         </div>
