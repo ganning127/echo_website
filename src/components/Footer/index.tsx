@@ -10,7 +10,7 @@ export const Footer = () => {
     <>
       <NewsletterStripFooter></NewsletterStripFooter>
       <footer className="bg-[#1473d2] text-white px-8 py-6">
-        <div className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-3 gap-4">
+        <div className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-4 gap-4">
           {/* Left Section */}
           <div className="col-span-1 m-auto sm:m-0 text-center sm:text-left">
             <Image
@@ -25,7 +25,7 @@ export const Footer = () => {
               <br className="sm:block invisible" /> Donations are tax
               deductible.{" "}
             </p>
-            <p>EIN: 99-3101733</p>
+            <p className="mb-5">EIN: 99-3101733</p>
           </div>
 
           <div className="col-span-1 sm:block hidden">
@@ -58,6 +58,14 @@ export const Footer = () => {
                 </a>
               ))}
             </div>
+          </div>
+          <div className="col-span-1  mx-auto">
+            <a
+              href="https://app.candid.org/profile/16399760/early-cardiovascular-health-outreach-99-3101733"
+              target="_blank"
+            >
+              <img src="https://widgets.guidestar.org/prod/v1/pdp/transparency-seal/16399760/svg" />{" "}
+            </a>
           </div>
         </div>
         <hr className="my-5 sm:block hidden"></hr>

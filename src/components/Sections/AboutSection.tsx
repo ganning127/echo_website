@@ -10,8 +10,8 @@ export const AboutSection = () => {
             <div>
               <h2 className="text-[36px]   mb-1">MISSION</h2>
               <p className="text-[24px]">
-                We are committed to creating innovative approaches to protect
-                the heart health of our communities.
+                To spark positive change in youth and their communities through
+                heart-healthy programs and activities.
               </p>
             </div>
             <div>
@@ -287,7 +287,7 @@ const TEAM_MEMBERS = [
     name: "Jamie Morales",
     role: "Illustrator",
     image: "/people/Jamie.jpg",
-    icon: "/people/icons/echo_logo.png",
+    icon: "/people/icons/jamie.png",
   },
   {
     name: "Bella Rose Kelly",
