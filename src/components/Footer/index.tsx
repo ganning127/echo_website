@@ -79,7 +79,13 @@ export const Footer = () => {
               href="https://app.candid.org/profile/16399760/early-cardiovascular-health-outreach-99-3101733"
               target="_blank"
             >
-              <img src="https://widgets.guidestar.org/prod/v1/pdp/transparency-seal/16399760/svg" />{" "}
+              <Image
+                src="/candid_silver.svg"
+                alt="Candid"
+                width={500}
+                height={500}
+                className="m-auto pb-5 w-full"
+              />
             </a>
           </div>
         </div>
