@@ -80,7 +80,7 @@ export const Footer = () => {
               target="_blank"
             >
               <Image
-                src="/candid_silver.svg"
+                src="Candid_Silver.svg"
                 alt="Candid"
                 width={500}
                 height={500}
