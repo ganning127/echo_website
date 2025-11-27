@@ -32,7 +32,7 @@ export const Footer = () => {
             <h1 className="text-[30px]">Connect</h1>
             <div className="flex items-center pb-3 gap-2 text-sm">
               <Mail className="w-4 h-4" />
-              <a href="mailto:edecho.org@gmail.com">edecho.org@gmail.com</a>
+              <a href="mailto:info@edecho.org">info@EdEcho.org</a>
             </div>
             <div className="flex items-center gap-2 text-sm pb-3">
               <Instagram className="w-4 h-4" />
@@ -116,7 +116,7 @@ export const Footer = () => {
 
             {/* Mail */}
             <a
-              href="mailto:edecho.org@gmail.com"
+              href="mailto:info@edecho.org"
               className="w-10 h-10 bg-[#FFD87A] rounded-full flex items-center justify-center hover:opacity-80 transition"
             >
               <Mail className="w-5 h-5 text-black" />
