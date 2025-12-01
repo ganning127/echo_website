@@ -37,7 +37,7 @@ export const NavBar = () => {
             );
           })}
           <a href="/donate" className="ml-5">
-            <Button className="font-heading text-[20px] border-[#ffffff] p-7 text-white px-6 border-4 bg-[#00a6c4] hover:bg-[#013161]">
+            <Button className="font-heading text-[20px] border-[#ffffff] p-7 text-white px-6 border-4 hover:bg-[#00a6c4] bg-[#013161]">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="22"
@@ -104,22 +104,6 @@ export const NavBar = () => {
           )}
         </div>
       </nav>
-      <div className="fixed bottom-4 right-4 z-50">
-        <a href="/donate" className="ml-5">
-          <Button className="font-heading text-[20px] border-[#ffffff] p-7 text-white px-6 border-4 bg-[#00a6c4] hover:bg-[#013161]">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="22"
-              height="22"
-              viewBox="0 0 24 24"
-              fill="#FFD87A"
-            >
-              <path d="M12 21s-6.7-4.3-10-9c-1.7-2.4-1-5.9 1.5-7.7 2.2-1.5 5.2-.9 6.9 1C12.3 3.4 15.3 2.8 17.5 4.3c2.5 1.8 3.2 5.3 1.5 7.7-3.3 4.7-10 9-10 9z" />
-            </svg>{" "}
-            Donate
-          </Button>
-        </a>
-      </div>
     </>
   );
 };
