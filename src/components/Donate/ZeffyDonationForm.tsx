@@ -14,6 +14,7 @@ export default function ZeffyDonationForm() {
         title="Donation form powered by Zeffy"
         src="https://www.zeffy.com/embed/donation-form/donate-to-change-lives-5034"
         allow="payment-request"
+        data-cookiecategory="necessary"
         style={{
           position: "absolute",
           border: 0,
