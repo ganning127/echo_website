@@ -42,7 +42,7 @@ export default function RootLayout({
         <link
           rel="stylesheet"
           id="silktide-consent-manager-css"
-          href="silktide/silktide-consent-manager.css"
+          href="/silktide/silktide-consent-manager.css"
         ></link>
         {/* Load Silktide script */}
         <Script
