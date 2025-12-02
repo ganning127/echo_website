@@ -51,7 +51,6 @@ export default function RootLayout({
         />
 
         {/* Initialize Silktide */}
-
         <Script id="silktide-config" strategy="afterInteractive">
           {`
             silktideCookieBannerManager.updateCookieBannerConfig({
@@ -78,6 +77,9 @@ export default function RootLayout({
                   required: false,
                   onAccept: function() {
                     console.log('Analytics enabled');
+                    if (window.__analyticsConsentGranted) {
+                      window.__analyticsConsentGranted();
+                    }
                   }
                 },
                 {
@@ -88,14 +90,14 @@ export default function RootLayout({
                   onAccept: function() {
                     console.log('Advertising enabled');
                     if (window.__instagramConsentGranted) {
-      window.__instagramConsentGranted();
-    }
+                      window.__instagramConsentGranted();
+                    }
                   },
-                  onReject: () => {
-    if (window.__instagramConsentRevoked) {
-      window.__instagramConsentRevoked();
-    }
-  }
+                  onReject: function() {
+                    if (window.__instagramConsentRevoked) {
+                      window.__instagramConsentRevoked();
+                    }
+                  }
                 }
               ],
               text: {
