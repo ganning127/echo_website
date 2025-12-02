@@ -9,16 +9,14 @@ export const metadata: Metadata = {
 };
 export default function Characters() {
   return (
-    <>
-      <nav className="bg-[#DBECF1] w-full">
-        <NavBar />
-      </nav>
+    <div className="bg-[#DBECF1] min-h-screen">
+      <NavBar />
 
       <Suspense fallback={<div>Loading...</div>}>
         <CharactersMain />
       </Suspense>
 
       <Footer />
-    </>
+    </div>
   );
 }

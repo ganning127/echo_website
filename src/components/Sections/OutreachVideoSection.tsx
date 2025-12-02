@@ -33,14 +33,17 @@ export const OutreachVideoSection = () => {
             </div>
             <div className="col-span-3 md:col-span-5 lg:col-span-3 z-0 justify-self-center lg:order-1 order-1">
               <div className="bg-[#D7BDE7] border-[#7B5AA1] border-20 border-double w-full lg:w-[50vw]">
-                <iframe
-                  className="w-full lg:h-[30vw] md:h-[250px] h-[150px]"
-                  width="560"
-                  height="315"
-                  src="https://www.youtube.com/embed/qpmOABYdZbU?si=gXVG_Ob1gu0EqIit"
-                  title="YouTube video player"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen"
-                ></iframe>
+                <div className="w-full lg:h-[30vw] md:h-[250px] h-[150px]">
+                  <iframe
+                    className="w-full lg:h-[30vw] md:h-[250px] h-[150px]"
+                    width="560"
+                    height="315"
+                    src="https://www.youtube-nocookie.com/embed/qpmOABYdZbU?si=gXVG_Ob1gu0EqIit"
+                    title="YouTube video player"
+                    data-cookiecategory="advertising"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen"
+                  ></iframe>
+                </div>
               </div>
               <Image
                 className="relative w-[50vw] m-auto"

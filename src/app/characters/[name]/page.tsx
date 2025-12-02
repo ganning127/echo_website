@@ -24,16 +24,14 @@ export default async function CharacterPage(props: {
   const { name } = params;
 
   return (
-    <>
-      <nav className="bg-[#DBECF1] w-full">
-        <NavBar />
-      </nav>
+    <div className="bg-[#DBECF1] min-h-screen">
+      <NavBar />
 
       <Suspense fallback={<div>Loading...</div>}>
         <CharactersDetails name={name} />
       </Suspense>
       <Footer />
-    </>
+    </div>
   );
 }
 

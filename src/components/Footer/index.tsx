@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import { Mail, Instagram } from "lucide-react";
+import { Mail, Instagram, Linkedin } from "lucide-react";
 import { NAV_CONTENT } from "../NavBar/NavContent";
 import { NewsletterStripFooter } from "../Sections/NewsletterStripFooter";
 
@@ -10,7 +10,7 @@ export const Footer = () => {
     <>
       <NewsletterStripFooter></NewsletterStripFooter>
       <footer className="bg-[#1473d2] text-white px-8 py-6">
-        <div className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-3 gap-4">
+        <div className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-4 gap-4">
           {/* Left Section */}
           <div className="col-span-1 m-auto sm:m-0 text-center sm:text-left">
             <Image
@@ -25,23 +25,33 @@ export const Footer = () => {
               <br className="sm:block invisible" /> Donations are tax
               deductible.{" "}
             </p>
-            <p>EIN: 99-3101733</p>
+            <p className="mb-5">EIN: 99-3101733</p>
           </div>
 
           <div className="col-span-1 sm:block hidden">
             <h1 className="text-[30px]">Connect</h1>
             <div className="flex items-center pb-3 gap-2 text-sm">
               <Mail className="w-4 h-4" />
-              <a href="mailto:edecho.org@gmail.com">edecho.org@gmail.com</a>
+              <a href="mailto:info@edecho.org">info@EdEcho.org</a>
             </div>
-            <div className="flex items-center gap-2 text-sm">
+            <div className="flex items-center gap-2 text-sm pb-3">
               <Instagram className="w-4 h-4" />
               <a
                 href="https://instagram.com/edechoorg"
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                @edechoorg
+                @EdEchoOrg
+              </a>
+            </div>
+            <div className="flex items-center gap-2 text-sm">
+              <Linkedin className="w-4 h-4" />
+              <a
+                href="https://www.linkedin.com/company/early-cardiovascular-health-outreach"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                ECHO
               </a>
             </div>
           </div>
@@ -57,7 +67,26 @@ export const Footer = () => {
                   </p>
                 </a>
               ))}
+              <a href="/donate" className="block">
+                <p className="font-heading sm:font-body sm:text-[15px] text-[20px]">
+                  Donate
+                </p>
+              </a>
             </div>
+          </div>
+          <div className="col-span-1  mx-auto">
+            <a
+              href="https://app.candid.org/profile/16399760/early-cardiovascular-health-outreach-99-3101733"
+              target="_blank"
+            >
+              <Image
+                src="/Candid_Silver.svg"
+                alt="Candid"
+                width={500}
+                height={500}
+                className="m-auto pb-5 w-full"
+              />
+            </a>
           </div>
         </div>
         <hr className="my-5 sm:block hidden"></hr>
@@ -93,10 +122,17 @@ export const Footer = () => {
 
             {/* Mail */}
             <a
-              href="mailto:edecho.org@gmail.com"
+              href="mailto:info@edecho.org"
               className="w-10 h-10 bg-[#FFD87A] rounded-full flex items-center justify-center hover:opacity-80 transition"
             >
               <Mail className="w-5 h-5 text-black" />
+            </a>
+            {/* LinkedIn */}
+            <a
+              href="https://www.linkedin.com/company/early-cardiovascular-health-outreach"
+              className="w-10 h-10 bg-[#FFD87A] rounded-full flex items-center justify-center hover:opacity-80 transition"
+            >
+              <Linkedin className="w-5 h-5 text-black" />
             </a>
           </div>
         </div>

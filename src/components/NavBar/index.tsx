@@ -5,83 +5,106 @@ import { useState } from "react";
 import { RxHamburgerMenu } from "react-icons/rx";
 import { NAV_CONTENT } from "./NavContent";
 import Link from "next/link";
+import { Button } from "../ui/button";
 
 export const NavBar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <nav className="sticky top-0 z-50">
-      <div className="hidden lg:flex w-full justify-center items-center">
-        <Link href="/">
-          <Image
-            src="/navbar_logo.png"
-            width={200}
-            height={200}
-            alt="EdEcho logo"
-          />
-        </Link>
-        {NAV_CONTENT.map((item, index) => {
-          const isLeft = index === 0;
-          const isRight = index === NAV_CONTENT.length - 1;
-
-          return (
-            <NavLinkBox
-              key={item.href}
-              title={item.title}
-              href={item.href}
-              isLeft={isLeft}
-              isRight={isRight}
+    <>
+      <nav className="sticky top-0 z-50">
+        <div className="hidden lg:flex w-full justify-center items-center">
+          <Link href="/">
+            <Image
+              src="/navbar_logo.png"
+              width={200}
+              height={200}
+              alt="EdEcho logo"
             />
-          );
-        })}
-      </div>
+          </Link>
+          {NAV_CONTENT.map((item, index) => {
+            const isLeft = index === 0;
+            const isRight = index === NAV_CONTENT.length - 1;
 
-      <div className="flex items-center justify-between px-4 py-3 lg:hidden bg-[#013161]">
-        <Link href="/">
-          <Image
-            src="/navbar_logo.png"
-            width={150}
-            height={10}
-            alt="EdEcho logo"
-            className="color"
-          />
-        </Link>
+            return (
+              <NavLinkBox
+                key={item.href}
+                title={item.title}
+                href={item.href}
+                isLeft={isLeft}
+                isRight={isRight}
+              />
+            );
+          })}
+          <a href="/donate" className="ml-5">
+            <Button className="font-heading text-[20px] border-[#ffffff] p-7 text-white px-6 border-4 hover:bg-[#00a6c4] bg-[#013161]">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="22"
+                height="22"
+                viewBox="0 0 24 24"
+                fill="#FFD87A"
+              >
+                <path d="M12 21s-6.7-4.3-10-9c-1.7-2.4-1-5.9 1.5-7.7 2.2-1.5 5.2-.9 6.9 1C12.3 3.4 15.3 2.8 17.5 4.3c2.5 1.8 3.2 5.3 1.5 7.7-3.3 4.7-10 9-10 9z" />
+              </svg>{" "}
+              Donate
+            </Button>
+          </a>
+        </div>
 
-        {/* Hamburger Button */}
-        <button
-          onClick={() => setIsOpen(!isOpen)}
-          className="hover:cursor-pointer"
-        >
-          {isOpen ? (
-            <RxHamburgerMenu className="w-8 h-8 text-[#FFD87A] rotate-90" />
-          ) : (
-            <RxHamburgerMenu className="w-8 h-8 text-[#FFD87A]" />
-          )}
-        </button>
+        <div className="flex items-center justify-between px-4 py-3 lg:hidden bg-[#013161]">
+          <Link href="/">
+            <Image
+              src="/navbar_logo.png"
+              width={150}
+              height={10}
+              alt="EdEcho logo"
+              className="color"
+            />
+          </Link>
 
-        {/* Mobile Menu */}
-        {isOpen && (
-          <div className="absolute top-16 left-0 w-full bg-[#013161] z-10">
-            <div className="flex flex-col items-center gap-2 p-4">
-              {NAV_CONTENT.map((item) => {
-                return (
-                  <a
-                    href={item.href}
-                    key={item.href}
-                    className={cn(
-                      "text-white font-heading hover:bg-blue-400 w-full text-center transition-colors rounded-md",
-                      item.title === "Play" ? "text-[36px]" : "text-[20px]"
-                    )}
-                  >
-                    <h4>{item.title}</h4>
-                  </a>
-                );
-              })}
+          {/* Hamburger Button */}
+          <button
+            onClick={() => setIsOpen(!isOpen)}
+            className="hover:cursor-pointer"
+          >
+            {isOpen ? (
+              <RxHamburgerMenu className="w-8 h-8 text-[#FFD87A] rotate-90" />
+            ) : (
+              <RxHamburgerMenu className="w-8 h-8 text-[#FFD87A]" />
+            )}
+          </button>
+
+          {/* Mobile Menu */}
+          {isOpen && (
+            <div className="absolute top-16 left-0 w-full bg-[#013161] z-10">
+              <div className="flex flex-col items-center gap-2 p-4">
+                {NAV_CONTENT.map((item) => {
+                  return (
+                    <a
+                      href={item.href}
+                      key={item.href}
+                      className={cn(
+                        "text-white font-heading hover:bg-blue-400 w-full text-center transition-colors rounded-md"
+                      )}
+                    >
+                      <h4>{item.title}</h4>
+                    </a>
+                  );
+                })}
+
+                <a
+                  className="text-white font-heading hover:bg-blue-400 w-full text-center transition-colors rounded-md"
+                  href="/donate"
+                >
+                  Donate
+                </a>
+              </div>
             </div>
-          </div>
-        )}
-      </div>
-    </nav>
+          )}
+        </div>
+      </nav>
+    </>
   );
 };
 
