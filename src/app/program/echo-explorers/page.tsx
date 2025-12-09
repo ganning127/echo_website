@@ -74,7 +74,7 @@ export default function EchoExplorers() {
             </div>
           </section>
 
-          <section className="w-5/6 max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-6 px-5 sm:px-0">
+          <section className="w-5/6 max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-3 xl:grid-cols-5 gap-6 px-5 sm:px-0">
             <div className="bg-white  rounded-2xl p-8 transition delay-150 duration-300 ease-in-out hover:-translate-y-1 hover:scale-105">
               <h3 className="text-2xl  text-[#00488D] mb-2">Registration</h3>
               <p className="text-lg">Opens December 15, 2025</p>
