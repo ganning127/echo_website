@@ -1,4 +1,3 @@
-/* eslint-disable @next/next/next-script-for-ga */
 "use client";
 
 import { useEffect } from "react";
