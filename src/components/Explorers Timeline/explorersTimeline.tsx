@@ -85,7 +85,7 @@ const weeks = [
     number: 10,
     title: "Meeting 10",
     subtitle: "On Your Mark, Get Set, Measure!",
-    info: "A guest teaches Explorers how to measure blood pressure and heart rate.",
+    info: "A special guest will join the quest to teach Explorers how to measure their blood pressure and heart rates",
     imgSrc: "/ExplorerTimeline/week9.png",
     date: "March 25",
   },
