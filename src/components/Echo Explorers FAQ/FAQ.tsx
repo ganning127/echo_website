@@ -51,7 +51,7 @@ export default function FAQSection() {
     {
       question: "When does the program take place?",
       answer:
-        "Classes are held on Mondays from 3:00–4:00 pm for 10 weeks. Although IPA after-school programs begin the week of January 19, this class will start on January 26 due to the MLK Jr. holiday. There will be no class on February 16 (Presidents’ Day) and March 16 (Spring Break).",
+        "Classes are held on Wednesdays from 3:00–4:00 pm for 12 weeks. There will be no class on March 18 (Spring Break).",
     },
     {
       question: "Is the heart health fair open to the public?",
@@ -66,35 +66,37 @@ export default function FAQSection() {
     {
       question: "How much does the program cost? ",
       answer:
-        "The cost is $200 for the 10-week program, payable to IPA through CampBrain. ",
+        "The cost is $215 for the 12-week program, payable to IPA through CampBrain. ",
     },
   ];
 
   return (
     <section className="py-20 bg-[#E8F6FA] px-5 sm:px-0">
-      <div className="max-w-6xl mx-auto">
-        <h2 className="text-3xl text-center mb-10 text-[#00488D]">
-          Frequently Asked Questions
-        </h2>
-        <Accordion items={faq} />
-      </div>
-      <div className="mx-auto text-center mt-10">
-        <a
-          className="mx-auto text-center"
-          href="https://ipaauxiliary.campbrainregistration.com/"
-          target="_blank"
-        >
-          <Button
-            variant="outline"
-            className="mt-4 text-[30px] px-10 py-6 hover:text-white hover:bg-[#00488D] bg-[#00A6C5] text-white font-heading"
+      <div className="max-w-6xl w-5/6 mx-auto">
+        <div className="max-w-6xl mx-auto">
+          <h2 className="text-3xl text-center mb-10 text-[#00488D]">
+            Frequently Asked Questions
+          </h2>
+          <Accordion items={faq} />
+        </div>
+        <div className="mx-auto text-center mt-10">
+          <a
+            className="mx-auto text-center"
+            href="https://ipaauxiliary.campbrainregistration.com/"
+            target="_blank"
           >
-            Register Now
-          </Button>
-        </a>
+            <Button
+              variant="outline"
+              className="mt-4 text-[30px] px-10 py-6 hover:text-white hover:bg-[#00488D] bg-[#00A6C5] text-white font-heading"
+            >
+              Register Now
+            </Button>
+          </a>
 
-        <p className="pt-5">
-          You will be redirected to ipaauxiliary.campbrainregistration.com
-        </p>
+          <p className="pt-5">
+            You will be redirected to ipaauxiliary.campbrainregistration.com
+          </p>
+        </div>
       </div>
     </section>
   );

@@ -33,14 +33,14 @@ export default function EchoExplorers() {
           </h1>
         </div>
         <div className="bg-[#DBECF1]">
-          <section className="bg-[#DBECF1] max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 pt-10 px-5 sm:px-0 items-center">
+          <section className="bg-[#DBECF1] w-5/6 max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 pt-10 px-5 sm:px-0 items-center">
             <div className="col-span-2">
               <h3 className="text-3xl font-heading text-[#00488D]">
                 Program Description
               </h3>
               <br></br>
               <p className="text-gray-700 leading-relaxed mb-4 text-xl">
-                For 10-weeks, Explorers will learn heart-healthy habits and they
+                For 12-weeks, Explorers will learn heart-healthy habits and they
                 will see how to utilize this knowledge to help themselves and
                 others.
               </p>
@@ -74,7 +74,7 @@ export default function EchoExplorers() {
             </div>
           </section>
 
-          <section className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-5 gap-6 px-5 sm:px-0">
+          <section className="w-5/6 max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-3 xl:grid-cols-5 gap-6 px-5 sm:px-0">
             <div className="bg-white  rounded-2xl p-8 transition delay-150 duration-300 ease-in-out hover:-translate-y-1 hover:scale-105">
               <h3 className="text-2xl  text-[#00488D] mb-2">Registration</h3>
               <p className="text-lg">Opens December 15, 2025</p>
@@ -87,7 +87,7 @@ export default function EchoExplorers() {
             </div>
             <div className="bg-white  rounded-2xl p-8 transition delay-150 duration-300 ease-in-out hover:-translate-y-1 hover:scale-105">
               <h3 className="text-2xl text-[#00488D] mb-2">Schedule</h3>
-              <p className="text-lg">10 weeks, Mondays,</p>
+              <p className="text-lg">12 weeks, Wednesdays,</p>
               <p className="text-lg">3:00 p.m. – 4:00 p.m.</p>
             </div>
 
@@ -98,7 +98,7 @@ export default function EchoExplorers() {
 
             <div className="bg-white  rounded-2xl p-8 transition delay-150 duration-300 ease-in-out hover:-translate-y-1 hover:scale-105">
               <h3 className="text-2xl text-[#00488D] mb-2">Cost</h3>
-              <p className="text-lg">$200</p>
+              <p className="text-lg">$215</p>
             </div>
           </section>
           <div className="mx-auto text-center mt-10 pb-10">
@@ -124,7 +124,7 @@ export default function EchoExplorers() {
               <ExplorersTimeline />
             </section>
           </div>
-          <section className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-1 py-10 px-5 sm:px-0">
+          <section className="w-5/6 max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-1 py-10 px-5 sm:px-0">
             <div className="col-span-2">
               <h2 className="text-3xl text-[#00488D] mb-4">How to Register</h2>
               <p className="mb-3 text-lg">
