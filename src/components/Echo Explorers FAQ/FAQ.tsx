@@ -51,7 +51,7 @@ export default function FAQSection() {
     {
       question: "When does the program take place?",
       answer:
-        "Classes are held on Wednesdays from 3:00–4:00 pm for 12 weeks. Although IPA after-school programs begin the week of January 19, this class will start on January 26 due to the MLK Jr. holiday. There will be no class on February 16 (Presidents’ Day) and March 16 (Spring Break).",
+        "Classes are held on Wednesdays from 3:00–4:00 pm for 12 weeks. There will be no class on March 18 (Spring Break).",
     },
     {
       question: "Is the heart health fair open to the public?",
@@ -66,7 +66,7 @@ export default function FAQSection() {
     {
       question: "How much does the program cost? ",
       answer:
-        "The cost is $200 for the 10-week program, payable to IPA through CampBrain. ",
+        "The cost is $215 for the 12-week program, payable to IPA through CampBrain. ",
     },
   ];
 

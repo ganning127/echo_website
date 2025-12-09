@@ -98,7 +98,7 @@ export default function EchoExplorers() {
 
             <div className="bg-white  rounded-2xl p-8 transition delay-150 duration-300 ease-in-out hover:-translate-y-1 hover:scale-105">
               <h3 className="text-2xl text-[#00488D] mb-2">Cost</h3>
-              <p className="text-lg">$200</p>
+              <p className="text-lg">$215</p>
             </div>
           </section>
           <div className="mx-auto text-center mt-10 pb-10">

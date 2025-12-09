@@ -1,6 +1,5 @@
 "use client";
-
-import { useRef } from "react";
+import { useRef, useState, useEffect } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
@@ -117,6 +116,12 @@ const weeks = [
 ];
 
 export const ExplorersTimeline = () => {
+  const [isTouchDevice, setIsTouchDevice] = useState(false);
+
+  useEffect(() => {
+    setIsTouchDevice("ontouchstart" in window || navigator.maxTouchPoints > 0);
+  }, []);
+
   const scrollRef = useRef<HTMLDivElement | null>(null);
   const itemRef = useRef<HTMLDivElement | null>(null);
 
@@ -188,18 +193,22 @@ export const ExplorersTimeline = () => {
               {week.subtitle}
             </p>
 
-            {/* Info text — visible by default on mobile/tablet, hover-only on desktop */}
-            <p className="text-center text-[#00488D] text-sm mt-2 md:hidden">
-              <span>{week.info}</span>
-            </p>
-
             <div className="bg-[#dbecf1] w-1/2 mx-auto text-center rounded-full mt-1">
               <p className="text-center text-[#00488D] text-sm p-2 rounded-2xl">
                 {week.date}
               </p>
             </div>
-
-            <p className="hidden md:block text-center text-[#00488D] text-sm pt-5 opacity-0 group-hover:opacity-100 transition-opacity duration-200">
+            {/* Info text */}
+            <p
+              className={`
+    text-center text-[#00488D] text-sm mt-2
+    ${
+      isTouchDevice
+        ? "block"
+        : "opacity-0 group-hover:opacity-100 transition-opacity duration-200"
+    }
+  `}
+            >
               <span>{week.info}</span>
             </p>
           </div>
