@@ -201,7 +201,7 @@ export const ExplorersTimeline = () => {
             {/* Info text */}
             <p
               className={`
-    text-center text-[#00488D] text-sm mt-2
+    text-center text-[#00488D] text-sm mt-5
     ${
       isTouchDevice
         ? "block"
