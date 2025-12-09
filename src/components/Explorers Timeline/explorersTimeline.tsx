@@ -109,7 +109,7 @@ const weeks = [
     number: 13,
     title: "Meeting 13",
     subtitle: "ECHO Explorers Fair!",
-    info: "Explorers lead a fair to raise awareness and pledge to continue their journey.",
+    info: "Explorers lead a fair to raise awareness and pledge to continue their journeys of their hearts.",
     imgSrc: "/ExplorerTimeline/week12.png",
     date: "April 15",
   },
