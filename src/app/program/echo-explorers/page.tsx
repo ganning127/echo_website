@@ -40,7 +40,7 @@ export default function EchoExplorers() {
               </h3>
               <br></br>
               <p className="text-gray-700 leading-relaxed mb-4 text-xl">
-                For 10-weeks, Explorers will learn heart-healthy habits and they
+                For 12-weeks, Explorers will learn heart-healthy habits and they
                 will see how to utilize this knowledge to help themselves and
                 others.
               </p>
@@ -87,7 +87,7 @@ export default function EchoExplorers() {
             </div>
             <div className="bg-white  rounded-2xl p-8 transition delay-150 duration-300 ease-in-out hover:-translate-y-1 hover:scale-105">
               <h3 className="text-2xl text-[#00488D] mb-2">Schedule</h3>
-              <p className="text-lg">10 weeks, Mondays,</p>
+              <p className="text-lg">12 weeks, Wednesdays,</p>
               <p className="text-lg">3:00 p.m. – 4:00 p.m.</p>
             </div>
 
