@@ -17,7 +17,7 @@ const weeks = [
     number: 2,
     title: "Meeting 2",
     subtitle: "Mapping The Heart! ",
-    info: "Explorers will discover their maps which will guide them through the chamber of their hearts.",
+    info: "Explorers will discover their maps which will guide them through the chambers of their hearts.",
     imgSrc: "/ExplorerTimeline/week2.png",
     date: "January 28",
   },

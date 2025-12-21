@@ -157,7 +157,7 @@
 
 @theme {
   --font-heading: 'Cookie_Supply';
-  --font-body: 'Lato';
+  --font-body: var(--font-body);
 }
 
 @layer base {
