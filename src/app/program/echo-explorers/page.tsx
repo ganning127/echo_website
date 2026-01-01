@@ -88,7 +88,7 @@ export default function EchoExplorers() {
             <div className="bg-white  rounded-2xl p-8 transition delay-150 duration-300 ease-in-out hover:-translate-y-1 hover:scale-105">
               <h3 className="text-2xl text-[#00488D] mb-2">Schedule</h3>
               <p className="text-lg">12 weeks, Wednesdays,</p>
-              <p className="text-lg">3:00 p.m. – 4:00 p.m.</p>
+              <p className="text-lg">2:15 p.m. – 3:15 p.m.</p>
             </div>
 
             <div className="bg-white  rounded-2xl p-8 transition delay-150 duration-300 ease-in-out hover:-translate-y-1 hover:scale-105">
