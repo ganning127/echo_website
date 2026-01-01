@@ -14,10 +14,12 @@ export default function Calendar() {
       <Container className="bg-[#dbecf1]">
         <div className="text-center pb-10">
           <h1 className="text-[8vw] sm:text-[4vw] font-heading mb-1">
-            2026 ECHO Calendar
+            2026 ECHO and Friends Calendar
           </h1>
           <p className="max-w-3xl mx-auto text-lg">
-            Print them monthly and enjoy your calendar all year long.
+            Print out the monthly calendars and use the extra space to add your
+            own heart-healthy reminders. Come back each month to build your own,
+            original 2026 ECHO and Friends Calendar.
           </p>
         </div>
 

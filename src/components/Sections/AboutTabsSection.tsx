@@ -32,7 +32,7 @@ export const AboutTabsSection = () => {
         router.replace(`?${params.toString()}`);
       }}
     >
-      <TabsList className="flex w-full p-0 bg-white rounded-none outline-bottom">
+      <TabsList className="flex w-full p-0 rounded-none outline-bottom">
         {tabs.map((tab) => {
           const isActive = tabValue.toLowerCase() === tab.value.toLowerCase();
           return (
@@ -40,7 +40,7 @@ export const AboutTabsSection = () => {
               key={tab.value}
               value={tab.value.toLowerCase()}
               className={
-                "hover:cursor-pointer flex-1 hover:bg-[#88eafc] text-white text-sm font-bold uppercase text-center py-2  border border-white transition-colors rounded-lg"
+                "hover:cursor-pointer flex-1 hover:bg-[#88eafc] text-white text-sm font-bold uppercase text-center py-2  border  transition-colors rounded-lg"
               }
             >
               <h2
