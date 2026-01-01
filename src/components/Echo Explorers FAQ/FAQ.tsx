@@ -51,7 +51,7 @@ export default function FAQSection() {
     {
       question: "When does the program take place?",
       answer:
-        "Classes are held on Wednesdays from 3:00–4:00 pm for 12 weeks. There will be no class on March 18 (Spring Break).",
+        "Classes are held on Wednesdays from 2:15–3:15 pm for 12 weeks. There will be no class on March 18 (Spring Break).",
     },
     {
       question: "Is the heart health fair open to the public?",
@@ -61,7 +61,7 @@ export default function FAQSection() {
     {
       question: "What is the pick- up procedure? ",
       answer:
-        "Students in IPA’s Extended Day program will be taken to their Extended Day rooms at 4:00 pm. Students who are not in Extended Day must be picked up right after class. IPA offers a 10-minute grace period; after that, students will be checked into Extended Day and a $35 drop-in fee will be applied.",
+        "Students in IPA’s Extended Day program will be taken to their Extended Day rooms at 3:15 pm. Students who are not in Extended Day must be picked up right after class. IPA offers a 10-minute grace period; after that, students will be checked into Extended Day and a $35 drop-in fee will be applied.",
     },
     {
       question: "How much does the program cost? ",
