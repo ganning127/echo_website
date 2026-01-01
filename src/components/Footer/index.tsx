@@ -72,6 +72,11 @@ export const Footer = () => {
                   Donate
                 </p>
               </a>
+              <a href="/calendar" className="block">
+                <p className="font-heading sm:font-body sm:text-[15px] text-[20px]">
+                  Calendar
+                </p>
+              </a>
             </div>
           </div>
           <div className="col-span-1  mx-auto">
