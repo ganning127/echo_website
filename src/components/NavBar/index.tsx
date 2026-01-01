@@ -96,7 +96,12 @@ export const NavBar = () => {
                     </a>
                   );
                 })}
-
+                <a
+                  className="text-white font-heading hover:bg-blue-400 w-full text-center transition-colors rounded-md"
+                  href="/calendar"
+                >
+                  Calendar
+                </a>
                 <a
                   className="text-white font-heading hover:bg-blue-400 w-full text-center transition-colors rounded-md"
                   href="/donate"
