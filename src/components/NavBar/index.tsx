@@ -6,6 +6,7 @@ import { RxHamburgerMenu } from "react-icons/rx";
 import { NAV_CONTENT } from "./NavContent";
 import Link from "next/link";
 import { Button } from "../ui/button";
+import { CalendarDays } from "lucide-react";
 
 export const NavBar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -36,6 +37,9 @@ export const NavBar = () => {
               />
             );
           })}
+          <a href="/calendar" className="ml-5">
+            <CalendarDays className="w-[50px] h-[50px] stroke-white fill-[#1876D0]" />
+          </a>
           <a href="/donate" className="ml-5">
             <Button className="font-heading text-[20px] border-[#ffffff] p-7 text-white px-6 border-4 hover:bg-[#00a6c4] bg-[#013161]">
               <svg
@@ -92,7 +96,12 @@ export const NavBar = () => {
                     </a>
                   );
                 })}
-
+                <a
+                  className="text-white font-heading hover:bg-blue-400 w-full text-center transition-colors rounded-md"
+                  href="/calendar"
+                >
+                  Calendar
+                </a>
                 <a
                   className="text-white font-heading hover:bg-blue-400 w-full text-center transition-colors rounded-md"
                   href="/donate"

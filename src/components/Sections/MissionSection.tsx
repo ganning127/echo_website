@@ -35,12 +35,12 @@ const PillarImage = ({ src }: { src: string }) => {
 export const MissionSection = () => {
   const imageSize = 120;
   return (
-    <section className="bg-white md:px-20 text-[#012C5D] space-y-16">
+    <section className=" md:px-20 text-[#012C5D] space-y-16">
       <FadeInWhenVisible>
         <div className="flex flex-col items-start gap-6">
           <h2 className="text-2xl font-bold text-[48px]">Our Four Pillars</h2>
 
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 w-full">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 w-full bg-white rounded-2xl shadow-lg p-6">
             <PillarImage src="/pillars/mind.png" />
             <PillarImage src="/pillars/eat.png" />
             <PillarImage src="/pillars/rest well.png" />

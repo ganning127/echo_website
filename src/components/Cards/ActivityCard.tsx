@@ -1,6 +1,5 @@
 "use client";
 
-import React from "react";
 import Image from "next/image";
 import { Button } from "../ui/button";
 
@@ -16,9 +15,8 @@ export const ActivityCard = ({
     slug: string;
   };
 }) => {
-  if (activity.tags) {
-    activity.tags = activity.tags.filter((tag: string) => tag !== "home");
-  }
+  const displayTags = activity.tags?.filter((tag) => tag !== "home");
+
   return (
     <div className="text-center bg-white rounded-lg shadow-lg">
       <Image
@@ -28,23 +26,25 @@ export const ActivityCard = ({
         height={300}
         className="w-full h-48 object-cover rounded-t-lg"
       />
+
       <div className="p-4">
         <div className="flex flex-row gap-2 items-center mb-2">
-          {activity.tags?.map((tag: string) => {
-            return (
-              <p
-                key={tag}
-                className="bg-[#00A6C5]/75 text-white text-[14px] px-2 py-1 rounded-lg"
-              >
-                {tag}
-              </p>
-            );
-          })}
+          {displayTags?.map((tag) => (
+            <p
+              key={tag}
+              className="bg-[#00A6C5]/75 text-white text-[14px] px-2 py-1 rounded-lg"
+            >
+              {tag}
+            </p>
+          ))}
         </div>
+
         <h3 className="text-[25px] mb-2">{activity.title}</h3>
+
         <p className="text-[15px] text-gray-700 line-clamp-2">
           {activity.description}
         </p>
+
         <a href={`/activities/${activity.slug}`} target="_blank">
           <Button
             variant="outline"
