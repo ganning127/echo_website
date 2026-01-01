@@ -38,18 +38,6 @@ export default function Calendar() {
               <h2 className="text-xl font-heading mb-3">{page.title}</h2>
 
               <div className="flex flex-col gap-3 justify-center ">
-                {/* PREVIEW */}
-                <Button className="transition delay-150 duration-300 ease-in-out hover:-translate-y-1 hover:scale-105  text-[20px] px-10 py-6 hover:text-black hover:bg-[#ffd87a] bg-[#00A6C5] text-white font-heading">
-                  <a
-                    href={page.pdf}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="font-heading px-5 py-2 inline-block"
-                  >
-                    Preview Page
-                  </a>
-                </Button>
-
                 {/* DOWNLOAD */}
                 <Button className="transition delay-150 duration-300 ease-in-out hover:-translate-y-1 hover:scale-105  text-[20px] px-10 py-6 hover:text-black hover:bg-[#ffd87a] bg-[#013161] text-white font-heading">
                   <a
