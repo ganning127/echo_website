@@ -28,7 +28,7 @@ export default function EchoExplorers() {
       <Suspense fallback={<div>Loading...</div>}>
         <div className="bg-[#00488D] text-white pb-10 mx-auto text-center pt-12 sm:pt-10 gap-5">
           <h1 className="text-5xl ">ECHO Explorers Program</h1>
-          <p className="pt-5">
+          <p className="pt-5 px-5">
             Contact us at{" "}
             <a href="mailto:info@EdEcho.org" className="underline">
               info@EdEcho.org
