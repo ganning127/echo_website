@@ -11,7 +11,7 @@ const weeks = [
     subtitle: "The Heartfelt Hello! ",
     info: "Welcome Explorers to your adventure! On this quest, you will get to know your fellow Explorers and their hearts!",
     imgSrc: "/ExplorerTimeline/week1.png",
-    date: "January 21",
+    date: "Session 1",
   },
   {
     number: 2,
@@ -19,7 +19,7 @@ const weeks = [
     subtitle: "Mapping The Heart! ",
     info: "Explorers will discover their maps which will guide them through the chambers of their hearts.",
     imgSrc: "/ExplorerTimeline/week2.png",
-    date: "January 28",
+    date: "Session 2",
   },
   {
     number: 3,
@@ -39,7 +39,7 @@ const weeks = [
       </>
     ),
     imgSrc: "/ExplorerTimeline/week3.png",
-    date: "February 4",
+    date: "Session 3",
   },
   {
     number: 4,
@@ -47,7 +47,7 @@ const weeks = [
     subtitle: "Mind-Well! ",
     info: "Explorers will discover their mind-heart connections.",
     imgSrc: "/ExplorerTimeline/week4.png",
-    date: "February 11",
+    date: "Session 4",
   },
   {
     number: 5,
@@ -55,7 +55,7 @@ const weeks = [
     subtitle: "Eat-Well! ",
     info: "Explorers will learn how to best fuel their hearts.",
     imgSrc: "/ExplorerTimeline/week5.png",
-    date: "February 18",
+    date: "Session 5",
   },
   {
     number: 6,
@@ -63,7 +63,7 @@ const weeks = [
     subtitle: "Rest-Well! ",
     info: "Explorers will learn how to recharge and rejuvenate their hearts.",
     imgSrc: "/ExplorerTimeline/week6.png",
-    date: "February 25",
+    date: "Session 6",
   },
   {
     number: 7,
@@ -71,7 +71,7 @@ const weeks = [
     subtitle: "Move-Well! ",
     info: "Beyond the four walls of the classroom, Explorers will learn the four squares of Echo’s favorite outdoor game.",
     imgSrc: "/ExplorerTimeline/week7.png",
-    date: "March 4",
+    date: "Session 7",
   },
   {
     number: 8,
@@ -79,7 +79,7 @@ const weeks = [
     subtitle: "Escape The Risk! ",
     info: "Uh oh! Explorers stumbled upon some blockages and will find ways to bypass them.",
     imgSrc: "/ExplorerTimeline/week8.png",
-    date: "March 11",
+    date: "Session 8",
   },
   {
     number: 10,
@@ -87,7 +87,7 @@ const weeks = [
     subtitle: "On Your Mark, Get Set, Measure!",
     info: "A special guest will join the quest to teach Explorers how to measure their blood pressure and heart rates.",
     imgSrc: "/ExplorerTimeline/week9.png",
-    date: "March 25",
+    date: "Session 9",
   },
   {
     number: 11,
@@ -95,7 +95,7 @@ const weeks = [
     subtitle: "Explorers Prepare For The Fair! (part 1)",
     info: "Explorers will prepare to showcase what they have learned from their quest.",
     imgSrc: "/ExplorerTimeline/week10.png",
-    date: "April 1",
+    date: "Session 10",
   },
   {
     number: 12,
@@ -103,7 +103,7 @@ const weeks = [
     subtitle: "Explorers Prepare For The Fair! (part 2)",
     info: "Explorers will prepare to showcase what they have learned from their quest.",
     imgSrc: "/ExplorerTimeline/week11.png",
-    date: "April 8",
+    date: "Session 11",
   },
   {
     number: 13,
@@ -111,7 +111,7 @@ const weeks = [
     subtitle: "ECHO Explorers Fair!",
     info: "Explorers lead a fair to raise awareness in their community, while pledging to continue their journeys of their hearts.",
     imgSrc: "/ExplorerTimeline/week12.png",
-    date: "April 15",
+    date: "Session 12",
   },
 ];
 
