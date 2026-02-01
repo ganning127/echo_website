@@ -4,7 +4,7 @@ export default function FAQSection() {
   const faq = [
     {
       question: "How long is the program? ",
-      answer: "The program consists of 12 sessions, each lasting 60 minutes.",
+      answer: "The program consists of 12 sessions, each lasting 1 hour.",
     },
     {
       question: "Who is the program for?",
@@ -14,7 +14,7 @@ export default function FAQSection() {
     {
       question: "How are the sessions taught? ",
       answer:
-        "Sessions are highly interactive and include games, group discussions, hands-on activities, and creative projects to keep Explorers engaged and excited to learn.",
+        "Sessions are highly interactive and include games, group discussions, hands-on activities, and creative projects to keep children engaged and excited to learn.",
     },
     {
       question: "What is the Health Fair? ",
