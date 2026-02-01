@@ -44,8 +44,8 @@ export default function EchoExplorers() {
               </h3>
               <br></br>
               <p className="text-gray-700 leading-relaxed mb-4 text-xl">
-                Explorers will learn heart-healthy habits and they will see how
-                to utilize this knowledge to help themselves and others.
+                Explorers will learn heart-healthy habits and how to utilize
+                them to help themselves and others.
               </p>
               <p className="text-gray-700 leading-relaxed mb-4 text-xl">
                 {" "}
