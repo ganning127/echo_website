@@ -9,7 +9,7 @@ export default function FAQSection() {
     {
       question: "Who is the program for?",
       answer:
-        "This program is designed for children (Explorers) who want to learn how to take care of their bodies, minds, and hearts while becoming leaders in their community.",
+        "This program is designed for children who want to learn how to take care of their bodies, minds, and hearts while becoming leaders in their community.",
     },
     {
       question: "How are the sessions taught? ",
