@@ -98,7 +98,7 @@ export const Footer = () => {
         <div className="max-w-7xl mx-auto sm:grid grid-cols-3 gap-4 hidden">
           <div className="col-span-2">
             <p className="text-sm">
-              &copy; 2025 Early Cardiovascular Health Outreach
+              &copy; 2026 Early Cardiovascular Health Outreach
             </p>
           </div>
           <div className="col-span-1 flex gap-5 justify-end">
