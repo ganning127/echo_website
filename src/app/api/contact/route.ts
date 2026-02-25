@@ -1,5 +1,6 @@
 import { MongoClient } from "mongodb";
 import { NextResponse } from "next/server";
+import { verifyRecaptcha } from "@/lib/recaptcha";
 
 export const dynamic = "force-dynamic";
 
@@ -17,6 +18,15 @@ export async function POST(req: Request) {
       return NextResponse.json(
         { error: "formType is required" },
         { status: 400 }
+      );
+    }
+
+    const { pass, score } = await verifyRecaptcha(body.recaptchaToken);
+    if (!pass) {
+      console.warn("reCAPTCHA failed for contact form:", { formType, score });
+      return NextResponse.json(
+        { error: "reCAPTCHA verification failed" },
+        { status: 403 }
       );
     }
 
@@ -45,8 +55,9 @@ export async function POST(req: Request) {
         );
     }
 
+    const { recaptchaToken: _token, ...formData } = body;
     const document = {
-      ...body,
+      ...formData,
       formType,
       createdAt: new Date(),
     };

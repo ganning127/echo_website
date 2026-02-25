@@ -5,6 +5,7 @@ import { motion, AnimatePresence } from "motion/react";
 import { NavBar } from "@/components/NavBar";
 import { Footer } from "@/components/Footer";
 import Link from "next/link";
+import { getRecaptchaToken } from "@/lib/recaptcha";
 
 type FormData = {
   firstName: string;
@@ -97,6 +98,8 @@ export default function PartnerPage() {
 
     setIsSubmitting(true);
     try {
+      const recaptchaToken = await getRecaptchaToken("contact_partner");
+
       const res = await fetch("/api/contact", {
         method: "POST",
         headers: {
@@ -104,6 +107,7 @@ export default function PartnerPage() {
         },
         body: JSON.stringify({
           formType: "partner",
+          recaptchaToken,
           ...formData,
         }),
       });

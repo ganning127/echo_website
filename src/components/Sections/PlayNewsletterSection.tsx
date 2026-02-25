@@ -1,6 +1,7 @@
 import { Button } from "../ui/button";
 import { useState } from "react";
 import { FadeInWhenVisible } from "../Animation/FadeInWhenVisible";
+import { getRecaptchaToken } from "@/lib/recaptcha";
 
 export const PlayNewsletterSection = () => {
   const [email, setEmail] = useState("");
@@ -10,10 +11,12 @@ export const PlayNewsletterSection = () => {
   const handleSubmit = async () => {
     setLoading(true);
     try {
+      const recaptchaToken = await getRecaptchaToken("newsletter");
+
       const res = await fetch("/api/newsletter", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ email }),
+        body: JSON.stringify({ email, recaptchaToken }),
       });
 
       if (res.ok) {

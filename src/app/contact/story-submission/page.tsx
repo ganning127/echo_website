@@ -5,6 +5,7 @@ import { motion, AnimatePresence } from "motion/react";
 import { NavBar } from "@/components/NavBar";
 import { Footer } from "@/components/Footer";
 import Link from "next/link";
+import { getRecaptchaToken } from "@/lib/recaptcha";
 
 type FormData = {
   // Background Information
@@ -142,6 +143,8 @@ export default function StorySubmissionPage() {
 
     setIsSubmitting(true);
     try {
+      const recaptchaToken = await getRecaptchaToken("contact_story");
+
       const res = await fetch("/api/contact", {
         method: "POST",
         headers: {
@@ -149,6 +152,7 @@ export default function StorySubmissionPage() {
         },
         body: JSON.stringify({
           formType: "story",
+          recaptchaToken,
           ...formData,
         }),
       });
@@ -703,12 +707,9 @@ export default function StorySubmissionPage() {
                       </label>
                     </div>
 
-                    {/* Simple CAPTCHA placeholder */}
-                    <div className="bg-white/10 rounded-xl p-4">
-                      <p className="text-white/70 font-body text-sm text-center">
-                        🤖 CAPTCHA verification will be shown here
-                      </p>
-                    </div>
+                    <p className="text-white/50 font-body text-xs text-center">
+                      This form is protected by reCAPTCHA.
+                    </p>
                   </div>
                 )}
               </motion.div>

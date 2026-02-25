@@ -5,6 +5,7 @@ import { motion, AnimatePresence } from "motion/react";
 import { NavBar } from "@/components/NavBar";
 import { Footer } from "@/components/Footer";
 import Link from "next/link";
+import { getRecaptchaToken } from "@/lib/recaptcha";
 
 type FormData = {
   fullName: string;
@@ -107,10 +108,12 @@ export default function RegisterPage() {
     setError("");
 
     try {
+      const recaptchaToken = await getRecaptchaToken("registration");
+
       const response = await fetch("/api/registration", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(formData),
+        body: JSON.stringify({ ...formData, recaptchaToken }),
       });
 
       if (!response.ok) {

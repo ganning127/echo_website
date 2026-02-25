@@ -1,5 +1,6 @@
 import { MongoClient } from "mongodb";
 import { NextResponse } from "next/server";
+import { verifyRecaptcha } from "@/lib/recaptcha";
 
 export const dynamic = "force-dynamic";
 
@@ -15,11 +16,21 @@ interface RegistrationData {
   heardFrom: string;
   interests: string[];
   comments?: string;
+  recaptchaToken?: string;
 }
 
 export async function POST(req: Request) {
   try {
     const data: RegistrationData = await req.json();
+
+    const { pass, score } = await verifyRecaptcha(data.recaptchaToken);
+    if (!pass) {
+      console.warn("reCAPTCHA failed for registration:", { score });
+      return NextResponse.json(
+        { error: "reCAPTCHA verification failed" },
+        { status: 403 }
+      );
+    }
 
     // Validate required fields
     if (!data.fullName || data.fullName.trim().length < 2) {

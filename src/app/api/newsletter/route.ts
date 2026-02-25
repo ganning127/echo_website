@@ -1,18 +1,27 @@
 import { MongoClient } from "mongodb";
 import { NextResponse } from "next/server";
+import { verifyRecaptcha } from "@/lib/recaptcha";
+
 export const dynamic = "force-dynamic";
 
 const uri = process.env.MONGO_URI!;
-
-console.log("Connecting to MongoDB with URI:", uri);
 const client = new MongoClient(uri);
 
 export async function POST(req: Request) {
   try {
-    const { email } = await req.json();
+    const { email, recaptchaToken } = await req.json();
 
     if (!email || !email.includes("@")) {
       return NextResponse.json({ error: "Invalid email" }, { status: 400 });
+    }
+
+    const { pass, score } = await verifyRecaptcha(recaptchaToken);
+    if (!pass) {
+      console.warn("reCAPTCHA failed for newsletter:", { score });
+      return NextResponse.json(
+        { error: "reCAPTCHA verification failed" },
+        { status: 403 }
+      );
     }
 
     await client.connect();
