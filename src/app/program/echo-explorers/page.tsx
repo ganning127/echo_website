@@ -64,8 +64,8 @@ export default function EchoExplorers() {
                 .{" "}
               </p>
               <p className="text-gray-700 leading-relaxed mb-4 text-xl">
-                By the end of the program, Explorers will have become leaders in
-                their community by organizing their own Heart Health Fair!
+                By the end of the program, Explorers will have the confidence to
+                lead heart healthy lives.
               </p>
             </div>
             <div className="col-span-1 mx-auto text-center flex justify-end">

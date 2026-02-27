@@ -48,6 +48,12 @@ export const NewsletterStripFooter = () => {
           <div className="text-center m-auto w-full sm:text-left col-span-2 block sm:flex justify-end gap-2">
             {!success && (
               <>
+                <label
+                  htmlFor="email"
+                  className="text-lg whitespace-nowrap font-bold content-center"
+                >
+                  Email Address:
+                </label>
                 <input
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}

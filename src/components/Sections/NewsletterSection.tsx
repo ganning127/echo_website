@@ -66,20 +66,30 @@ export const NewsletterSection = () => {
         {!success && (
           <>
             <div className="md:w-128 mx-auto">
-              <input
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
-                type="email"
-                placeholder="Your email here"
-                className="w-full px-4 py-3 rounded-md text-black bg-white placeholder-gray-400 ring-2 ring-yellow-400"
-              />
+              {/* Label + Input Row */}
+              <div className="flex items-center gap-4">
+                <label
+                  htmlFor="email"
+                  className="text-lg whitespace-nowrap font-bold"
+                >
+                  Email Address:
+                </label>
 
-              <div className="text-center">
+                <input
+                  id="email"
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
+                  type="email"
+                  placeholder="username@example.com"
+                  className="flex-1 px-4 py-3 rounded-md text-black bg-white placeholder-gray-400 ring-2 ring-yellow-400"
+                />
+              </div>
+
+              {/* Button Row */}
+              <div className="text-center mt-4">
                 <Button
                   disabled={!email || loading}
-                  className={
-                    "mt-4 hover:bg-[#ad7e0c] bg-[#FFD87A] transition-colors"
-                  }
+                  className="hover:bg-[#ad7e0c] bg-[#FFD87A] transition-colors"
                   size="lg"
                   onClick={handleSubmit}
                 >
