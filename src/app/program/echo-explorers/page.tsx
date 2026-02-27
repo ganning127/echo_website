@@ -5,6 +5,8 @@ import { Metadata } from "next";
 import Image from "next/image";
 import { ExplorersTimeline } from "@/components/Explorers Timeline/explorersTimeline";
 import FAQSection from "@/components/Echo Explorers FAQ/FAQ";
+// src/app/layout.tsx
+import "@/styles/styles.css";
 
 export const metadata: Metadata = {
   title: "Echo Explorers",
@@ -22,7 +24,7 @@ export const metadata: Metadata = {
 export default function EchoExplorers() {
   return (
     <>
-      <nav className="bg-[#DBECF1] sticky top-0 z-50">
+      <nav className="bg-paper sticky top-0 z-50">
         <NavBar />
       </nav>
       <Suspense fallback={<div>Loading...</div>}>
@@ -36,12 +38,12 @@ export default function EchoExplorers() {
             to bring the ECHO Explorers program to your school or community!
           </p>
         </div>
-        <div className="bg-[#DBECF1]">
-          <section className="bg-[#DBECF1] w-5/6 max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 pt-10 px-5 sm:px-0 items-center">
+        <div className="bg-paper">
+          <section className="bg-[url('/Echo Explorers Paper.webp')] bg-cover bg-center w-5/6 max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 pt-10 px-5 sm:px-0 items-center">
             <div className="col-span-2">
-              <h3 className="text-3xl font-heading text-[#00488D]">
+              <h2 className="text-3xl font-heading text-[#00488D]">
                 Program Description
-              </h3>
+              </h2>
               <br></br>
               <p className="text-gray-700 leading-relaxed mb-4 text-xl">
                 Explorers will learn heart-healthy habits and how to utilize
@@ -88,12 +90,14 @@ export default function EchoExplorers() {
               <p className="text-lg">Elementary</p>
             </div>
           </section>
-
+          <section className="bg-[#00488D] h-[10px] mx-auto sm:px-0"></section>
           <div className="bg-[#E8F6FA]">
             <section className=" mx-auto pt-10 px-10 max-w-6xl">
               <ExplorersTimeline />
             </section>
           </div>
+
+          <section className="bg-[#00488D] h-[10px] mx-auto sm:px-0"></section>
           <section>
             <FAQSection></FAQSection>
           </section>
