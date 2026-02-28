@@ -20,7 +20,7 @@ export const WelcomeCard = () => {
         <a href="/about" target="_blank">
           <Button
             variant="outline"
-            className="mt-2 text-[24px] bg-[#00A6C5] text-white font-heading"
+            className="mt-2 text-[24px] bg-[#1876D0] text-white font-heading"
           >
             Learn More
           </Button>

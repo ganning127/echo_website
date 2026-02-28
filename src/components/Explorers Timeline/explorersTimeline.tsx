@@ -1,5 +1,5 @@
 "use client";
-import { useRef, useState, useEffect } from "react";
+import { useRef } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
@@ -92,36 +92,14 @@ const weeks = [
   {
     number: 11,
     title: "Meeting 11",
-    subtitle: "Explorers Prepare For The Fair! (part 1)",
-    info: "Explorers will prepare to showcase what they have learned from their quest.",
-    imgSrc: "/ExplorerTimeline/week10.png",
-    date: "Session 10",
-  },
-  {
-    number: 12,
-    title: "Meeting 12",
-    subtitle: "Explorers Prepare For The Fair! (part 2)",
-    info: "Explorers will prepare to showcase what they have learned from their quest.",
-    imgSrc: "/ExplorerTimeline/week11.png",
-    date: "Session 11",
-  },
-  {
-    number: 13,
-    title: "Meeting 13",
-    subtitle: "ECHO Explorers Fair!",
-    info: "Explorers lead a fair to raise awareness in their community, while pledging to continue their journeys of their hearts.",
+    subtitle: "The HeartFelt Goodbye!",
+    info: "Explorers celebrate the achievements they have made during their quest and pledge to continue on their HeartFelt journey!",
     imgSrc: "/ExplorerTimeline/week12.png",
     date: "Session 12",
   },
 ];
 
 export const ExplorersTimeline = () => {
-  const [isTouchDevice, setIsTouchDevice] = useState(false);
-
-  useEffect(() => {
-    setIsTouchDevice("ontouchstart" in window || navigator.maxTouchPoints > 0);
-  }, []);
-
   const scrollRef = useRef<HTMLDivElement | null>(null);
   const itemRef = useRef<HTMLDivElement | null>(null);
 
@@ -199,16 +177,7 @@ export const ExplorersTimeline = () => {
               </p>
             </div>
             {/* Info text */}
-            <p
-              className={`
-    text-center text-[#00488D] text-sm mt-5
-    ${
-      isTouchDevice
-        ? "block"
-        : "opacity-0 group-hover:opacity-100 transition-opacity duration-200"
-    }
-  `}
-            >
+            <p className="text-center text-[#00488D] text-sm mt-5">
               <span>{week.info}</span>
             </p>
           </div>

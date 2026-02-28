@@ -48,7 +48,7 @@ export const ActivityCard = ({
         <a href={`/activities/${activity.slug}`} target="_blank">
           <Button
             variant="outline"
-            className="mt-4 text-[24px] bg-[#00A6C5] text-white font-heading"
+            className="mt-4 text-[24px] bg-[#1876D0] text-white font-heading"
           >
             Read More
           </Button>

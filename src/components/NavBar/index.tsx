@@ -6,7 +6,7 @@ import { RxHamburgerMenu } from "react-icons/rx";
 import { NAV_CONTENT } from "./NavContent";
 import Link from "next/link";
 import { Button } from "../ui/button";
-import { CalendarDays } from "lucide-react";
+import { CalendarDays, CalendarIcon } from "lucide-react";
 
 export const NavBar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -89,7 +89,7 @@ export const NavBar = () => {
                       href={item.href}
                       key={item.href}
                       className={cn(
-                        "text-white font-heading hover:bg-blue-400 w-full text-center transition-colors rounded-md"
+                        "text-white font-heading hover:bg-blue-400 w-full text-center transition-colors rounded-md",
                       )}
                     >
                       <h4>{item.title}</h4>
@@ -97,10 +97,11 @@ export const NavBar = () => {
                   );
                 })}
                 <a
-                  className="text-white font-heading hover:bg-blue-400 w-full text-center transition-colors rounded-md"
                   href="/calendar"
+                  aria-label="Open calendar"
+                  className="text-white hover:bg-blue-400 transition-colors rounded-md p-2"
                 >
-                  Calendar
+                  <CalendarIcon aria-hidden="true" />
                 </a>
                 <a
                   className="text-white font-heading hover:bg-blue-400 w-full text-center transition-colors rounded-md"
@@ -150,7 +151,7 @@ const NavLinkBox = ({
           roundedClass,
           darker
             ? "bg-[#013161] hover:bg-[#011a33]"
-            : "bg-[#1876D0] hover:bg-[#013161]"
+            : "bg-[#1876D0] hover:bg-[#013161]",
         )}
       >
         <h2 className="text-xl">{title}</h2>

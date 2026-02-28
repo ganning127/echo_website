@@ -49,6 +49,12 @@ export const PlayNewsletterSection = () => {
       <div className="mt-6">
         {!success && (
           <>
+            <label
+              htmlFor="email"
+              className="text-lg whitespace-nowrap font-bold"
+            >
+              Email Address:
+            </label>
             <input
               value={email}
               onChange={(e) => setEmail(e.target.value)}
