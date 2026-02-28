@@ -95,7 +95,7 @@ const weeks = [
     subtitle: "The HeartFelt Goodbye!",
     info: "Explorers celebrate the achievements they have made during their quest and pledge to continue on their HeartFelt journey!",
     imgSrc: "/ExplorerTimeline/week12.png",
-    date: "Session 12",
+    date: "Session 10",
   },
 ];
 
