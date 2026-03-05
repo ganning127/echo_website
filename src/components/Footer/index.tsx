@@ -120,6 +120,7 @@ export const Footer = () => {
               href="https://instagram.com/edechoorg"
               target="_blank"
               rel="noopener noreferrer"
+              aria-label="Visit our Instagram page"
               className="w-10 h-10 bg-[#FFD87A] rounded-full flex items-center justify-center hover:opacity-80 transition"
             >
               <Instagram className="w-5 h-5 text-black" />
@@ -128,6 +129,7 @@ export const Footer = () => {
             {/* Mail */}
             <a
               href="mailto:info@edecho.org"
+              aria-label="Email EDECHO"
               className="w-10 h-10 bg-[#FFD87A] rounded-full flex items-center justify-center hover:opacity-80 transition"
             >
               <Mail className="w-5 h-5 text-black" />
@@ -135,6 +137,7 @@ export const Footer = () => {
             {/* LinkedIn */}
             <a
               href="https://www.linkedin.com/company/early-cardiovascular-health-outreach"
+              aria-label="Visit our LinkedIn page"
               className="w-10 h-10 bg-[#FFD87A] rounded-full flex items-center justify-center hover:opacity-80 transition"
             >
               <Linkedin className="w-5 h-5 text-black" />

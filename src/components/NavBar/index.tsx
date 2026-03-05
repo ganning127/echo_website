@@ -6,7 +6,7 @@ import { RxHamburgerMenu } from "react-icons/rx";
 import { NAV_CONTENT } from "./NavContent";
 import Link from "next/link";
 import { Button } from "../ui/button";
-import { CalendarDays, CalendarIcon } from "lucide-react";
+import { CalendarIcon } from "lucide-react";
 
 export const NavBar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -37,8 +37,12 @@ export const NavBar = () => {
               />
             );
           })}
-          <a href="/calendar" className="ml-5">
-            <CalendarDays className="w-[50px] h-[50px] stroke-white fill-[#1876D0]" />
+          <a
+            href="/calendar"
+            className="ml-5 flex items-center justify-center w-15 h-15 rounded-full bg-[#1876D0] hover:bg-[#013161] transition-colors border-5 border-white"
+          >
+            <span className="sr-only">View calendar</span>
+            <CalendarIcon aria-hidden="true" className="w-5 h-5 text-white" />
           </a>
           <a href="/donate" className="ml-5">
             <Button className="font-heading text-[20px] border-[#ffffff] p-7 text-white px-6 border-4 hover:bg-[#00a6c4] bg-[#013161]">
@@ -57,7 +61,7 @@ export const NavBar = () => {
         </div>
 
         <div className="flex items-center justify-between px-4 py-3 lg:hidden bg-[#013161]">
-          <Link href="/">
+          <Link href="/" aria-label="EdEcho home">
             <Image
               src="/navbar_logo.png"
               width={150}
@@ -71,6 +75,7 @@ export const NavBar = () => {
           <button
             onClick={() => setIsOpen(!isOpen)}
             className="hover:cursor-pointer"
+            aria-label="Toggle menu"
           >
             {isOpen ? (
               <RxHamburgerMenu className="w-8 h-8 text-[#FFD87A] rotate-90" />
@@ -98,11 +103,12 @@ export const NavBar = () => {
                 })}
                 <a
                   href="/calendar"
-                  aria-label="Open calendar"
-                  className="text-white hover:bg-blue-400 transition-colors rounded-md p-2"
+                  className="text-white font-heading hover:bg-blue-400 w-full text-center transition-colors rounded-md"
+                  aria-label="View calendar"
                 >
-                  <CalendarIcon aria-hidden="true" />
+                  Calendar
                 </a>
+
                 <a
                   className="text-white font-heading hover:bg-blue-400 w-full text-center transition-colors rounded-md"
                   href="/donate"

@@ -54,7 +54,9 @@ export const NewsletterStripFooter = () => {
                 >
                   Email Address:
                 </label>
+
                 <input
+                  id="email"
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
                   type="email"
@@ -71,9 +73,9 @@ export const NewsletterStripFooter = () => {
                     size="lg"
                     onClick={handleSubmit}
                   >
-                    <h5 className="text-[24px] text-white">
+                    <h3 className="text-[24px] text-white">
                       {loading ? "Loading..." : "Sign Up"}
-                    </h5>
+                    </h3>
                   </Button>
                 </div>
               </>
