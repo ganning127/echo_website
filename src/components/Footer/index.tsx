@@ -147,7 +147,7 @@ export const Footer = () => {
 
         <div className="col-span-3 text-slate-50">
           <p className="text-md text-center">
-            &copy; 2025 Early Cardiovascular Health Outreach
+            &copy; 2026 Early Cardiovascular Health Outreach
           </p>
         </div>
         <div className="col-span-3 flex gap-5 text-center m-auto text-slate-50">
