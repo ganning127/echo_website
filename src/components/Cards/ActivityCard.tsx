@@ -45,12 +45,17 @@ export const ActivityCard = ({
           {activity.description}
         </p>
 
-        <a href={`/activities/${activity.slug}`} target="_blank">
+        <a
+          href={`/activities/${activity.slug}`}
+          target="_blank"
+          aria-label={`View ${activity.title} activity, opens in new tab`}
+          rel="noopener noreferrer"
+        >
           <Button
             variant="outline"
             className="mt-4 text-[24px] bg-[#1876D0] text-white font-heading"
           >
-            Read More
+            View Activity
           </Button>
         </a>
       </div>

@@ -71,46 +71,55 @@ export const FoundersStory = () => {
       year: "July 4, 2014",
       text: "Dad receives life saving procedure after heart attack on a family vacation",
       img: "/timeline/dad_procedure.png",
+      alt: "Kimberly and her family at EPCOT",
     },
     {
       year: "July 10, 2015",
       text: "U.S. Naval Academy Medical Disqualification for High Blood Pressure",
       img: "/timeline/naval_disqual.png",
+      alt: "Kimberly with Navy paperwork",
     },
     {
       year: "July 27, 2015",
       text: "Started UCLA career over summer, prior to Fall quarter",
       img: "/timeline/started_ucla.png",
+      alt: "Kimberly at UCLA",
     },
     {
       year: "May 16, 2017",
       text: "Met Dr. Marcella Press in the catheterization lab at UCLA hospital",
       img: "/timeline/met_dr.png",
+      alt: "Kimberly and Dr. Press in the cath lab",
     },
     {
       year: "July 25, 2017",
       text: "Co-founded the Early Cardiovascular Health Outreach SMS (ECHOS) alongside the UCLA Women's Cardiovascular Center ",
       img: "/timeline/orig_echo_logo.png",
+      alt: "Original ECHO logo",
     },
     {
       year: "September 25, 2017",
       text: "First scientific research poster presentation at the UCLA Cardiovascular Symposium",
       img: "/timeline/first_poster.png",
+      alt: "Kimberly's scientific poster",
     },
     {
       year: "September 25, 2017",
       text: "Awarded the UCLA Babara Streisand Research Fellowship",
       img: "/timeline/babara_streisand.png",
+      alt: "Kimberly with UCLA campus statue",
     },
     {
       year: "December 19, 2018",
       text: "Selected for the 2019 Undergraduate Research Fellows Program (URFP) and scholarship from the Wasserman Endowment",
       img: "/timeline/urfp.png",
+      alt: "Kimberly on Campus",
     },
     {
       year: "May 21, 2019",
       text: "UCLA Undergraduate Research Poster Day",
       img: "/timeline/poster_day.png",
+      alt: "Kimberly presenting her research poster at UCLA",
     },
     {
       year: "May 15, 2021",
@@ -124,16 +133,19 @@ export const FoundersStory = () => {
       year: "August 12, 2022",
       text: "Defended Master's Thesis on ECHOS",
       img: "/timeline/def_masters.png",
+      alt: "kimberly in lab coat",
     },
     {
       year: "November, 2022",
       text: "Ambition Accelerator Winner at First Pitch Competition at Taco Bell Foundation in Irvine, Ca.",
       img: "/timeline/tbf_pitch.png",
+      alt: "Kimberly at the Taco Bell Foundation pitch competition",
     },
     {
       year: "February 2023",
       text: "Received the Hershey Company Heartwarming Young Hero's Grant",
       img: "/timeline/hershey.png",
+      alt: "Kimberly with the Hershey's Heartwarming Young Heroes",
     },
     {
       year: "April 29, 2023",
@@ -147,6 +159,7 @@ export const FoundersStory = () => {
       year: "2025",
       text: "Earned a Master's in Public Health at Charles R. Drew University of Medicine and Science",
       img: "/timeline/masters_ph.png",
+      alt: "kimberly in graduation cap and gown",
     },
   ];
 
@@ -173,7 +186,7 @@ export const FoundersStory = () => {
             {event.img && (
               <Image
                 src={event.img}
-                alt={`${event.year} image`}
+                alt={event.alt}
                 width={200}
                 height={100}
                 className="h-auto w-64 object-cover rounded-lg my-2"
@@ -210,7 +223,7 @@ const MemberCard = ({
       <div className="relative">
         <Image
           src={member.image}
-          alt={member.name}
+          alt=""
           width={200}
           height={200}
           className="h-24 w-24 object-cover rounded-lg"
@@ -227,7 +240,7 @@ const MemberCard = ({
         <div className="flex flex-row items-center gap-2">
           <Image
             src={member.icon}
-            alt={`${member.name} icon`}
+            alt=""
             width={iconSize}
             height={iconSize}
             className=""
