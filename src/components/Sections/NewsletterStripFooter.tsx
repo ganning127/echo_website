@@ -46,48 +46,53 @@ export const NewsletterStripFooter = () => {
           {/* Right Section - Sign up for newsletter */}
 
           <div className="text-center m-auto w-full sm:text-left col-span-2 block sm:flex justify-end gap-2">
-            {!success && (
-              <>
-                <label
-                  htmlFor="email"
-                  className="text-lg whitespace-nowrap font-bold content-center"
-                >
-                  Email Address:
-                </label>
-
-                <input
-                  id="email"
-                  value={email}
-                  onChange={(e) => setEmail(e.target.value)}
-                  type="email"
-                  placeholder="Your email here"
-                  className="m-auto sm:m-0 w-[80%] h-[60%] sm:w-full px-4 py-3 rounded-md text-black bg-white placeholder-gray-400"
-                />
-
-                <div className="text-center m-auto">
-                  <Button
-                    disabled={!email || loading}
-                    className={
-                      " hover:bg-[#00488D] mt-5 sm:m-0 py-3 text-slate-50 bg-[#1473d2] transition-colors"
-                    }
-                    size="lg"
-                    onClick={handleSubmit}
+            <form
+              onSubmit={handleSubmit}
+              className="text-center m-auto w-full sm:text-left col-span-2 flex flex-col sm:flex-row justify-end gap-2"
+            >
+              {!success && (
+                <>
+                  <label
+                    htmlFor="emailStrip"
+                    className="text-lg whitespace-nowrap font-bold content-center"
                   >
-                    <h3 className="text-[24px] text-white">
-                      {loading ? "Loading..." : "Sign Up"}
-                    </h3>
-                  </Button>
-                </div>
-              </>
-            )}
+                    Email Address
+                  </label>
 
-            {success && (
-              <div className="text-center mt-4">
-                <h2 className="text-[24px] text-green-600">
-                  Thank you for subscribing!
-                </h2>
-              </div>
-            )}
+                  <input
+                    id="email"
+                    name="emailStrip"
+                    type="email"
+                    required
+                    value={email}
+                    onChange={(e) => setEmail(e.target.value)}
+                    placeholder="Your email here"
+                    className="m-auto sm:m-0 w-[80%] sm:w-full px-4 py-3 rounded-md text-black bg-white placeholder-gray-400"
+                  />
+
+                  <div className="text-center m-auto">
+                    <Button
+                      type="submit"
+                      disabled={!email || loading}
+                      className="hover:bg-[#00488D] mt-5 sm:m-0 py-3 text-slate-50 bg-[#1473d2] transition-colors"
+                      size="lg"
+                    >
+                      <span className="text-[24px] text-white">
+                        {loading ? "Loading..." : "Sign Up"}
+                      </span>
+                    </Button>
+                  </div>
+                </>
+              )}
+
+              {success && (
+                <div className="text-center mt-4">
+                  <p className="text-[24px] text-green-600">
+                    Thank you for subscribing!
+                  </p>
+                </div>
+              )}
+            </form>
           </div>
         </div>
       </section>

@@ -93,9 +93,9 @@ export const NewsletterSection = () => {
                   size="lg"
                   onClick={handleSubmit}
                 >
-                  <h5 className="text-[24px] text-black">
+                  <h2 className="text-[24px] text-black">
                     {loading ? "Loading..." : "Join!"}
-                  </h5>
+                  </h2>
                 </Button>
               </div>
             </div>

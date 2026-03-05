@@ -141,9 +141,10 @@ export const ExplorersTimeline = () => {
       {/* Left Arrow */}
       <button
         onClick={() => scroll("left")}
+        aria-label="scroll left"
         className="absolute left-0 top-[30%] -translate-y-1/2 z-20 bg-white shadow-lg rounded-full p-2 hover:bg-gray-200"
       >
-        <ChevronLeft className="w-6 h-6 text-[#00488D]" />
+        <ChevronLeft className="w-6 h-6 text-[#00488D]" aria-hidden="true" />
       </button>
 
       {/* Timeline Items */}
@@ -187,9 +188,10 @@ export const ExplorersTimeline = () => {
       {/* Right Arrow */}
       <button
         onClick={() => scroll("right")}
+        aria-label="Scroll right"
         className="absolute right-0 top-[30%] -translate-y-1/2 z-20 bg-white shadow-lg rounded-full p-2 hover:bg-gray-200"
       >
-        <ChevronRight className="w-6 h-6 text-[#00488D]" />
+        <ChevronRight className="w-6 h-6 text-[#00488D]" aria-hidden="true" />
       </button>
     </div>
   );
