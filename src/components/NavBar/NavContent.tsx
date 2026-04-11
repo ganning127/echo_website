@@ -23,4 +23,8 @@ export const NAV_CONTENT = [
     title: "Play",
     href: "/play",
   },
+  {
+    title: "Contact",
+    href: "/contact",
+  },
 ];
