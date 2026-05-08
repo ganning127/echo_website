@@ -20,7 +20,7 @@ export default function Donate() {
       <NavBar />
 
       <Suspense fallback={<div>Loading...</div>}>
-        <h1 className="mt-5 text-5xl text-center mx-auto mb-5">
+        <h1 className="mt-5 text-5xl text-center mx-auto mb-5 lg:pt-36 pt-0">
           Invest in a Heart Healthy Future
         </h1>
         <div className="grid-cols-2 grid mx-auto max-w-6xl">

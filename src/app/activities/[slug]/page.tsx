@@ -33,7 +33,7 @@ export default function ActivityPage({
   return (
     <section className="w-full bg-[#B77372]">
       <NavBar />
-      <div className="w-5/6 m-auto">
+      <div className="w-5/6 m-auto lg:pt-24 pt-0">
         <Button className="mt-3 bg-[#7C2D36] hover:bg-[#013161] p-5">
           <Link
             href="/activities"

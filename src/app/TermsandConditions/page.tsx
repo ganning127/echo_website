@@ -14,6 +14,7 @@ export default function TermsandConditions() {
 
       <Container>
         <Suspense fallback={<div>Loading...</div>}>
+        <div className="lg:pt-24 pt-0">
           <h1>Terms and Conditions</h1>
           <p>Last updated: August 03, 2025</p>
           <p>
@@ -511,6 +512,7 @@ export default function TermsandConditions() {
           <ul>
             <li>By email: edecho.org@gmail.com</li>
           </ul>
+          </div>
         </Suspense>
       </Container>
 

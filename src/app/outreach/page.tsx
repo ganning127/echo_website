@@ -63,7 +63,7 @@ export default function Outreach() {
         />
       </div>
 
-      <div className="relative m-auto text-[7vw] text-[#013161] text-center visible sm:invisible justify-self-center sm:w-[1px] w-[70%] mt-5 z-20 rounded-md">
+      <div className="relative m-auto text-[7vw] text-[#013161] text-center visible sm:invisible justify-self-center sm:w-[1px] w-[70%] z-20 rounded-md lg:pt-24 pt-0">
         <h1>Outreach</h1>
       </div>
       {/* 8 minute call video section*/}

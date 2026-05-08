@@ -14,7 +14,7 @@ export const NavBar = () => {
   return (
     <>
       <nav className="sticky top-0 z-50">
-        <div className="hidden lg:flex w-full justify-center items-center">
+        <div className="hidden lg:flex w-full justify-center items-cente absolute items-center">
           <Link href="/">
             <Image
               src="/navbar_logo.png"

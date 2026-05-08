@@ -22,7 +22,7 @@ export default function About() {
       <nav className="bg-[#DBECF1] sticky top-0 z-50">
         <NavBar />
       </nav>
-      <Container className="bg-[#DBECF1]">
+      <Container className="bg-[#DBECF1] lg:pt-24 pt-0">
         <Suspense fallback={<div>Loading...</div>}>
           <AboutTabsSection />
         </Suspense>

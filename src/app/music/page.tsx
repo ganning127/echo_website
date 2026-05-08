@@ -22,7 +22,7 @@ export default function Music() {
   return (
     <section className="bg-[#fff6e9]">
       <NavBar />
-      <div className="mt-10">
+      <div className="lg:pt-36 pt-0">
         <Image
           className="w-md justify-self-center"
           src="/Sign.png"

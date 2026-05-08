@@ -20,7 +20,7 @@ export default function Activities() {
   return (
     <section className="w-full bg-[#B77372]">
       <NavBar />
-      <div className="pt-5 pb-5 w-5/6 m-auto text-center">
+      <div className="pt-5 pb-5 w-5/6 m-auto text-center lg:pt-36 pt-0">
         {/*
         <Image
           className="w-xs justify-self-center rounded-lg pb-10"
