@@ -82,20 +82,20 @@ const weeks = [
     date: "Session 8",
   },
   {
-    number: 10,
-    title: "Meeting 10",
+    number: 9,
+    title: "Meeting 9",
     subtitle: "On Your Mark, Get Set, Measure!",
-    info: "A special guest will join the quest to teach Explorers how to measure their blood pressure and heart rates.",
+    info: "Explorers will how to measure their blood pressure and heart rates.",
     imgSrc: "/ExplorerTimeline/week9.png",
     date: "Session 9",
   },
   {
-    number: 11,
-    title: "Meeting 11",
+    number: 10,
+    title: "Meeting 10",
     subtitle: "The HeartFelt Goodbye!",
     info: "Explorers celebrate the achievements they have made during their quest and pledge to continue on their HeartFelt journey!",
     imgSrc: "/ExplorerTimeline/week12.png",
-    date: "Session 12",
+    date: "Session 10",
   },
 ];
 
@@ -141,9 +141,10 @@ export const ExplorersTimeline = () => {
       {/* Left Arrow */}
       <button
         onClick={() => scroll("left")}
+        aria-label="scroll left"
         className="absolute left-0 top-[30%] -translate-y-1/2 z-20 bg-white shadow-lg rounded-full p-2 hover:bg-gray-200"
       >
-        <ChevronLeft className="w-6 h-6 text-[#00488D]" />
+        <ChevronLeft className="w-6 h-6 text-[#00488D]" aria-hidden="true" />
       </button>
 
       {/* Timeline Items */}
@@ -187,9 +188,10 @@ export const ExplorersTimeline = () => {
       {/* Right Arrow */}
       <button
         onClick={() => scroll("right")}
+        aria-label="Scroll right"
         className="absolute right-0 top-[30%] -translate-y-1/2 z-20 bg-white shadow-lg rounded-full p-2 hover:bg-gray-200"
       >
-        <ChevronRight className="w-6 h-6 text-[#00488D]" />
+        <ChevronRight className="w-6 h-6 text-[#00488D]" aria-hidden="true" />
       </button>
     </div>
   );

@@ -5,14 +5,14 @@ import { FadeInWhenVisible } from "../Animation/FadeInWhenVisible";
 
 export const HeartConnectionSection = () => {
   const [heartbeatImage, setHeartbeatImage] = useState(
-    "/60_MPH_Infographic.gif"
+    "/60_MPH_Infographic.gif",
   );
 
   const handleImageSwap = () => {
     setHeartbeatImage((prev) =>
       prev === "/60_MPH_Infographic.gif"
         ? "/120_MPH_Infographic.gif"
-        : "/60_MPH_Infographic.gif"
+        : "/60_MPH_Infographic.gif",
     );
   };
 
@@ -21,7 +21,7 @@ export const HeartConnectionSection = () => {
       <FadeInWhenVisible>
         <div className="pt-10 w-5/6 justify-self-center columns-2 flex flex-col-reverse md:flex-row items-start gap-10">
           <div className="w-[100%] text-[3.5vw] sm:text-[1.5vw]">
-            <h4 className="text-[48px]">Music and the heart</h4>
+            <h2 className="text-[48px]">Music and the heart</h2>
             As you listen, notice how your body responds.
             <ul className="list-disc ml-10">
               <li>Is your heart beating faster or slower?</li>

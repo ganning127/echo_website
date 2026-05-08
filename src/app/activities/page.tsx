@@ -30,9 +30,9 @@ export default function Activities() {
           height="100"
         /> */}
         <h1 className="text-[8vw] sm:text-[4vw] text-black">Activities</h1>
-        <p className="text-black text-[4vw] sm:text-[1.5vw] md:text-[2vw] w-3/6 m-auto">
+        <h2 className="text-black text-[4vw] sm:text-[1.5vw] md:text-[2vw] w-3/6 m-auto">
           Click on an activity to learn more about it!
-        </p>
+        </h2>
         <div className="relative z-20">
           <AllActivities />
         </div>
@@ -41,7 +41,7 @@ export default function Activities() {
         <Image
           className="absolute md:mt-40 left-0 top-30 w-auto visible z-0 h-[60vw] lg:h-[40vw] max-h-[500px]"
           src="/Activities Window Left.png"
-          alt="window"
+          alt="left window"
           width="200"
           height="500"
         />
@@ -49,7 +49,7 @@ export default function Activities() {
         <Image
           className="absolute md:mt-40 right-0 top-30 w-auto visible z-0 h-[60vw] lg:h-[40vw] max-h-[500px]"
           src="/Activities Window Right.png"
-          alt="window"
+          alt="right window"
           width="200"
           height="500"
         />
@@ -58,14 +58,14 @@ export default function Activities() {
         <Image
           className="absolute left-0 z-10 bottom-0 w-auto visible h-[40vw] md:h-[25vw] max-h-[500px]"
           src="/Activities Machine 1.png"
-          alt="Machine"
+          alt="left workout Machine"
           width="200"
           height="500"
         />
         <Image
           className="absolute right-0 z-10 bottom-8 w-auto visible h-[20vw] md:h-[15vw] max-h-[500px]"
           src="/Activities Machine 2.png"
-          alt="Machine"
+          alt="right workout Machine"
           width="200"
           height="500"
         />

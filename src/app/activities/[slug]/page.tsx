@@ -80,7 +80,7 @@ export default function ActivityPage({
         <Image
           className="absolute md:mt-40 left-0 top-30 w-auto visible z-0 h-[60vw] lg:h-[40vw] max-h-[500px]"
           src="/Activities Window Left.png"
-          alt="window"
+          alt="left window"
           width="200"
           height="500"
         />
@@ -88,7 +88,7 @@ export default function ActivityPage({
         <Image
           className="absolute md:mt-40 right-0 top-30 w-auto visible z-0 h-[60vw] lg:h-[40vw] max-h-[500px]"
           src="/Activities Window Right.png"
-          alt="window"
+          alt="right window"
           width="200"
           height="500"
         />
@@ -97,14 +97,14 @@ export default function ActivityPage({
         <Image
           className="absolute left-0 z-10 bottom-0 w-auto visible h-[40vw] md:h-[25vw] max-h-[500px]"
           src="/Activities Machine 1.png"
-          alt="Machine"
+          alt="left workout Machine"
           width="200"
           height="500"
         />
         <Image
           className="absolute right-0 z-10 bottom-8 w-auto visible h-[20vw] md:h-[15vw] max-h-[500px]"
           src="/Activities Machine 2.png"
-          alt="Machine"
+          alt="right workout Machine"
           width="200"
           height="500"
         />
@@ -112,7 +112,7 @@ export default function ActivityPage({
         <Image
           className="relative object-contain w-full bg-[#9C6363]"
           src="/Activities floor pattern.png"
-          alt="door"
+          alt="checkerboard floor pattern"
           width="800"
           height="100"
         />

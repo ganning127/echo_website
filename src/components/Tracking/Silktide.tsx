@@ -83,6 +83,19 @@ export default function Silktide() {
             },
             position: { banner: "bottomCenter" },
           });
+
+          // Accessibility patch for Silktide modal close button
+          const observer = new MutationObserver(() => {
+            const closeButton = document.querySelector(".modal-close");
+            if (closeButton && !closeButton.getAttribute("aria-label")) {
+              closeButton.setAttribute(
+                "aria-label",
+                "Close cookie preferences",
+              );
+            }
+          });
+
+          observer.observe(document.body, { childList: true, subtree: true });
         }}
       />
     </>
