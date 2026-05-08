@@ -38,9 +38,9 @@ export const CharactersMain = () => {
                 fill
                 className="object-contain rotate-10"
               />
-              <p className="absolute bottom-2 text-center text-[5vw] left-[13vw] sm:left-[4vw] text-black sm:text-[2vw] font-bold rotate-10">
+              <h3 className="absolute bottom-2 text-center text-[5vw] left-[13vw] sm:left-[4vw] text-black sm:text-[2vw] font-bold rotate-10">
                 Echo
-              </p>
+              </h3>
             </div>
           </Link>
           <Link
@@ -54,9 +54,9 @@ export const CharactersMain = () => {
                 fill
                 className="object-contain -rotate-10"
               />
-              <p className="absolute bottom-2 text-center left-[17vw] sm:left-[6vw] text-black text-[5vw] sm:text-[2vw] font-bold -rotate-10">
+              <h3 className="absolute bottom-2 text-center left-[17vw] sm:left-[6vw] text-black text-[5vw] sm:text-[2vw] font-bold -rotate-10">
                 Artie
-              </p>
+              </h3>
             </div>
           </Link>
         </div>
@@ -74,9 +74,9 @@ export const CharactersMain = () => {
                 fill
                 className="object-contain rotate-10"
               />
-              <p className="absolute bottom-2 text-center text-[5vw] left-[10vw] sm:left-[3vw] text-black sm:text-[2vw] font-bold rotate-10">
+              <h3 className="absolute bottom-2 text-center text-[5vw] left-[10vw] sm:left-[3vw] text-black sm:text-[2vw] font-bold rotate-10">
                 Vienna
-              </p>
+              </h3>
             </div>
           </Link>
           <Link
@@ -90,9 +90,9 @@ export const CharactersMain = () => {
                 fill
                 className="object-contain -rotate-10"
               />
-              <p className="absolute bottom-2 text-center text-[5vw] left-[13vw] sm:left-[4vw] text-black sm:text-[2vw] font-bold -rotate-10">
+              <h3 className="absolute bottom-2 text-center text-[5vw] left-[13vw] sm:left-[4vw] text-black sm:text-[2vw] font-bold -rotate-10">
                 Plaqtrick
-              </p>
+              </h3>
             </div>
           </Link>
         </div>

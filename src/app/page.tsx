@@ -33,7 +33,7 @@ export default function Home() {
             <div className="w-full md:w-1/3">
               <Image
                 src="/run_img.png"
-                alt="Welcome to Echoville"
+                alt="Echo and Plaqtrick running"
                 width={400}
                 height={300}
                 className="w-full h-full object-cover"

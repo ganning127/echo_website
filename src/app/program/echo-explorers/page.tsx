@@ -82,7 +82,7 @@ export default function EchoExplorers() {
           <section className="w-5/6 max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-2 gap-6 px-5 pb-10 sm:px-0">
             <div className="bg-white  rounded-2xl p-8 transition delay-150 duration-300 ease-in-out hover:-translate-y-1 hover:scale-105">
               <h3 className="text-2xl text-[#00488D] mb-2">Schedule</h3>
-              <p className="text-lg">12 session, each 1 hour</p>
+              <p className="text-lg">10 sessions, each 1 hour</p>
             </div>
 
             <div className="bg-white  rounded-2xl p-8 transition delay-150 duration-300 ease-in-out hover:-translate-y-1 hover:scale-105">

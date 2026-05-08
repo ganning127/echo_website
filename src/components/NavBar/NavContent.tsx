@@ -23,4 +23,8 @@ export const NAV_CONTENT = [
     title: "Blog",
     href: "/blog",
   },
+  {
+    title: "Contact",
+    href: "/contact",
+  },
 ];

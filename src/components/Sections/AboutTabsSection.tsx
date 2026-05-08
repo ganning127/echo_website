@@ -46,7 +46,7 @@ export const AboutTabsSection = () => {
               <h2
                 className={cn(
                   "text-xl lg:text-[48px]",
-                  isActive ? "text-[#00A6C5]" : "text-[#013161]"
+                  isActive ? "text-[#1876D0]" : "text-[#013161]",
                 )}
               >
                 {tab.label}
