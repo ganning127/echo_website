@@ -6,7 +6,6 @@ import Image from "next/image";
 import { ExplorersTimeline } from "@/components/Explorers Timeline/explorersTimeline";
 import FAQSection from "@/components/Echo Explorers FAQ/FAQ";
 // src/app/layout.tsx
-import "@/styles/styles.css";
 
 export const metadata: Metadata = {
   title: "Echo Explorers",
@@ -39,7 +38,7 @@ export default function EchoExplorers() {
           </p>
         </div>
         <div className="bg-paper">
-          <section className="bg-[url('/Echo Explorers Paper.webp')] bg-cover bg-center w-5/6 max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 pt-10 px-5 sm:px-0 items-center">
+          <section className="bg-[url('/Echo Explorers Paper.webp')] bg-cover bg-center w-5/6 max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-4 pt-10 px-5 sm:px-0 items-center">
             <div className="col-span-2">
               <h2 className="text-3xl font-heading text-[#00488D]">
                 Program Description
@@ -68,11 +67,11 @@ export default function EchoExplorers() {
                 lead heart healthy lives.
               </p>
             </div>
-            <div className="col-span-1 mx-auto text-center flex justify-end">
+            <div className="col-span-2 mx-auto text-center flex justify-end">
               <Image
-                src="/Echo Explorers.png"
+                src="/echo teachers note.webp"
                 alt="Explorer Character"
-                width={740}
+                width={540}
                 height={565}
                 className="m-auto pb-5 w-full max-w-[350px] lg:max-w-[420px] xl:max-w-[480px]"
               />

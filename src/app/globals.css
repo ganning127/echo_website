@@ -1,4 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bangers&family=Lato:wght@400;700&display=swap');
+
 @import "tailwindcss";
 @import "tw-animate-css";
 
@@ -7,6 +9,25 @@
 /* Hide scrollbar but keep scroll functionality */
 .scrollbar-hide::-webkit-scrollbar {
   display: none;
+}
+
+.bg-paper {
+  background-image: url("/Echo Explorers Paper.webp");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.bg-heroes{
+    background-image: url("/Echo Heroes Background.webp");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.font-heroes{
+
+  font-family: 'Bangers';
 }
 
 /* Custom scrollbar styling */
@@ -151,6 +172,13 @@
 @font-face {
   font-family: 'Cookie_Supply';
   src: url('/fonts/cookie_supply_demo.otf') format('opentype');
+  font-weight: 100 300 500 700 900;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Bangers';
+  src: url('/fonts/Bangers-Regular.ttf') format('truetype');
   font-weight: 100 300 500 700 900;
   font-style: normal;
 }

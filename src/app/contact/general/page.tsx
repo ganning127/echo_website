@@ -116,8 +116,10 @@ export default function GeneralContactPage() {
   if (isComplete) {
     return (
       <>
-        <NavBar />
-        <div className="min-h-screen bg-gradient-to-br from-[#013161] via-[#1876D0] to-[#329D3C] flex items-center justify-center p-4">
+       <nav className="bg-[#DBECF1] sticky top-0 z-50">
+      <NavBar />
+    </nav>
+        <div className="min-h-screen bg-gradient-to-br from-[#013161] via-[#1876D0] to-[#329D3C] flex items-center justify-center lg:pt-36 pt-0">
           <motion.div
             initial={{ scale: 0.8, opacity: 0 }}
             animate={{ scale: 1, opacity: 1 }}

@@ -52,7 +52,7 @@ export default function ContactPage() {
   return (
     <>
       <NavBar />
-      <div className="min-h-screen bg-gradient-to-br from-[#013161] via-[#1876D0] to-[#329D3C] flex flex-col">
+      <div className="min-h-screen bg-gradient-to-br from-[#013161] via-[#1876D0] to-[#329D3C] flex flex-col lg:pt-24 pt-0">
         {/* Header */}
         <div className="text-center pt-12 pb-8 px-4">
           <motion.h1
