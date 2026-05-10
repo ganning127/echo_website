@@ -2,8 +2,6 @@ export const NAV_CONTENT = [
   { title: "About", 
     href: "/about",
     children: [
-      {title: "about", href:"/about?tab=about"},
-      
       {title: "Mission", href:"/about?tab=mission"},
       
       {title: "Newsletter", href:"/about?tab=newsletter"},

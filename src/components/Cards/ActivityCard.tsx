@@ -39,7 +39,7 @@ export const ActivityCard = ({
           ))}
         </div>
 
-        <h3 className="text-[25px] mb-2">{activity.title}</h3>
+        <h3 className="text-[30px] mb-2">{activity.title}</h3>
 
         <p className="text-[15px] text-gray-700 line-clamp-2">
           {activity.description}
