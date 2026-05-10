@@ -1,4 +1,18 @@
 [
+  
+  {
+    "title": "Blood Pressure Awareness Card",
+    "slug": "BPAC",
+    "preview": "/ActivityPreview/BPAC - Single and Multiple.png",
+    "description": "All Echo Heroes have their very own ID called a Blood Pressure Awareness Card (BPAC)",
+    "link": "/make/ECHO BPAC, Single.pdf",
+    "downloadLabel": "Print 1 Card",
+    "secondaryLink": "/make/ECHO BPAC, Multiple.pdf",
+    "secondaryLabel": "Print set of 10 cards",
+    "image": "/ActivityPreview/BPAC Preview.png",
+    "order": 4,
+    "tags": ["home"]
+  },
   {
     "title": "There's always time for care",
     "slug": "theres-always-time-for-care",
@@ -31,18 +45,5 @@
     "image": "/act_painting.png",
     "order": 3,
     "tags": ["recipe", "home", "artie"]
-  },
-  {
-    "title": "Blood Pressure Awareness Card",
-    "slug": "BPAC",
-    "preview": "/ActivityPreview/BPAC - Single and Multiple.png",
-    "description": "All Echo Heroes have their very own ID called a Blood Pressure Awareness Card (BPAC)",
-    "link": "/make/ECHO BPAC, Single.pdf",
-    "downloadLabel": "Print 1 Card",
-    "secondaryLink": "/make/ECHO BPAC, Multiple.pdf",
-    "secondaryLabel": "Print set of 10 cards",
-    "image": "/ActivityPreview/BPAC Preview.png",
-    "order": 4,
-    "tags": ["home", "echo"]
   }
 ]
