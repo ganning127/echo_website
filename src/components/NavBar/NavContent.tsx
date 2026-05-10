@@ -1,5 +1,14 @@
 export const NAV_CONTENT = [
-  { title: "About", href: "/about" },
+  { title: "About", 
+    href: "/about",
+    children: [
+      {title: "about", href:"/about?tab=about"},
+      
+      {title: "Mission", href:"/about?tab=mission"},
+      
+      {title: "Newsletter", href:"/about?tab=newsletter"},
+    ]
+   },
   {
     title: "Characters",
     href: "/characters",
@@ -21,5 +30,4 @@ export const NAV_CONTENT = [
     ],
   },
   { title: "Activities", href: "/activities" },
-  { title: "Music", href: "/music" },
 ];

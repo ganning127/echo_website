@@ -18,7 +18,7 @@ export function ForwardThinkingSection() {
         {/* Comic Image */}
         <div className="max-w-[1040px] mx-auto">
           <Image
-                                src="/BP Comic.png"
+                                src="/blood_pressure_comic.png"
                                 alt="BPAC"
                                 width={740}
                                 height={740}

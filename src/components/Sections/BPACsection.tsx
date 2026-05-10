@@ -1,5 +1,7 @@
 "use client";
 import Image from "next/image";
+import { Button } from "../ui/button";
+
 
 export function BPACSection() {
   return (
@@ -104,10 +106,13 @@ export function BPACSection() {
                     </div>
                   </div>
                 </div>
-
-                <button className="bg-[#7559a4] text-white font-['Bangers',sans-serif] text-[28px] lg:text-[32px] px-8 lg:px-6 py-4 lg:py-2 rounded-[15px] hover:bg-[#634a8c] transition-colors">
-                  Print BPAC
-                </button>
+<a href="/make/ECHO BPAC, Single.pdf">
+                 <Button
+            className="bg-[#7559a4] text-white font-['Bangers',sans-serif] text-[28px] lg:text-[32px] px-8 lg:px-6 py-4 lg:py-2 rounded-[5px] hover:bg-[#634a8c] transition-colors"
+          >Print BPAC
+          </Button>
+          </a>
+                <a className="underline" href="/make/ECHO BPAC, Multiple.pdf">Need more than one BPAC? Print a set of 10 here</a>
               </div>
             </div>
 

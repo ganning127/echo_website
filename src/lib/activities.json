@@ -2,56 +2,47 @@
   {
     "title": "There's always time for care",
     "slug": "theres-always-time-for-care",
-    "preview":"/ActivityPreview/Vienna's_Poem.png", 
+    "preview": "/ActivityPreview/Vienna's_Poem.png",
     "description": "Vienna has quite a way with words, check out some of her poetry!",
     "link": "/make/Vienna's_Poem.pdf",
+    "downloadLabel": "Download Poem",
     "image": "/act_care.png",
     "order": 1,
-    "tags": [
-      "home",
-      "poetry",
-      "vienna"
-    ]
+    "tags": ["home", "poetry", "vienna"]
   },
   {
     "title": "Dodge the goo",
     "slug": "Dodge-the-goo",
-    "preview":"/ActivityPreview/Dodge_the_goo_maze.png",
+    "preview": "/ActivityPreview/Dodge_the_goo_maze.png",
     "description": "Plaqtrick has left behind some big messes in the house. Help Echo navigate around the ooey-gooey puddles of ick!",
     "link": "/make/Dodge_the_goo_maze.pdf",
+    "downloadLabel": "Download Game",
     "image": "/act_dodge.png",
     "order": 2,
-    "tags": [
-      "home",
-      "game",
-      "plaqtrick"
-    ]
+    "tags": ["home", "game", "plaqtrick"]
   },
   {
     "title": "What A Cute-Cumber",
     "slug": "What-A-Cute-Cumber",
-    "preview":"/ActivityPreview/Recipe_What a Cute-Cucumber.png",
+    "preview": "/ActivityPreview/Recipe_What a Cute-Cucumber.png",
     "description": "Artie is sharing some of his favorite recipes with us. Check out his cookbook to get your own inner chef inspired!",
     "link": "/make/Recipe_What a Cute-Cucumber.pdf",
+    "downloadLabel": "Download Recipe",
     "image": "/act_painting.png",
     "order": 3,
-    "tags": [
-      "recipe",
-      "home",
-      "artie"
-    ]
+    "tags": ["recipe", "home", "artie"]
   },
-    {
-    "title": "BPAC",
+  {
+    "title": "Blood Pressure Awareness Card",
     "slug": "BPAC",
-    "preview":"/ECHO BPAC Front.png",
-    "description": "Dis is the bpac",
-    "link": "/make/Recipe_What a Cute-Cucumber.pdf",
-    "image": "/ECHO BPAC Front.png",
+    "preview": "/ActivityPreview/BPAC - Single and Multiple.png",
+    "description": "All Echo Heroes have their very own ID called a Blood Pressure Awareness Card (BPAC)",
+    "link": "/make/ECHO BPAC, Single.pdf",
+    "downloadLabel": "Print 1 Card",
+    "secondaryLink": "/make/ECHO BPAC, Multiple.pdf",
+    "secondaryLabel": "Print set of 10 cards",
+    "image": "/ActivityPreview/BPAC Preview.png",
     "order": 4,
-    "tags": [
-      "home",
-      "echo"
-    ]
+    "tags": ["home", "echo"]
   }
 ]

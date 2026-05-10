@@ -32,7 +32,7 @@ export function EducationSection() {
   <div className="absolute inset-0 flex items-center justify-center">
     <div className="relative w-[180px] lg:w-[420px] h-[220px] lg:h-[280px]">
       <Image
-        src="/Blood pressure monitor.png"
+        src="/BP monitor.png"
         alt="Blood pressure monitor"
         fill
         className="object-contain"

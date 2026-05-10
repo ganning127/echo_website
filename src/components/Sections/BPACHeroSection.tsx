@@ -11,13 +11,13 @@ export function HeroSection() {
             {/* Program Name */}
             <div className="flex flex-col items-center lg:items-start">
                 <Image
-                                src="/ECHO BPAC Front.png"
-                                alt="BPAC"
-                                width={740}
+            src="/Echo Heroes Program.png"
+            alt="Echo Heroes with Artie, Echo, Plaqtrick, and vienna"
+                                width={800}
                                 height={365}
-                                className=" w-full max-w-[350px] lg:max-w-[420px] xl:max-w-[480px]"
+                                className=" w-full max-w-[350px] lg:max-w-[820px] xl:max-w-[880px]"
                               />
-              <p className="font-['Lato',sans-serif] text-white text-[20px] lg:text-[24px] text-center lg:text-left">PROGRAM</p>
+              <p className="font-['Lato',sans-serif] text-white text-[20px] lg:text-[24px] text-center lg:text-left pt-10">PROGRAM</p>
               <h1 className="font-['Bangers',sans-serif] text-[#bfe6ed] text-[60px] lg:text-[90px] xl:text-[128px] leading-none text-center lg:text-left">ECHO HEROES</h1>
             </div>
           </div>
