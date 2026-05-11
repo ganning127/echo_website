@@ -137,7 +137,7 @@ export function TimelineSection() {
         <h2
           className="text-center text-[#013161] mb-8"
           style={{
-            fontFamily: "'Cookie Supply DEMO', 'Cookie', cursive",
+            fontFamily: "'Cookie Supply DEMO', 'Cookie'",
             fontSize: "clamp(2rem, 5vw, 4rem)",
           }}
         >
@@ -179,7 +179,6 @@ export function TimelineSection() {
 <div className="flex flex-col items-center gap-2 text-center bg-white rounded-xl p-6 flex-1 w-full mb-4">                  <h3
                     className="text-[#013161]"
                     style={{
-                      fontFamily: "'Cookie Supply DEMO', 'Cookie', cursive",
                       fontSize: "1.4rem",
                     }}
                   >
@@ -200,8 +199,7 @@ export function TimelineSection() {
                 <span
                   className="bg-[#FACA1E] text-[#013161] px-6 py-1.5 rounded-full mt-auto"
                   style={{
-                    fontFamily: "'Cookie Supply DEMO', 'Cookie', cursive",
-                    fontSize: "1rem",
+                    fontSize: "1rem"
                   }}
                 >
                   {session.date}
