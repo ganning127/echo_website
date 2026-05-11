@@ -45,11 +45,27 @@ export async function POST(req: Request) {
         );
     }
 
-    const document = {
-      ...body,
-      formType,
-      createdAt: new Date(),
-    };
+const { name, email, subject, message } = body;
+
+// Validate
+if (!name || typeof name !== "string" || name.trim().length < 2 || name.trim().length > 100) {
+  return NextResponse.json({ error: "Invalid name" }, { status: 400 });
+}
+if (!email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+  return NextResponse.json({ error: "Invalid email" }, { status: 400 });
+}
+if (!message || message.trim().length < 10 || message.trim().length > 5000) {
+  return NextResponse.json({ error: "Invalid message" }, { status: 400 });
+}
+
+const document = {
+  name: name.trim(),
+  email: email.trim().toLowerCase(),
+  subject: subject?.trim().slice(0, 200) ?? "",
+  message: message.trim(),
+  formType,
+  createdAt: new Date(),
+};
 
     await db.collection(collectionName).insertOne(document);
 
