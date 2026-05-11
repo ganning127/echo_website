@@ -8,7 +8,7 @@ export function ProgramDescriptionSection() {
         <h2
           className="text-[#013161]"
           style={{
-            fontFamily: "'Cookie Supply DEMO', 'Cookie', cursive",
+            fontFamily: "'Cookie Supply DEMO', 'Cookie'",
             fontSize: "clamp(2rem, 5vw, 3rem)",
           }}
         >

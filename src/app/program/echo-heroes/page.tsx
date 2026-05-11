@@ -10,7 +10,7 @@ import { EducationSection } from "@/components/Sections/BPACEducation";
 export const metadata: Metadata = {
   title: "Echo Heroes",
   description:
-    "Echo Heroes teachs Blood Pressure Education",
+    "Echo Heroes teachs the importance of Blood Pressure Awareness Cards",
   keywords: [
     "Echo Heroes",
     "Blood Pressure",

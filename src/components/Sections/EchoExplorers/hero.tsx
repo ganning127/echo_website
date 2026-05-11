@@ -13,7 +13,7 @@ export function HeroSection() {
           <h1
             className="text-white leading-none"
             style={{
-              fontFamily: "'Cookie Supply DEMO', 'Cookie', cursive",
+              fontFamily: "'Cookie Supply DEMO', 'Cookie'",
               fontSize: "clamp(3rem, 8vw, 6rem)",
             }}
           >
@@ -33,7 +33,7 @@ export function HeroSection() {
           <button
             className="bg-[#FACA1E] text-[#013161] px-12 py-3 rounded-lg w-full transition-opacity hover:opacity-90"
             style={{
-              fontFamily: "'Cookie Supply DEMO', 'Cookie', cursive",
+              fontFamily: "'Cookie Supply DEMO', 'Cookie'",
               fontSize: "1.5rem",
             }}
           >

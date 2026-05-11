@@ -7,7 +7,7 @@ export function ScheduleSection() {
           <span
             className="text-[#013161] whitespace-nowrap shrink-0"
             style={{
-              fontFamily: "'Cookie Supply DEMO', 'Cookie', cursive",
+              fontFamily: "'Cookie Supply DEMO', 'Cookie'",
               fontSize: "2rem",
             }}
           >
@@ -26,7 +26,7 @@ export function ScheduleSection() {
           <span
             className="text-[#013161] whitespace-nowrap shrink-0"
             style={{
-              fontFamily: "'Cookie Supply DEMO', 'Cookie', cursive",
+              fontFamily: "'Cookie Supply DEMO', 'Cookie'",
               fontSize: "2rem",
             }}
           >
