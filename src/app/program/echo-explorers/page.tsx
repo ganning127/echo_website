@@ -32,18 +32,16 @@ export default function EchoExplorers() {
         <NavBar />
       </nav>
       <Suspense fallback={<div>Loading...</div>}>
-      <main className="bg-paper">
+      <main className="bg-paper pb-10">
       <HeroSection/>
       <ProgramDescriptionSection/>
       <ScheduleSection/>
-      
-              <TimelineSection />
-<ReachOutSection/>
-<GallerySection/>
-<DonationSection/>
-            <FAQSection/>
-            
-<ReachOutSection/>
+      <TimelineSection />
+      <ReachOutSection/>
+      <GallerySection/>
+      <DonationSection/>
+      <FAQSection/>
+      <ReachOutSection/>
         </main>
       </Suspense>
       <Footer />

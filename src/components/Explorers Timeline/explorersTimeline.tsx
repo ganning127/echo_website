@@ -137,7 +137,7 @@ export function TimelineSection() {
         <h2
           className="text-center text-[#013161] mb-8"
           style={{
-            fontSize: "clamp(2rem, 5vw, 4rem)",
+            fontSize: "clamp(2rem, 5vw, 3rem)",
           }}
         >
           Program Timeline

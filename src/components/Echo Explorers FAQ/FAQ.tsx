@@ -19,10 +19,12 @@ export default function FAQSection() {
   ];
 
   return (
-    <section className="py-20 px-5 sm:px-0">
+    <section className="py-10 px-5 sm:px-0">
       <div className="max-w-6xl w-5/6 mx-auto">
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-3xl text-center mb-10 text-[#00488D]">
+          <h2 className="text-center mb-10 text-[#013161]" style={{
+            fontSize: "clamp(1.4rem, 3vw, 3rem)",
+          }}>
             Frequently Asked Questions
           </h2>
           <Accordion items={faq} />

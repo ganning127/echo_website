@@ -6,7 +6,7 @@ export function ReachOutSection() {
           className="text-[#013161]"
           style={{
             fontFamily: "'Cookie Supply DEMO', 'Cookie'",
-            fontSize: "clamp(1.6rem, 4vw, 2.5rem)",
+            fontSize: "clamp(1.6rem, 4vw, 3rem)",
           }}
         >
           Reach out to bring Echo Explorers to your school or community
@@ -15,7 +15,7 @@ export function ReachOutSection() {
         <div className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto">
           
           <a href="https://www.edecho.org/contact/partner"><button
-            className="bg-[#013161] text-white px-12 py-3 rounded-xl shadow-md hover:opacity-90 transition-opacity"
+            className="bg-[#013161] text-white px-12 py-3 rounded-xl shadow-md hover:opacity-90 transition-opacity font-heading"
             style={{
               fontSize: "1.4rem",
               color: "rgba(255,255,255,0.88)",
@@ -25,7 +25,7 @@ export function ReachOutSection() {
           </button></a>
           <a href="https://www.edecho.org/contact/general">
           <button
-            className="bg-transparent text-[#013161] px-12 py-3 rounded-xl border-4 border-[#013161] shadow-md hover:bg-[#013161] hover:text-white transition-colors"
+            className="font-heading bg-transparent text-[#013161] px-12 py-3 rounded-xl border-4 border-[#013161] shadow-md hover:bg-[#013161] hover:text-white transition-colors"
             style={{
               fontSize: "1.4rem",
             }}

@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export function GallerySection() {
   return (
-    <div className="w-full overflow-hidden">
+    <div className="w-full overflow-hidden py-10">
       {/* Desktop: wide collage photo */}
       <Image
                 src="/Echo Explorers and characters.png"

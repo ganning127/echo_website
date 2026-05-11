@@ -1,6 +1,6 @@
 export function HeroSection() {
   return (
-    <div className="bg-[#00488D] text-white w-full lg:pt-36 pt-0">
+    <div className="bg-[#00488D] text-white w-full lg:pt-36 pt-5">
       <div className="max-w-6xl mx-auto px-5 xl:px-0 pb-8 flex flex-col md:flex-row md:items-end md:justify-between gap-8">
         {/* Left: Title */}
         <div className="flex flex-col text-center sm:text-left">
@@ -35,7 +35,7 @@ export function HeroSection() {
               fontSize: "1.5rem",
             }}
           >
-            Fill out interest form
+            <p className="font-heading">Fill out interest form</p>
           </button></a>
         </div>
       </div>
