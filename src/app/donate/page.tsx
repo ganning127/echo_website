@@ -20,10 +20,10 @@ export default function Donate() {
       <NavBar />
 
       <Suspense fallback={<div>Loading...</div>}>
-        <div className="mt-5 text-center mx-auto mb-5 lg:pt-36 pt-0">
+        <div className="text-center mx-auto mb-5 lg:pt-36 pt-0">
          <h1 className="text-5xl mb-5"> Invest in a Heart Healthy Future
         </h1>
-        <p>Our youth will use what they learn with ECHO in their everyday lives to increase heart health in their generation.<br></br> You can help strengthen our programs and activities by making a donation today
+        <p className="text-xl">Our youth will use what they learn with ECHO in their everyday lives to increase heart health in their generation.<br></br> You can help strengthen our programs and activities by making a donation today!
 </p>
 </div>
         <div className="grid-cols-2 grid mx-auto max-w-6xl">
@@ -33,7 +33,7 @@ export default function Donate() {
                 Thank you for choosing to support Early Cardiovascular Health
                 Outreach.
               </p>
-              <p className=" pb-5 text-lg">
+              <p className=" pb-5 text-xl">
                 ECHO is a 501(c)(3) charity. All donations sent to our nonprofit directly contributes to our mission of spreading heart health awareness and education. Your generosity means so much to us and the community we serve, thank you!
 
               </p>

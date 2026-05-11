@@ -71,7 +71,7 @@ export default function ContactPage() {
             transition={{ delay: 0.1 }}
             className="text-white/80 text-xl font-body max-w-2xl mx-auto"
           >
-            Choose how you&apos;d like to connect with the ECHO team
+            Choose how you&apos;d like to connect with the ECHO team:
           </motion.p>
         </div>
 

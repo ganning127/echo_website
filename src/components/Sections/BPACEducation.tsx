@@ -4,7 +4,7 @@ export function EducationSection() {
   return (
     <div className="w-full">
       {/* Super Heart Starts Young */}
-      <section className="w-full py-12 lg:py-16 px-6 lg:px-8">
+      <section className="w-full pt-12 lg:pt-16 lg:py-16 px-6 lg:px-8">
         <div className="max-w-[1400px] mx-auto text-center">
           <h2 className="font-['Bangers',sans-serif] text-white text-[36px] lg:text-[48px] mb-4">
             A Super Heart Starts Young
@@ -12,11 +12,11 @@ export function EducationSection() {
           <p className="font-['Lato',sans-serif] text-white text-[20px] lg:text-[24px]">
             Blood pressure is the amount of force your blood pushes against the walls of your arteries.
           </p>
-        </div>
+        </div> 
       </section>
 
       {/* Blood Pressure Readings */}
-      <section className="w-full py-12 lg:py-16 px-6 lg:px-8">
+      <section className="w-full py-12 lg:py-2 px-6 lg:px-8">
         <div className="max-w-[1400px] mx-auto">
           <div className="flex flex-col lg:flex-row gap-8 items-center">
             {/* Blood Pressure Monitor Image */}
@@ -63,7 +63,7 @@ export function EducationSection() {
       </section>
 
       {/* Hypertension Info */}
-      <section className="w-full py-12 lg:py-16 px-6 lg:px-8">
+      <section className="w-full py-0 lg:py-12 px-6 lg:px-8">
         <div className="max-w-[1400px] mx-auto text-white">
           <p className="font-['Lato',sans-serif] text-[20px] lg:text-[24px] mb-12">
             Normal blood pressure is below 120/80. If blood pressure increases then remains at 130/90 for multiple readings, that is called hypertension. Hypertension is a chronic condition, which can lead to heart disease.
