@@ -182,7 +182,7 @@ export default function GeneralContactPage() {
 
         {/* Section Indicator */}
         <div className="text-center pt-6">
-          <h2 className="text-2xl text-white mb-1">Contact Us</h2>
+          <h2 className="text-2xl text-white mb-1 lg:mt-24 mt-0">Contact Us</h2>
           <div className="text-white/80 font-body">
             <span className="text-[#FFD87A]">{sections[currentSection]}</span>
             <span className="text-white/50">

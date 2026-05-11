@@ -235,7 +235,7 @@ export default function PartnerPage() {
 
         {/* Section Indicator */}
         <div className="text-center pt-6">
-          <h2 className="text-2xl text-white mb-1">Partner With Us</h2>
+          <h2 className="text-2xl text-white mb-1 mt-0 lg:mt-24">Partner With Us</h2>
           <div className="text-white/80 font-body">
             <span className="text-[#FFD87A]">{sections[currentSection]}</span>
             <span className="text-white/50">
