@@ -19,30 +19,37 @@ export async function POST(req: NextRequest) {
           "Content-Type": "application/json",
         },
         body: JSON.stringify({
-          data: {
-            type: "profile-subscription-bulk-create-job",
+  data: {
+    type: "profile-subscription-bulk-create-job",
+    attributes: {
+      profiles: {
+        data: [
+          {
+            type: "profile",
             attributes: {
-              list_id: process.env.KLAVIYO_LIST_ID,
-              subscriptions: {
+              email,
+              subscriptions: {          // ✅ subscriptions belongs inside the profile
                 email: {
                   marketing: {
                     consent: "SUBSCRIBED",
                   },
                 },
               },
-              profiles: {
-                data: [
-                  {
-                    type: "profile",
-                    attributes: {
-                      email,
-                    },
-                  },
-                ],
-              },
             },
           },
-        }),
+        ],
+      },
+    },
+    relationships: {                    // ✅ list_id belongs in relationships, not attributes
+      list: {
+        data: {
+          type: "list",
+          id: process.env.KLAVIYO_LIST_ID,
+        },
+      },
+    },
+  },
+}),
       }
     );
 
