@@ -1,34 +1,64 @@
-import { MongoClient } from "mongodb";
-import { NextResponse } from "next/server";
-export const dynamic = "force-dynamic";
+// app/api/newsletter/route.ts
+import { NextRequest, NextResponse } from "next/server";
 
-const uri = process.env.MONGO_URI!;
+export async function POST(req: NextRequest) {
+  const { email } = await req.json();
 
-console.log("Connecting to MongoDB with URI:", uri);
-const client = new MongoClient(uri);
+  if (!email || !email.includes("@")) {
+    return NextResponse.json({ error: "Valid email is required." }, { status: 400 });
+  }
 
-export async function POST(req: Request) {
   try {
-    const { email } = await req.json();
+    const res = await fetch(
+      "https://a.klaviyo.com/api/profile-subscription-bulk-create-jobs/",
+      {
+        method: "POST",
+        headers: {
+          Authorization: `Klaviyo-API-Key ${process.env.KLAVIYO_PRIVATE_KEY}`,
+          revision: "2024-02-15",
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          data: {
+            type: "profile-subscription-bulk-create-job",
+            attributes: {
+              list_id: process.env.KLAVIYO_LIST_ID,
+              subscriptions: {
+                email: {
+                  marketing: {
+                    consent: "SUBSCRIBED",
+                  },
+                },
+              },
+              profiles: {
+                data: [
+                  {
+                    type: "profile",
+                    attributes: {
+                      email,
+                    },
+                  },
+                ],
+              },
+            },
+          },
+        }),
+      }
+    );
 
-    if (!email || !email.includes("@")) {
-      return NextResponse.json({ error: "Invalid email" }, { status: 400 });
+    // Klaviyo returns 202 Accepted for this endpoint
+    if (res.status === 202) {
+      return NextResponse.json({ success: true });
     }
 
-    await client.connect();
-    const db = client.db("website"); // <-- Replace this
-    const collection = db.collection("newsletter");
-
-    await collection.insertOne({
-      email,
-      subscribedAt: new Date(),
-    });
-
-    return NextResponse.json({ message: "Success" });
+    const errorData = await res.json();
+    console.error("Klaviyo error:", errorData);
+    return NextResponse.json(
+      { error: "Failed to subscribe. Please try again." },
+      { status: 500 }
+    );
   } catch (err) {
-    console.error("Newsletter insert failed:", err);
-    return NextResponse.json({ error: "Server error" }, { status: 500 });
-  } finally {
-    await client.close();
+    console.error(err);
+    return NextResponse.json({ error: "Server error." }, { status: 500 });
   }
 }
