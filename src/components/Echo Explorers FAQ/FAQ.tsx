@@ -19,7 +19,7 @@ export default function FAQSection() {
   ];
 
   return (
-    <section className="py-20 bg-paper px-5 sm:px-0">
+    <section className="py-20 px-5 sm:px-0">
       <div className="max-w-6xl w-5/6 mx-auto">
         <div className="max-w-6xl mx-auto">
           <h2 className="text-3xl text-center mb-10 text-[#00488D]">

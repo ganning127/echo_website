@@ -1,10 +1,11 @@
 "use client";
-import { useRef } from "react";
+import { useRef, useState } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 
-const weeks = [
+
+const sessions = [
   {
     number: 1,
     title: "Meeting 1",
@@ -99,100 +100,126 @@ const weeks = [
   },
 ];
 
-export const ExplorersTimeline = () => {
-  const scrollRef = useRef<HTMLDivElement | null>(null);
-  const itemRef = useRef<HTMLDivElement | null>(null);
+export function TimelineSection() {
+  const scrollRef = useRef<HTMLDivElement>(null);
+  const [currentIndex, setCurrentIndex] = useState(0);
 
-  const scroll = (direction: "left" | "right") => {
-    if (!scrollRef.current || !itemRef.current) return;
-
-    const itemsToScroll = getScrollAmount();
-    const itemWidth = itemRef.current.offsetWidth;
-    const gap = 24;
-
-    const distance = (itemWidth + gap) * itemsToScroll;
-
-    scrollRef.current.scrollBy({
-      left: direction === "left" ? -distance : distance,
-      behavior: "smooth",
-    });
+  const getVisible = () => {
+    if (typeof window !== "undefined" && window.innerWidth < 768) return 1;
+    return 3;
   };
 
-  const getScrollAmount = () => {
-    const width = window.innerWidth;
+  const scroll = (dir: "left" | "right") => {
+    const visible = getVisible();
+    const next =
+      dir === "right"
+        ? Math.min(currentIndex + visible, sessions.length - visible)
+        : Math.max(currentIndex - visible, 0);
+    setCurrentIndex(next);
 
-    if (width < 768) return 1; // mobile
-    if (width < 1024) return 3; // tablet
-    return 3; // desktop
+    if (scrollRef.current) {
+      const card = scrollRef.current.querySelector(".session-card") as HTMLElement;
+      if (card) {
+        const gap = 24;
+        const cardWidth = card.offsetWidth + gap;
+        scrollRef.current.scrollTo({
+          left: next * cardWidth,
+          behavior: "smooth",
+        });
+      }
+    }
   };
 
   return (
-    <div className="relative w-full">
-      <h2 className="text-center text-3xl font-heading mb-3 text-[#00488D]">
-        Program Timeline
-      </h2>
+    <div className="w-full py-10">
+      <div className="max-w-6xl mx-auto px-6 sm:px-10">
+        {/* Title */}
+        <h2
+          className="text-center text-[#013161] mb-8"
+          style={{
+            fontFamily: "'Cookie Supply DEMO', 'Cookie', cursive",
+            fontSize: "clamp(2rem, 5vw, 4rem)",
+          }}
+        >
+          Program Timeline
+        </h2>
 
-      {/* Yellow Line */}
-      <div
-        className="absolute left-0 right-0 top-[30%] h-2 bg-[#FFD87A] z-0"
-        style={{ transform: "translateY(-50%)" }}
-      />
-
-      {/* Left Arrow */}
-      <button
-        onClick={() => scroll("left")}
-        aria-label="scroll left"
-        className="absolute left-0 top-[30%] -translate-y-1/2 z-20 bg-white shadow-lg rounded-full p-2 hover:bg-gray-200"
-      >
-        <ChevronLeft className="w-6 h-6 text-[#00488D]" aria-hidden="true" />
-      </button>
-
-      {/* Timeline Items */}
-      <div
-        ref={scrollRef}
-        className="flex gap-6 overflow-x-auto scroll-smooth pl-16 pr-0 snap-x snap-mandatory scrollbar-hide relative z-10"
-      >
-        {weeks.map((week, index) => (
-          <div
-            key={week.number}
-            ref={index === 0 ? itemRef : null}
-            className={`group flex-shrink-0 w-72 rounded-3xl p-6 bg-transparent
-    ${index === weeks.length - 1 ? "snap-end" : "snap-center"}
-  `}
+        {/* Carousel */}
+        <div className="relative">
+          {/* Left button */}
+          <button
+            onClick={() => scroll("left")}
+            aria-label="Previous sessions"
+            className="absolute -left-6 top-[40%] -translate-y-1/2 z-20 bg-[#00488D] text-white rounded-full w-12 h-12 flex items-center justify-center shadow-md hover:bg-[#013161] transition-colors"
           >
-            <Image
-              src={week.imgSrc}
-              alt={`Week ${week.number}`}
-              width={110}
-              height={110}
-              className="text-center mx-auto bg-white rounded-full shadow-md"
-            />
+            <ChevronLeft className="w-6 h-6" />
+          </button>
 
-            <p className="text-center text-[#00488D] text-lg font-heading leading-snug mt-5 rounded-2xl p-5">
-              {week.subtitle}
-            </p>
+          {/* Cards container */}
+          <div
+            ref={scrollRef}
+            className="flex gap-2 overflow-x-auto scroll-smooth pb-4 snap-x snap-mandatory"
+            style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
+          >
+            {sessions.map((session) => (
+              <div
+                key={session.number}
+                className="session-card flex-shrink-0 w-[calc(100%-2rem)] sm:w-[calc(50%-1rem)] lg:w-[calc(33.333%-1.5rem)] p-5 flex flex-col items-center gap-1 snap-start"
+              >
+                {/* Image */}
+                
+                  <img
+                    src={session.imgSrc}
+                    alt={session.title}
+                    className="h-[140px] w-auto object-contain"
+                  />
+      
 
-            <div className="bg-[#dbecf1] w-1/2 mx-auto text-center rounded-full mt-1">
-              <p className="text-center text-[#00488D] text-sm p-2 rounded-2xl">
-                {week.date}
-              </p>
-            </div>
-            {/* Info text */}
-            <p className="text-center text-[#00488D] text-sm mt-5">
-              <span>{week.info}</span>
-            </p>
+                {/* Text */}
+<div className="flex flex-col items-center gap-2 text-center bg-white rounded-xl p-6 flex-1 w-full mb-4">                  <h3
+                    className="text-[#013161]"
+                    style={{
+                      fontFamily: "'Cookie Supply DEMO', 'Cookie', cursive",
+                      fontSize: "1.4rem",
+                    }}
+                  >
+                    {session.subtitle}
+                  </h3>
+                  <p
+                    className="text-[#013161]"
+                    style={{
+                      fontFamily: "'Lato', sans-serif",
+                      fontSize: "0.95rem",
+                    }}
+                  >
+                    {session.info}
+                  </p>
+                </div>
+
+                {/* Session badge */}
+                <span
+                  className="bg-[#FACA1E] text-[#013161] px-6 py-1.5 rounded-full mt-auto"
+                  style={{
+                    fontFamily: "'Cookie Supply DEMO', 'Cookie', cursive",
+                    fontSize: "1rem",
+                  }}
+                >
+                  {session.date}
+                </span>
+              </div>
+            ))}
           </div>
-        ))}
-      </div>
 
-      {/* Right Arrow */}
-      <button
-        onClick={() => scroll("right")}
-        aria-label="Scroll right"
-        className="absolute right-0 top-[30%] -translate-y-1/2 z-20 bg-white shadow-lg rounded-full p-2 hover:bg-gray-200"
-      >
-        <ChevronRight className="w-6 h-6 text-[#00488D]" aria-hidden="true" />
-      </button>
+          {/* Right button */}
+          <button
+            onClick={() => scroll("right")}
+            aria-label="Next sessions"
+            className="absolute -right-6 top-[40%] -translate-y-1/2 z-20 bg-[#00488D] text-white rounded-full w-12 h-12 flex items-center justify-center shadow-md hover:bg-[#013161] transition-colors"
+          >
+            <ChevronRight className="w-6 h-6" />
+          </button>
+        </div>
+      </div>
     </div>
   );
-};
+}

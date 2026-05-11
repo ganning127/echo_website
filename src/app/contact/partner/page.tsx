@@ -32,7 +32,7 @@ const initialFormData: FormData = {
   presentation: "",
 };
 
-const presentationOptions = ["ECHO Explorers"];
+const presentationOptions = ["ECHO Explorers", "ECHO Heroes"];
 
 const gradeLevelOptions = [
   "Pre-K",

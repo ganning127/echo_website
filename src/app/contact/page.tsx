@@ -40,7 +40,7 @@ const contactOptions = [
   },
   {
     title: "Partner With Us",
-    description: "Bring an ECHO program to your school or organization with a presentation.",
+    description: "Reach out to us to bring ECHO to your community.",
     href: "/contact/partner",
     icon: (
       <svg className="w-12 h-12" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
