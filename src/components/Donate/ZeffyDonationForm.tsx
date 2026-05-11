@@ -2,7 +2,7 @@
 
 export default function ZeffyDonationForm() {
   return (
-    <div className="relative h-[500px] w-full overflow-y-scroll custom-scrollbar">
+    <div className="relative h-[500px] w-full overflow-y-scroll custom-scrollbar text-dark">
       <iframe
         title="Donation form powered by Zeffy"
         src="https://www.zeffy.com/embed/donation-form/donate-to-change-lives-5034"

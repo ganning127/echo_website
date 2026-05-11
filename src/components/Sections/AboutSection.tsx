@@ -10,16 +10,13 @@ export const AboutSection = () => {
             <div>
               <h2 className="text-[36px]   mb-1">MISSION</h2>
               <p className="text-[24px]">
-                To spark positive change in youth and their communities through
-                heart-healthy programs and activities.
+                To spark positive heart health change in youth and their communities through nutrition, mindfulness, movement, and rest. 
               </p>
             </div>
             <div>
               <h2 className="text-[36px]  mb-1">VISION</h2>
               <p className="text-[24px]">
-                We envision a future where young people and their families are
-                empowered with the knowledge and tools needed to achieve
-                lifelong heart health through education, research, and advocacy.
+                We envision a future where young people and their families are empowered with the knowledge and tools needed to achieve and advocate for life-long heart health in their communities.
               </p>
             </div>
             <div>

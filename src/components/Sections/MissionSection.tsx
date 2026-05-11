@@ -54,7 +54,7 @@ export const MissionSection = () => {
           <ul className="list-disc pl-8 space-y-3">
             <TitleValueListItem
               title="Mind-Well"
-              value="The actions we take and the words we say have a great impact on our quality of life. Being one with our emotions helps us set up a basis of serenity. "
+              value="Mindfulness is an important tool to keep our hearts healthy. Regulating our feelings helps our hearts calm, our minds positive, and our actions confident. "
             />
             <TitleValueListItem
               title="Eat-Well"

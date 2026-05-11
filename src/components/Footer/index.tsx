@@ -59,39 +59,49 @@ export const Footer = () => {
           {/* Right Section - Navigation Links */}
           <div className="col-span-1">
             <h1 className="text-[30px] sm:block hidden">Explore</h1>
-            <div className="grid grid-cols-2 gap-x-8 gap-y-3 text-sm text-white md:justify-end m-auto sm:m-0">
-              {NAV_CONTENT.map((item) => (
-                <a key={item.href} href={item.href} className="block">
-                  <p className="font-heading sm:font-body sm:text-[15px] text-[20px]">
-                    {item.title}
-                  </p>
-                </a>
-              ))}
-              <a href="/donate" className="block">
-                <p className="font-heading sm:font-body sm:text-[15px] text-[20px]">
-                  Donate
-                </p>
-              </a>
-              <a href="/calendar" className="block">
-                <p className="font-heading sm:font-body sm:text-[15px] text-[20px]">
-                  Calendar
-                </p>
-              </a>
-            </div>
+ <div className="grid grid-cols-2 gap-x-8 gap-y-3 text-sm text-white md:justify-end m-auto sm:m-0">
+  {NAV_CONTENT.map((item) => {
+    // Has children — but a footerHref means show as single link
+    if (item.children) {
+      if (item.footerHref) {
+        return (
+          <a key={item.footerHref} href={item.footerHref} className="block">
+            <p className="font-heading sm:font-body sm:text-[15px] text-[20px]">
+              {item.title}
+            </p>
+          </a>
+        );
+      }
+      // No footerHref — expand children
+      return item.children.map((child) => (
+        <a key={child.href} href={child.href} className="block">
+          <p className="font-heading sm:font-body sm:text-[15px] text-[20px]">
+            {child.title}
+          </p>
+        </a>
+      ));
+    }
+
+    return (
+      <a key={item.href} href={item.href!} className="block">
+        <p className="font-heading sm:font-body sm:text-[15px] text-[20px]">
+          {item.title}
+        </p>
+      </a>
+    );
+  })}
+  <a href="/donate" className="block">
+    <p className="font-heading sm:font-body sm:text-[15px] text-[20px]">Donate</p>
+  </a>
+  <a href="/calendar" className="block">
+    <p className="font-heading sm:font-body sm:text-[15px] text-[20px]">Calendar</p>
+  </a>
+</div>
           </div>
           <div className="col-span-1  mx-auto">
-            <a
-              href="https://app.candid.org/profile/16399760/early-cardiovascular-health-outreach-99-3101733"
-              target="_blank"
-            >
-              <Image
-                src="/Candid_Silver.svg"
-                alt="Candid"
-                width={500}
-                height={500}
-                className="m-auto pb-5 w-full"
-              />
-            </a>
+          
+            <a aria-label="Early Cardiovascular Health Outreach" href="https://app.candid.org/profile/16399760/early-cardiovascular-health-outreach-99-3101733/?pkId=4ac93586-b686-4f03-9a95-2d74055b8303" target="_blank"> 
+<img alt="" src="https://widgets.guidestar.org/prod/v1/pdp/transparency-seal/16399760/svg" /> </a>
           </div>
         </div>
         <hr className="my-5 sm:block hidden"></hr>

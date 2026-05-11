@@ -21,6 +21,12 @@ export const AboutTabsSection = () => {
     { value: "newsletter", label: "Newsletter", component: NewsletterSection },
   ];
 
+  // Add this:
+React.useEffect(() => {
+  const tab = searchParams.get("tab") || "about";
+  setTabValue(tab);
+}, [searchParams]);
+
   return (
     <Tabs
       className="w-full"

@@ -14,6 +14,7 @@ export default function privacyPolicy() {
 
       <Container>
         <Suspense fallback={<div>Loading...</div>}>
+        <div className="lg:pt-24 pt-0">
           <h1>Privacy Policy</h1>
           <p>Last updated: August 03, 2025</p>
           <p>
@@ -1468,7 +1469,7 @@ export default function privacyPolicy() {
           </p>
           <ul>
             <li>By email: edecho.org@gmail.com</li>
-          </ul>
+          </ul></div>
         </Suspense>
       </Container>
 

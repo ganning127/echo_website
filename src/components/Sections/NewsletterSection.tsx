@@ -59,10 +59,10 @@ export const NewsletterSection = () => {
           <div className="flex-1 text-black">
             <p className="text-[24px] leading-relaxed">
               Extra! Extra! Read all about it!
+
               <br />
-              Sign up for our newsletter and keep up with all the latest
-              updates! Everything from game production to what our team members
-              are up to can all be found in our monthly newsletter.
+              Sign up for our newsletter, the Echo Insider,  and keep up with all the latest updates! Everything from programming and events to what our team members are up to, can all be found in the Echo Insider.
+
             </p>
           </div>
 

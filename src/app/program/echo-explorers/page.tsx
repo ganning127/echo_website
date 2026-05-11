@@ -3,10 +3,14 @@ import { Suspense } from "react";
 import { Footer } from "@/components/Footer";
 import { Metadata } from "next";
 import Image from "next/image";
-import { ExplorersTimeline } from "@/components/Explorers Timeline/explorersTimeline";
+import { TimelineSection } from "@/components/Explorers Timeline/explorersTimeline";
 import FAQSection from "@/components/Echo Explorers FAQ/FAQ";
-// src/app/layout.tsx
-import "@/styles/styles.css";
+import { HeroSection } from "@/components/Sections/EchoExplorers/hero";// src/app/layout.tsx
+import { ProgramDescriptionSection } from "@/components/Sections/EchoExplorers/ProgramDescription";
+import { ScheduleSection } from "@/components/Sections/EchoExplorers/Schedule";
+import { ReachOutSection } from "@/components/Sections/EchoExplorers/ReachOut";
+import { DonationSection } from "@/components/Sections/EchoExplorers/Donation";
+import { GallerySection } from "@/components/Sections/EchoExplorers/Gallery";
 
 export const metadata: Metadata = {
   title: "Echo Explorers",
@@ -28,80 +32,17 @@ export default function EchoExplorers() {
         <NavBar />
       </nav>
       <Suspense fallback={<div>Loading...</div>}>
-        <div className="bg-[#00488D] text-white pb-10 mx-auto text-center pt-12 sm:pt-10 gap-5">
-          <h1 className="text-5xl ">ECHO Explorers Program</h1>
-          <p className="pt-5 px-5">
-            Contact us at{" "}
-            <a href="mailto:info@EdEcho.org" className="underline">
-              info@EdEcho.org
-            </a>{" "}
-            to bring the ECHO Explorers program to your school or community!
-          </p>
-        </div>
-        <div className="bg-paper">
-          <section className="bg-[url('/Echo Explorers Paper.webp')] bg-cover bg-center w-5/6 max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 pt-10 px-5 sm:px-0 items-center">
-            <div className="col-span-2">
-              <h2 className="text-3xl font-heading text-[#00488D]">
-                Program Description
-              </h2>
-              <br></br>
-              <p className="text-gray-700 leading-relaxed mb-4 text-xl">
-                Explorers will learn heart-healthy habits and how to utilize
-                them to help themselves and others.
-              </p>
-              <p className="text-gray-700 leading-relaxed mb-4 text-xl">
-                {" "}
-                Each week introduces a new topic through interactive learning,
-                games, and creative activities. They will explore mindfulness,
-                the importance of taking breaks, staying active, and eating
-                nutritious foods through our four pillars:{" "}
-                <a
-                  className="text-[#00488D] underline"
-                  href="/about?tab=mission"
-                >
-                  Mind-Well, Rest-Well, Move-Well, and Eat-Well
-                </a>
-                .{" "}
-              </p>
-              <p className="text-gray-700 leading-relaxed mb-4 text-xl">
-                By the end of the program, Explorers will have the confidence to
-                lead heart healthy lives.
-              </p>
-            </div>
-            <div className="col-span-1 mx-auto text-center flex justify-end">
-              <Image
-                src="/Echo Explorers.png"
-                alt="Explorer Character"
-                width={740}
-                height={565}
-                className="m-auto pb-5 w-full max-w-[350px] lg:max-w-[420px] xl:max-w-[480px]"
-              />
-            </div>
-          </section>
-
-          <section className="w-5/6 max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-2 gap-6 px-5 pb-10 sm:px-0">
-            <div className="bg-white  rounded-2xl p-8 transition delay-150 duration-300 ease-in-out hover:-translate-y-1 hover:scale-105">
-              <h3 className="text-2xl text-[#00488D] mb-2">Schedule</h3>
-              <p className="text-lg">10 sessions, each 1 hour</p>
-            </div>
-
-            <div className="bg-white  rounded-2xl p-8 transition delay-150 duration-300 ease-in-out hover:-translate-y-1 hover:scale-105">
-              <h3 className="text-2xl  text-[#00488D] mb-2">Grade Level</h3>
-              <p className="text-lg">Elementary</p>
-            </div>
-          </section>
-          <section className="bg-[#00488D] h-[10px] mx-auto sm:px-0"></section>
-          <div className="bg-[#E8F6FA]">
-            <section className=" mx-auto pt-10 px-10 max-w-6xl">
-              <ExplorersTimeline />
-            </section>
-          </div>
-
-          <section className="bg-[#00488D] h-[10px] mx-auto sm:px-0"></section>
-          <section>
-            <FAQSection></FAQSection>
-          </section>
-        </div>
+      <main className="bg-paper pb-10">
+      <HeroSection/>
+      <ProgramDescriptionSection/>
+      <ScheduleSection/>
+      <TimelineSection />
+      <ReachOutSection/>
+      <GallerySection/>
+      <DonationSection/>
+      <FAQSection/>
+      <ReachOutSection/>
+        </main>
       </Suspense>
       <Footer />
     </>
