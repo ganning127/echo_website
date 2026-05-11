@@ -5,7 +5,7 @@ export function GallerySection() {
     <div className="w-full overflow-hidden">
       {/* Desktop: wide collage photo */}
       <Image
-                src="/echo explorers.webp"
+                src="/Echo Explorers and characters.png"
                 alt="Explorer Character"
                 width={540}
                 height={565}
@@ -13,11 +13,11 @@ export function GallerySection() {
               />
       {/* Mobile: union grid photo */}
       <Image
-                src="/echo teachers note.webp"
+                src="/Echo Explorers in the Classroom.png"
                 alt="Explorer Character"
                 width={540}
                 height={565}
-                className="block md:hidden m-auto pb-5 w-full max-w-[350px] lg:max-w-[420px] xl:max-w-[480px]"
+                className="block md:hidden m-auto pb-5 w-full "
               />
     </div>
   );
