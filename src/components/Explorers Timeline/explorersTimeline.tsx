@@ -137,7 +137,6 @@ export function TimelineSection() {
         <h2
           className="text-center text-[#013161] mb-8"
           style={{
-            fontFamily: "'Cookie Supply DEMO', 'Cookie'",
             fontSize: "clamp(2rem, 5vw, 4rem)",
           }}
         >
@@ -187,7 +186,6 @@ export function TimelineSection() {
                   <p
                     className="text-[#013161]"
                     style={{
-                      fontFamily: "'Lato', sans-serif",
                       fontSize: "0.95rem",
                     }}
                   >

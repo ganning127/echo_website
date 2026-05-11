@@ -17,7 +17,6 @@ export function ReachOutSection() {
           <a href="https://www.edecho.org/contact/partner"><button
             className="bg-[#013161] text-white px-12 py-3 rounded-xl shadow-md hover:opacity-90 transition-opacity"
             style={{
-              fontFamily: "'Cookie Supply DEMO', 'Cookie'",
               fontSize: "1.4rem",
               color: "rgba(255,255,255,0.88)",
             }}
@@ -28,7 +27,6 @@ export function ReachOutSection() {
           <button
             className="bg-transparent text-[#013161] px-12 py-3 rounded-xl border-4 border-[#013161] shadow-md hover:bg-[#013161] hover:text-white transition-colors"
             style={{
-              fontFamily: "'Cookie Supply DEMO', 'Cookie'",
               fontSize: "1.4rem",
             }}
           >

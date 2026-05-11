@@ -7,7 +7,6 @@ export function ScheduleSection() {
           <span
             className="text-[#013161] whitespace-nowrap shrink-0"
             style={{
-              fontFamily: "'Cookie Supply DEMO', 'Cookie'",
               fontSize: "2rem",
             }}
           >
@@ -15,7 +14,7 @@ export function ScheduleSection() {
           </span>
           <span
             className="text-black"
-            style={{ fontFamily: "'Lato', sans-serif", fontSize: "1.25rem" }}
+            style={{ fontSize: "1.25rem" }}
           >
             10 sessions, each 1 hour
           </span>
@@ -26,7 +25,6 @@ export function ScheduleSection() {
           <span
             className="text-[#013161] whitespace-nowrap shrink-0"
             style={{
-              fontFamily: "'Cookie Supply DEMO', 'Cookie'",
               fontSize: "2rem",
             }}
           >
@@ -34,7 +32,7 @@ export function ScheduleSection() {
           </span>
           <span
             className="text-black"
-            style={{ fontFamily: "'Lato', sans-serif", fontSize: "1.25rem" }}
+            style={{ fontSize: "1.25rem" }}
           >
             Elementary
           </span>

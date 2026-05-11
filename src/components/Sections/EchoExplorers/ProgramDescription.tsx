@@ -8,7 +8,6 @@ export function ProgramDescriptionSection() {
         <h2
           className="text-[#013161]"
           style={{
-            fontFamily: "'Cookie Supply DEMO', 'Cookie'",
             fontSize: "clamp(2rem, 5vw, 3rem)",
           }}
         >
@@ -16,7 +15,7 @@ export function ProgramDescriptionSection() {
         </h2>
         <div
           className="text-[#013161] space-y-4"
-          style={{ fontFamily: "'Lato', sans-serif", fontSize: "1.25rem" }}
+          style={{ fontSize: "1.25rem" }}
         >
           <p>
             Explorers will learn heart-healthy habits and how to utilize them to

@@ -6,14 +6,13 @@ export function HeroSection() {
         <div className="flex flex-col text-center sm:text-left">
           <p
             className="text-white uppercase tracking-wide"
-            style={{ fontFamily: "'Lato', sans-serif", fontSize: "1.25rem" }}
+            style={{ fontSize: "1.25rem" }}
           >
             PROGRAM
           </p>
           <h1
             className="text-white leading-none"
             style={{
-              fontFamily: "'Cookie Supply DEMO', 'Cookie'",
               fontSize: "clamp(3rem, 8vw, 6rem)",
             }}
           >
@@ -25,7 +24,7 @@ export function HeroSection() {
         <div className="flex flex-col items-start md:items-center gap-4 max-w-sm md:max-w-md">
           <p
             className="text-white text-center"
-            style={{ fontFamily: "'Lato', sans-serif", fontSize: "1.25rem" }}
+            style={{ fontSize: "1.25rem" }}
           >
             Contact us to bring the ECHO Explorers program to your school or
             community!
@@ -33,7 +32,6 @@ export function HeroSection() {
           <button
             className="bg-[#FACA1E] text-[#013161] px-12 py-3 rounded-lg w-full transition-opacity hover:opacity-90"
             style={{
-              fontFamily: "'Cookie Supply DEMO', 'Cookie'",
               fontSize: "1.5rem",
             }}
           >

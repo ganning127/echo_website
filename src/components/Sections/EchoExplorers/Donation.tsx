@@ -5,7 +5,6 @@ export function DonationSection() {
         <p
           className="text-[#013161] text-center sm:text-left"
           style={{
-            fontFamily: "'Cookie Supply DEMO', 'Cookie'",
             fontSize: "clamp(1.4rem, 3vw, 2rem)",
           }}
         >
@@ -15,7 +14,6 @@ export function DonationSection() {
         <button
           className="bg-[#013161] text-white px-12 py-3 rounded-xl shadow-md shrink-0 hover:opacity-90 transition-opacity"
           style={{
-            fontFamily: "'Cookie Supply DEMO', 'Cookie'",
             fontSize: "1.5rem",
             color: "rgba(255,255,255,0.88)",
           }}
