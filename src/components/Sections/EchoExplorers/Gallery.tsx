@@ -9,7 +9,7 @@ export function GallerySection() {
                 alt="Explorer Character"
                 width={540}
                 height={565}
-                className="md:block hidden m-auto pb-5 w-full max-w-[350px] lg:max-w-[420px] xl:max-w-6xl"
+                className="md:block hidden m-auto pb-5 w-full  xl:max-w-6xl"
               />
       {/* Mobile: union grid photo */}
       <Image
