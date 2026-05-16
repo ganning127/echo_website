@@ -15,7 +15,11 @@ export default function BlogPage() {
          <Suspense fallback={<div>Loading...</div>}>
          <div className="pb-12 text-center lg:pt-36 pt-0">
          <h1 className="text-4xl">ECHO Blog</h1>
-         <h2 className="text-2xl">Coming soon!</h2>
+            <div className="p-6 grid grid-cols-1 md:grid-cols-1 gap-6">
+      {blogs.map((blog: Blog) => (
+        <BlogCard key={blog.slug} blog={blog} />
+      ))}
+    </div>
               </div> 
          </Suspense>
    
