@@ -8,14 +8,25 @@ import { ForwardThinkingSection } from "@/components/Sections/BPACForwardThinkin
 import { EducationSection } from "@/components/Sections/BPACEducation";
 
 export const metadata: Metadata = {
-  title: "Echo Heroes",
+  title: "Echo Heroes | Blood Pressure Awareness Education Program",
   description:
-    "Echo Heroes teachs the importance of Blood Pressure Awareness Cards",
+    "Echo Heroes empowers students and communities to understand blood pressure through our Blood Pressure Awareness Cards (BPAC) program — building a forward-thinking generation of health advocates.",
   keywords: [
     "Echo Heroes",
-    "Blood Pressure",
-    "Education",
-    "Health Program",
+    "Blood Pressure Awareness Cards",
+    "BPAC",
+    "blood pressure education",
+    "health education program",
+    "cardiovascular health for kids",
+    "blood pressure awareness",
+    "school health program",
+    "heart health education",
+    "community health awareness",
+    "hypertension education",
+    "student health program",
+    "preventive health education",
+    "blood pressure monitoring",
+    "youth health advocates",
   ],
 };
 

@@ -3,9 +3,8 @@ export function ReachOutSection() {
     <div className="w-full py-10">
       <div className="max-w-4xl mx-auto px-6 sm:px-10 flex flex-col items-center gap-6 text-center">
         <h2
-          className="text-[#013161]"
+          className="text-[#013161] font-heading"
           style={{
-            fontFamily: "'Cookie Supply DEMO', 'Cookie'",
             fontSize: "clamp(1.6rem, 4vw, 3rem)",
           }}
         >

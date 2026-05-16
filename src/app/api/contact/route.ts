@@ -22,8 +22,7 @@ export async function POST(req: Request) {
 
     await client.connect();
     const db = client.db("website");
-
-    let collectionName: string;
+        let collectionName: string;
 
     switch (formType) {
       case "general":
@@ -45,27 +44,59 @@ export async function POST(req: Request) {
         );
     }
 
-const { name, email, subject, message } = body;
+    let document: Record<string, unknown>;
 
-// Validate
-if (!name || typeof name !== "string" || name.trim().length < 2 || name.trim().length > 100) {
-  return NextResponse.json({ error: "Invalid name" }, { status: 400 });
-}
-if (!email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
-  return NextResponse.json({ error: "Invalid email" }, { status: 400 });
-}
-if (!message || message.trim().length < 10 || message.trim().length > 5000) {
-  return NextResponse.json({ error: "Invalid message" }, { status: 400 });
-}
+    if (formType === "general") {
+      const { name, email, subject, message } = body;
 
-const document = {
-  name: name.trim(),
-  email: email.trim().toLowerCase(),
-  subject: subject?.trim().slice(0, 200) ?? "",
-  message: message.trim(),
-  formType,
-  createdAt: new Date(),
-};
+      if (!name || typeof name !== "string" || name.trim().length < 2 || name.trim().length > 100)
+        return NextResponse.json({ error: "Invalid name" }, { status: 400 });
+      if (!email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email))
+        return NextResponse.json({ error: "Invalid email" }, { status: 400 });
+      if (!message || message.trim().length < 10 || message.trim().length > 5000)
+        return NextResponse.json({ error: "Invalid message" }, { status: 400 });
+
+      document = {
+        name: name.trim(),
+        email: email.trim().toLowerCase(),
+        subject: subject?.trim().slice(0, 200) ?? "",
+        message: message.trim(),
+        formType,
+        createdAt: new Date(),
+      };
+
+    } else if (formType === "partner") {
+      const { firstName, lastName, email, phone, organization, participants, gradeLevel, requestedDate, requestedTime, presentation } = body;
+
+      if (!firstName || firstName.trim().length < 2)
+        return NextResponse.json({ error: "Invalid first name" }, { status: 400 });
+      if (!lastName || lastName.trim().length < 2)
+        return NextResponse.json({ error: "Invalid last name" }, { status: 400 });
+      if (!email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email))
+        return NextResponse.json({ error: "Invalid email" }, { status: 400 });
+      if (!organization || organization.trim().length < 2)
+        return NextResponse.json({ error: "Invalid organization" }, { status: 400 });
+      if (!participants || !gradeLevel || !requestedDate || !requestedTime || !presentation)
+        return NextResponse.json({ error: "Missing required fields" }, { status: 400 });
+
+      document = {
+        firstName: firstName.trim(),
+        lastName: lastName.trim(),
+        email: email.trim().toLowerCase(),
+        phone: phone?.trim() ?? "",
+        organization: organization.trim(),
+        participants,
+        gradeLevel,
+        requestedDate,
+        requestedTime,
+        presentation,
+        formType,
+        createdAt: new Date(),
+      };
+
+    } else {
+      return NextResponse.json({ error: "Unknown formType" }, { status: 400 });
+    }
 
     await db.collection(collectionName).insertOne(document);
 
@@ -77,4 +108,3 @@ const document = {
     await client.close();
   }
 }
-
