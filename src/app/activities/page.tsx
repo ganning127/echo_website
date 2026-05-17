@@ -5,7 +5,7 @@ import Image from "next/image";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "ECHO Activities | Games & Learning for Heart Health",
+  title: "ECHO Activities",
   description:
     "Explore ECHO’s fun activities — interactive games, recipes, and exercises to help kids learn about cardiovascular health through play.",
   keywords: [

@@ -13,9 +13,9 @@ import { DonationSection } from "@/components/Sections/EchoExplorers/Donation";
 import { GallerySection } from "@/components/Sections/EchoExplorers/Gallery";
 
 export const metadata: Metadata = {
-  title: "Echo Explorers",
+  title: "Echo Explorers Program: Heart-healthy habits for elementary students",
   description:
-    "Learn about the 10-week Echo Explorers program that teaches heart-healthy habits through interactive activities, games, and more.",
+    "Learn about the 10-week Echo Explorers program that teaches heart-healthy habits through interactive learning, games, and creative activities",
   keywords: [
     "Echo Explorers",
     "Heart Health",

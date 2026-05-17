@@ -7,7 +7,7 @@ import { Button } from "@/components/ui/button";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "2026 ECHO and Friends Calendar | Printable Calendar Pages",
+  title: "2026 ECHO and Friends Calendar",
   description:
     "Print out the monthly calendars and use the extra space to add your own heart-healthy reminders. Come back each month to build your own, original 2026 ECHO and Friends Calendar.",
   keywords: [
