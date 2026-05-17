@@ -6,9 +6,11 @@ import * as runtime from "react/jsx-runtime";
 import { NavBar } from "@/components/NavBar";
 import { Suspense } from "react";
 import { Footer } from "@/components/Footer";
+import Link from "next/link";
 
 export async function generateStaticParams() {
   const blogs = getAllBlogs();
+  
   return blogs.map((blog: Blog) => ({ slug: blog.slug }));
 }
 
@@ -25,6 +27,27 @@ export default async function BlogPost({
   const { slug } = await params;
 
   const blog = getBlogBySlug(slug);
+  const blogs = getAllBlogs();
+
+// Optional: sort newest first
+const sortedBlogs = [...blogs].sort(
+  (a, b) =>
+    new Date(b.date).getTime() -
+    new Date(a.date).getTime()
+);
+
+const currentIndex = sortedBlogs.findIndex((b) => b.slug === slug);
+
+const previousBlog =
+  currentIndex < sortedBlogs.length - 1
+    ? sortedBlogs[currentIndex + 1]
+    : null;
+
+const nextBlog =
+  currentIndex > 0
+    ? sortedBlogs[currentIndex - 1]
+    : null;
+
   if (!blog) return notFound();
 
   const readTime = estimateReadTime(blog.content);
@@ -63,7 +86,35 @@ const shareLinks = {
          
 
           <div className="p-6 w-6/6 md:w-4/6 mx-auto pt-10 md:pt-32">
-         
+         {/* BREADCRUMB / BACK LINK */}
+<div className="mb-6">
+
+
+  <div className="mt-3 flex items-center gap-2 text-sm text-gray-400">
+    <Link
+      href="/"
+      className="hover:text-[#7C2D36] transition-colors"
+    >
+      Home
+    </Link>
+
+    <span>/</span>
+
+    <Link
+      href="/blog"
+      className="hover:text-[#7C2D36] transition-colors"
+    >
+      Blog
+    </Link>
+
+    <span>/</span>
+
+    <span className="text-gray-600 truncate">
+      {blog.frontmatter.title}
+    </span>
+  </div>
+
+</div>
             <div className="bg-white py-12 px-6 mx-auto border border-24 border-purple-200 rounded-xl ">
                       <div className="text-black  text-center">
             <h1 className="text-2xl text-wrap md:text-4xl font-bold">{blog.frontmatter.title}</h1>
@@ -89,7 +140,7 @@ const shareLinks = {
       aria-label="Share on Facebook"
       className="
         w-full sm:w-auto
-        flex items-center justify-center gap-2
+        flex items-center justify-center 
         px-5 py-3
         rounded-xl
         border border-gray-200
@@ -115,7 +166,7 @@ const shareLinks = {
       aria-label="Share on X"
       className="
         w-full sm:w-auto
-        flex items-center justify-center gap-2
+        flex items-center justify-center 
         px-5 py-3
         rounded-xl
         border border-gray-200
@@ -139,7 +190,7 @@ const shareLinks = {
       aria-label="Share via Email"
       className="
         w-full sm:w-auto
-        flex items-center justify-center gap-2
+        flex items-center justify-center 
         px-5 py-3
         rounded-xl
         border border-gray-200
@@ -171,11 +222,69 @@ const shareLinks = {
 </div>
               <div className="prose prose-lg mx-auto prose-p:text-xl prose-p:leading-relaxed prose-p:mb-6">
                 <PostContent />
+                
               </div>
+              
             </div>
 
-          
+                 <div className="mt-16 pt-8 border-t border-gray-200">
+
+  <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+
+    {/* Previous */}
+    <div>
+      {previousBlog && (
+        <Link
+          href={`/blog/${previousBlog.slug}`}
+          className="
+            group block
+            rounded-2xl
+            p-5
+            hover:bg-gray-50
+            transition-all duration-200
+          "
+        >
+          <p className="text-xs uppercase tracking-widest text-gray-400 mb-2">
+            Previous Article
+          </p>
+
+          <h3 className="font-bold text-lg text-gray-900 group-hover:text-[#1876d0] transition-colors">
+            ← {previousBlog.title}
+          </h3>
+        </Link>
+      )}
+    </div>
+
+    {/* Next */}
+    <div>
+      {nextBlog && (
+        <Link
+          href={`/blog/${nextBlog.slug}`}
+          className="
+            group block
+            rounded-2xl
+            p-5
+            text-left md:text-right
+            hover:bg-gray-50
+            transition-all duration-200
+          "
+        >
+          <p className="text-xs uppercase tracking-widest text-gray-400 mb-2">
+            Next Article
+          </p>
+
+          <h3 className="font-bold text-lg text-gray-900 group-hover:text-[#1876d0] transition-colors">
+            {nextBlog.title} →
+          </h3>
+        </Link>
+      )}
+    </div>
+
+  </div>
+
+</div>
           </div>
+   
         </div>
       </Suspense>
 
