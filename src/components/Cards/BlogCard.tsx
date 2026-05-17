@@ -22,8 +22,8 @@ export const BlogCard = ({ blog }: { blog: Blog }) => {
         <div
           className="
             relative
-            w-full md:w-56
-            h-64 md:h-auto
+            w-full md:w-80
+            h-90 md:h-auto
             shrink-0
             overflow-hidden
           "

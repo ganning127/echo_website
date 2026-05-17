@@ -5,7 +5,7 @@ import { Metadata } from "next";
 import Image from "next/image";
 import { TimelineSection } from "@/components/Explorers Timeline/explorersTimeline";
 import FAQSection from "@/components/Echo Explorers FAQ/FAQ";
-import { HeroSection } from "@/components/Sections/EchoExplorers/hero";// src/app/layout.tsx
+import { HeroSection } from "@/components/Sections/EchoExplorers/hero";
 import { ProgramDescriptionSection } from "@/components/Sections/EchoExplorers/ProgramDescription";
 import { ScheduleSection } from "@/components/Sections/EchoExplorers/Schedule";
 import { ReachOutSection } from "@/components/Sections/EchoExplorers/ReachOut";
