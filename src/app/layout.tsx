@@ -11,7 +11,7 @@ export const metadata: Metadata = {
     default: "Early Cardiovascular Health Outreach (ECHO)",
   },
   description:
-    "The Early Cardiovascular Health Outreach (ECHO) was founded alongside the UCLA Women's Cardiovascular Center in July 2017",
+    "Welcome to ECHOVILLE — the land inside your body! ECHO helps kids learn heart-healthy habits through mindfulness, movement, nutrition, and rest.",
 };
 
 export default function RootLayout({

@@ -7,6 +7,9 @@ import { NavBar } from "@/components/NavBar";
 import { Suspense } from "react";
 import { Footer } from "@/components/Footer";
 import Link from "next/link";
+import type { Metadata } from "next";
+
+
 
 export async function generateStaticParams() {
   const blogs = getAllBlogs();
@@ -18,6 +21,59 @@ function estimateReadTime(content: string): number {
   const wordCount = content.trim().split(/\s+/).length;
   return Math.max(1, Math.ceil(wordCount / 200));
 }
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ slug: string }>;
+}): Promise<Metadata> {
+  const { slug } = await params;
+
+  const blog = getBlogBySlug(slug);
+
+  if (!blog) {
+    return {
+      title: "Blog Not Found | ECHO",
+    };
+  }
+
+  const pageUrl = `https://edecho.org/blog/${slug}`;
+  
+  const imageUrl = `https://edecho.org${blog.frontmatter.image}`;
+
+  return {
+    title: `${blog.frontmatter.title} | ECHO Blog`,
+    description: blog.frontmatter.excerpt,
+
+    alternates: {
+      canonical: pageUrl,
+    },
+
+    openGraph: {
+      title: blog.frontmatter.title,
+      description: blog.frontmatter.excerpt,
+      url: pageUrl,
+      siteName: "ECHO",
+      type: "article",
+       publishedTime: blog.frontmatter.date,
+  authors: [blog.frontmatter.author],
+
+images: [
+  {
+    url: imageUrl,
+    width: 1200,
+    height: 630,
+    alt: blog.frontmatter.title,
+  },
+],
+    },
+
+twitter: {
+  card: "summary_large_image",
+  images: [imageUrl],
+}
+  };
+}
+
 
 export default async function BlogPost({
   params,
@@ -63,10 +119,12 @@ const nextBlog =
     console.error("MDX compile error:", e);
     return notFound();
   }
+  
 
   // Share URLs — built server-side from the slug; the full origin is
   // injected via an absolute path so it works in both dev and prod.
 const pageUrl = `https://edecho.org/blog/${slug}`;
+const imageUrl = `https://edecho.org${blog.frontmatter.image}`;
 
 const encodedUrl = encodeURIComponent(pageUrl);
 const encodedTitle = encodeURIComponent(blog.frontmatter.title);
@@ -77,8 +135,40 @@ const shareLinks = {
   email: `mailto:?subject=${encodedTitle}&body=I wanted to share this blog from ECHO (Early Cardiovascular Health Outreach): ${pageUrl}`,
 };
 
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  headline: blog.frontmatter.title,
+  description: blog.frontmatter.excerpt,
+  image: [imageUrl],
+  datePublished: blog.frontmatter.date,
+  author: {
+    "@type": "Organization",
+    name: blog.frontmatter.author,
+  },
+  publisher: {
+    "@type": "Organization",
+    name: "ECHO",
+    logo: {
+      "@type": "ImageObject",
+      url: "https://edecho.org/logo.png",
+    },
+  },
+  mainEntityOfPage: {
+    "@type": "WebPage",
+    "@id": pageUrl,
+  },
+};
+
   return (
-    <div className="min-h-screen">
+    
+    <div className="min-h-screen bg-[#fffbef]">
+      <script
+  type="application/ld+json"
+  dangerouslySetInnerHTML={{
+    __html: JSON.stringify(jsonLd),
+  }}
+/>
       <NavBar />
 
       <Suspense fallback={<div>Loading...</div>}>
@@ -198,7 +288,7 @@ const shareLinks = {
         transition-all duration-200
         hover:bg-[#7C2D36]
         hover:text-white
-        hover:border-[#7C2D36]
+        hover:border-[#7C2D36] gap-2
       "
     >
       <svg
