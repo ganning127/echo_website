@@ -130,7 +130,7 @@ const encodedUrl = encodeURIComponent(pageUrl);
 const encodedTitle = encodeURIComponent(blog.frontmatter.title);
 
 const shareLinks = {
-  facebook: `https://www.facebook.com/sharer/sharer.php?u=${encodedUrl}`,
+  facebook: `https://www.facebook.com/sharer/sharer.php?u=${pageUrl}`,
   x: `https://twitter.com/intent/tweet?url=${encodedUrl}&text=${encodedTitle}`,
   email: `mailto:?subject=${encodedTitle}&body=I wanted to share this blog from ECHO (Early Cardiovascular Health Outreach): ${pageUrl}`,
 };
