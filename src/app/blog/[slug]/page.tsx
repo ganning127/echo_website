@@ -137,8 +137,11 @@ const encodedUrl = encodeURIComponent(pageUrl);
 const encodedTitle = encodeURIComponent(blog.frontmatter.title);
 
 const shareLinks = {
-  facebook: `https://www.facebook.com/sharer/sharer.php?u=${encodedUrl}`,
-  x: `https://twitter.com/intent/tweet?url=${encodedUrl}&text=${encodedTitle}`,
+  facebook: `https://www.facebook.com/sharer/sharer.php?u=${encodedUrl}&quote=${encodeURIComponent(
+  `Check out this article from ECHO: ${blog.frontmatter.title}`
+)}`,x: `https://twitter.com/intent/tweet?url=${encodedUrl}&text=${encodeURIComponent(
+  `Check out "${blog.frontmatter.title}" from ECHO (Early Cardiovascular Health Outreach)!`
+)}`,
   email: `mailto:?subject=${encodedTitle}&body=I wanted to share this blog from ECHO (Early Cardiovascular Health Outreach): ${pageUrl}`,
 };
 
