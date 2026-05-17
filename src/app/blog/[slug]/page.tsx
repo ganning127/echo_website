@@ -9,6 +9,7 @@ import { Footer } from "@/components/Footer";
 import Link from "next/link";
 import type { Metadata } from "next";
 
+  import { headers } from "next/headers";
 
 
 export async function generateStaticParams() {
@@ -119,18 +120,24 @@ const nextBlog =
     console.error("MDX compile error:", e);
     return notFound();
   }
-  
 
-  // Share URLs — built server-side from the slug; the full origin is
-  // injected via an absolute path so it works in both dev and prod.
-const pageUrl = `https://edecho.org/blog/${slug}`;
-const imageUrl = `https://edecho.org${blog.frontmatter.image}`;
+const headersList = await headers();
+
+const host = headersList.get("host");
+const protocol = process.env.NODE_ENV === "development"
+  ? "http"
+  : "https";
+
+const baseUrl = `${protocol}://${host}`;
+
+const pageUrl = `${baseUrl}/blog/${slug}`;
+const imageUrl = `${baseUrl}${blog.frontmatter.image}`;
 
 const encodedUrl = encodeURIComponent(pageUrl);
 const encodedTitle = encodeURIComponent(blog.frontmatter.title);
 
 const shareLinks = {
-  facebook: `https://www.facebook.com/sharer/sharer.php?u=${pageUrl}`,
+  facebook: `https://www.facebook.com/sharer/sharer.php?u=${encodedUrl}`,
   x: `https://twitter.com/intent/tweet?url=${encodedUrl}&text=${encodedTitle}`,
   email: `mailto:?subject=${encodedTitle}&body=I wanted to share this blog from ECHO (Early Cardiovascular Health Outreach): ${pageUrl}`,
 };
