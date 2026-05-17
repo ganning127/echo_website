@@ -4,22 +4,41 @@ import Link from "next/link";
 export const BlogCard = ({ blog }: { blog: Blog }) => {
   return (
     <Link href={`/blog/${blog.slug}`} className="group block">
-      <div className="
-        flex flex-row items-stretch
-        bg-white border border-gray-200 rounded-xl
-        overflow-hidden
-        shadow-sm
-        transition-all duration-300 ease-out
-        group-hover:shadow-lg group-hover:-translate-y-0.5 group-hover:border-gray-300 max-w-6xl mx-auto
-      ">
+      <div
+        className="
+          flex flex-col md:flex-row
+          bg-white border border-gray-200 rounded-2xl
+          overflow-hidden
+          shadow-sm
+          transition-all duration-300 ease-out
+          group-hover:shadow-xl
+          group-hover:-translate-y-1
+          group-hover:border-gray-300
+          max-w-6xl mx-auto
+        "
+      >
 
-        {/* LEFT — square 1:1 image */}
-        <div className="relative w-40 shrink-0 self-stretch">
+        {/* IMAGE */}
+        <div
+          className="
+            relative
+            w-full md:w-56
+            h-64 md:h-auto
+            shrink-0
+            overflow-hidden
+          "
+        >
           {blog.image ? (
             <img
               src={blog.image}
               alt={blog.title}
-              className="absolute inset-0 w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+              className="
+                absolute inset-0
+                w-full h-full
+                object-cover
+                transition-transform duration-500
+                group-hover:scale-105
+              "
             />
           ) : (
             <div className="absolute inset-0 bg-gray-100 flex items-center justify-center">
@@ -28,47 +47,88 @@ export const BlogCard = ({ blog }: { blog: Blog }) => {
           )}
         </div>
 
-        {/* RIGHT — text content */}
-        <div className="flex text-left flex-col justify-between pl-10 pb-5 pt-5 pr-5 min-w-0">
+        {/* CONTENT */}
+        <div className="flex flex-col justify-between p-6 md:p-8 min-w-0 flex-1">
+
           <div>
-            {/* Tags */}
+
+            {/* TAGS */}
             {blog.tags && blog.tags.length > 0 && (
-              <div className="flex gap-2 mb-2">
+              <div className="flex flex-wrap gap-2 mb-4">
                 {blog.tags.map((tag) => (
                   <span
                     key={tag}
-                    className="text-xs font-semibold uppercase tracking-widest text-[#7C2D36]"
+                    className="
+                      inline-flex items-center
+                      rounded-full
+                      bg-[#1876d0]/10
+                      px-3 py-1
+                      text-xs font-semibold
+                      tracking-wide
+                      text-[#013161]
+                      border border-[#7C2D36]/20
+                    "
                   >
-                    {tag}
+                    #{tag}
                   </span>
                 ))}
               </div>
             )}
 
-            {/* Title */}
-            <h3 className="
-              font-extrabold uppercase tracking-wide text-gray-900
-              transition-colors duration-200 group-hover:text-[#7C2D36]
-              line-clamp-2 text-3xl
-            ">
+            {/* TITLE */}
+            <h3
+              className="
+                text-2xl md:text-3xl
+                font-extrabold
+                uppercase
+                tracking-wide
+                text-gray-900
+                transition-colors duration-200
+                group-hover:text-[#1876d0]
+                line-clamp-2 text-left
+              "
+            >
               {blog.title}
             </h3>
 
-            {/* Excerpt */}
-            <p className="text-sm text-gray-500 mt-2 line-clamp-2 leading-relaxed">
+            {/* EXCERPT */}
+            <p
+              className="
+                text-base text-gray-600
+                mt-4
+                leading-relaxed
+                line-clamp-3 text-left
+              "
+            >
               {blog.excerpt}
             </p>
           </div>
 
-          {/* Read More */}
-          <p className="
-            mt-4 text-xs font-bold uppercase tracking-widest text-gray-800
-            transition-colors duration-200 group-hover:text-[#7C2D36]
-          ">
-            Read More
-          </p>
-        </div>
+          {/* READ MORE */}
+          <div className="mt-6 flex items-center gap-2">
+            <span
+              className="
+                text-xs font-bold uppercase tracking-[0.2em]
+                text-gray-800
+                transition-colors duration-200
+                group-hover:text-[#1876d0]
+              "
+            >
+              Read More
+            </span>
 
+            <span
+              className="
+                transition-transform duration-300
+                group-hover:translate-x-1
+                text-[#7C2D36]
+              "
+            >
+              →
+            </span>
+          </div>
+
+        </div>
       </div>
     </Link>
   );
