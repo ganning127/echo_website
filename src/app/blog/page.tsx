@@ -4,6 +4,19 @@ import { Blog } from "@/lib/blog";
 import { NavBar } from "@/components/NavBar";
 import { Suspense } from "react";
 import { Footer } from "@/components/Footer";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Plaqtrick's Chronicles | Blogs by ECHO",
+  description:
+    "Indulge in Plaqtrick's Chronicles! These ooey-gooey blog posts are sure to stick in your mind and away from your arteries! Check out what the ECHO team has to say by perusing the articles below!",
+  keywords: [
+    "ECHO blog",
+    "Echo articles",
+    "blog",
+    "cardiovascular wellness through articles",
+  ],
+};
 
 export default function BlogPage() {
   const blogs = getAllBlogs();

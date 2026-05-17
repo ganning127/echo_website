@@ -4,7 +4,18 @@ import { NavBar } from "@/components/NavBar";
 import { Container } from "@/components/Container";
 import { Footer } from "@/components/Footer";
 import { Button } from "@/components/ui/button";
+import { Metadata } from "next";
 
+export const metadata: Metadata = {
+  title: "2026 ECHO and Friends Calendar | Printable Calendar Pages",
+  description:
+    "Print out the monthly calendars and use the extra space to add your own heart-healthy reminders. Come back each month to build your own, original 2026 ECHO and Friends Calendar.",
+  keywords: [
+    "ECHO calendar",
+    "2026 calendar",
+    "holidays",
+  ],
+};
 export default function Calendar() {
   return (
     <>
