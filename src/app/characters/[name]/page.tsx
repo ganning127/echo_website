@@ -5,17 +5,29 @@ import { CharactersDetails } from "@/components/Sections/CharactersDetails";
 import { Metadata } from "next";
 import characters from "@/lib/characters.json";
 
-export const metadata: Metadata = {
-  title: "ECHO Characters | Meet the Heart Health Heroes",
-  description:
-    "Meet the ECHO characters — friendly guides in Echoville who help children understand heart health, nutrition, rest, and movement.",
-  keywords: [
-    "ECHO characters",
-    "heart health heroes",
-    "Echoville guides",
-    "kids health education characters",
-  ],
-};
+export async function generateMetadata(
+  { params }: { params: Promise<{ name: string }> }
+): Promise<Metadata> {
+  const { name } = await params;
+
+  const character = characters.find(
+    (char) => char.name.toLowerCase() === name
+  );
+
+  const displayName = character?.name ?? name;
+
+  return {
+    title: `ECHO Characters: Meet ${displayName}`,
+    description:
+      "Meet the ECHO characters — friendly guides in Echoville who help children understand heart health, nutrition, rest, and movement.",
+    keywords: [
+      "ECHO characters",
+      "heart health heroes",
+      "Echoville guides",
+      "kids health education characters",
+    ],
+  };
+}
 
 export default async function CharacterPage(props: {
   params: Promise<{ name: string }>; // params is a Promise here

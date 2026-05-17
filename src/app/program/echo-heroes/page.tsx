@@ -8,7 +8,7 @@ import { ForwardThinkingSection } from "@/components/Sections/BPACForwardThinkin
 import { EducationSection } from "@/components/Sections/BPACEducation";
 
 export const metadata: Metadata = {
-  title: "Echo Heroes | Blood Pressure Awareness Education Program",
+  title: "Echo Heroes: Blood Pressure Awareness Education Program",
   description:
     "Echo Heroes empowers students and communities to understand blood pressure through our Blood Pressure Awareness Cards (BPAC) program — building a forward-thinking generation of health advocates.",
   keywords: [

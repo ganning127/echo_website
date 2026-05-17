@@ -6,7 +6,7 @@ import { AboutTabsSection } from "@/components/Sections/AboutTabsSection";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "About ECHO | Our Mission & Values",
+  title: "About ECHO: Our Mission & Values",
   description:
     "Learn about ECHO’s mission to teach children heart-healthy habits through mindfulness, movement, nutrition, and rest. Discover our values and approach.",
   keywords: [

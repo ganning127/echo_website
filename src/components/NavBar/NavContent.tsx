@@ -28,4 +28,6 @@ export const NAV_CONTENT = [
     ],
   },
   { title: "Activities", href: "/activities" },
+  
+  { title: "Blog", href: "/blog" },
 ];

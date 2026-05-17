@@ -7,6 +7,7 @@ import { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Characters",
 };
+
 export default function Characters() {
   return (
     <div className="bg-[#DBECF1] min-h-screen">

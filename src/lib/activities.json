@@ -10,29 +10,29 @@
     "secondaryLink": "/make/ECHO BPAC, Multiple.pdf",
     "secondaryLabel": "Print set of 10 cards",
     "image": "/ActivityPreview/BPAC Preview.png",
-    "order": 1,
+    "order": 4,
     "tags": ["home", "echo"]
   },
   {
-    "title": "There's always time for care Poem",
+    "title": "There's Always Time for Care Poem",
     "slug": "theres-always-time-for-care",
     "preview": "/ActivityPreview/Vienna's_Poem.png",
     "description": "Vienna has quite a way with words, check out some of her poetry!",
     "link": "/make/Vienna's_Poem.pdf",
     "downloadLabel": "Download Poem",
     "image": "/act_care.png",
-    "order": 2,
+    "order": 3,
     "tags": ["home", "poetry", "vienna"]
   },
   {
-    "title": "Dodge the goo Printable Maze",
+    "title": "Dodge the Goo Printable Maze",
     "slug": "Dodge-the-goo",
     "preview": "/ActivityPreview/Dodge_the_goo_maze.png",
     "description": "Plaqtrick has left behind some big messes in the house. Help Echo navigate around the ooey-gooey puddles of ick!",
     "link": "/make/Dodge_the_goo_maze.pdf",
     "downloadLabel": "Download Game",
     "image": "/act_dodge.png",
-    "order": 3,
+    "order": 2,
     "tags": ["home", "game", "plaqtrick"]
   },
   {
@@ -43,7 +43,7 @@
     "link": "/make/Recipe_What a Cute-Cucumber.pdf",
     "downloadLabel": "Download Recipe",
     "image": "/act_painting.png",
-    "order": 4,
+    "order": 1,
     "tags": ["recipe", "home", "artie"]
   }
 ]

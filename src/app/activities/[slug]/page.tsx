@@ -1,144 +1,56 @@
-"use client";
-
-import { useRouter } from "next/navigation";
-import Image from "next/image";
+import { Metadata } from "next";
 import activities from "@/lib/activities.json";
-import { useEffect, useState } from "react";
-import { NavBar } from "@/components/NavBar";
-import { Footer } from "@/components/Footer";
-import React from "react";
-import { Button } from "@/components/ui/button";
-import Link from "next/link";
+import ActivityClient from "./activityClient";
 
-export default function ActivityPage({
+export async function generateMetadata(
+  { params }: { params: Promise<{ slug: string }> }
+): Promise<Metadata> {
+  const { slug } = await params;
+
+  const activity = activities.find((a) => a.slug === slug);
+
+  if (!activity) {
+    return {
+      title: "Activity Not Found | ECHO Activities",
+    };
+  }
+
+  return {
+    title: `${activity.title} Activity`,
+    description: activity.description,
+    keywords: [
+      "ECHO activities",
+      "kids health education",
+      ...(activity.tags ?? []),
+      activity.title,
+    ],
+    openGraph: {
+      title: activity.title,
+      description: activity.description,
+      images: [
+        {
+          url: activity.image || activity.preview,
+          width: 800,
+          height: 400,
+          alt: activity.title,
+        },
+      ],
+    },
+  };
+}
+
+export default async function ActivityPage({
   params,
 }: {
   params: Promise<{ slug: string }>;
 }) {
-  const router = useRouter();
-  const actualParams = React.use(params);
-  const [activity, setActivity] = useState<null | (typeof activities)[0]>(null);
+  const { slug } = await params;
 
-  useEffect(() => {
-    const found = activities.find((a) => a.slug === actualParams.slug);
-    if (!found) {
-      router.push("/404");
-    } else {
-      setActivity(found);
-    }
-  }, [actualParams.slug, router]);
+  const activity = activities.find((a) => a.slug === slug);
 
-  if (!activity) return null;
+  if (!activity) {
+    return null; // or redirect
+  }
 
-  return (
-    <section className="w-full bg-[#B77372]">
-      <NavBar />
-      <div className="w-5/6 m-auto lg:pt-24 pt-0">
-        <Button className="mt-3 bg-[#7C2D36] hover:bg-[#013161] p-5">
-          <Link
-            href="/activities"
-            className="relative text-[5vw] md:text-[2vw] inline-block text-white rounded font-heading transition"
-          >
-            ← All Activities
-          </Link>
-        </Button>
-      </div>
-
-      <div className="pt-5 pb-5 w-5/6 m-auto text-center">
-        <h1 className="text-[8vw] sm:text-[4vw] text-black mb-4 w-5/6 md:w-6/6 m-auto">
-          {activity.title}
-        </h1>
-        <p className="pb-3 text-black text-[4vw] sm:text-[1.5vw] md:text-[2vw] w-4/6 md:w-5/6 m-auto">
-          {activity.description}
-        </p>
-
-        <Image
-          src={activity.preview}
-          alt={activity.title}
-          width={800}
-          height={400}
-          className="rounded mb-6 m-auto z-20 relative"
-        />
-      </div>
-      
-        {/* Download buttons */}
-        <div className="flex flex-wrap gap-4 justify-center mb-10">
-          <Button className="bg-[#7C2D36] hover:bg-[#013161]">
-            <Link
-              href={activity.link}
-              className="inline-block text-white rounded font-heading transition text-[5vw] md:text-[2vw]"
-            >
-              {activity.downloadLabel ?? "Download Activity"}
-            </Link>
-          </Button>
-
-          {"secondaryLink" in activity && activity.secondaryLink && (
-            <Button className="bg-[#7C2D36] hover:bg-[#013161]">
-              <Link
-                href={activity.secondaryLink}
-                className="inline-block text-white rounded font-heading transition text-[5vw] md:text-[2vw]"
-              >
-                {("secondaryLabel" in activity && activity.secondaryLabel) ?? "Download Activity"}
-              </Link>
-            </Button>
-          )}
-        </div>
-
-
-      <div className="w-5/6 m-auto">
-        <Button className="mt-3 bg-[#7C2D36] hover:bg-[#013161] p-5">
-          <Link
-            href="/activities"
-            className="relative text-[5vw] md:text-[2vw] inline-block text-white rounded font-heading transition"
-          >
-            ← All Activities
-          </Link>
-        </Button>
-      </div>
-
-      <div className="pb-10">
-        <Image
-          className="absolute md:mt-40 left-0 top-30 w-auto visible z-0 h-[60vw] lg:h-[40vw] max-h-[500px]"
-          src="/Activities Window Left.png"
-          alt="left window"
-          width={200}
-          height={500}
-        />
-        <Image
-          className="absolute md:mt-40 right-0 top-30 w-auto visible z-0 h-[60vw] lg:h-[40vw] max-h-[500px]"
-          src="/Activities Window Right.png"
-          alt="right window"
-          width={200}
-          height={500}
-        />
-      </div>
-
-      <div className="relative">
-        <Image
-          className="absolute left-0 z-10 bottom-0 w-auto visible h-[40vw] md:h-[25vw] max-h-[500px]"
-          src="/Activities Machine 1.png"
-          alt="left workout Machine"
-          width={200}
-          height={500}
-        />
-        <Image
-          className="absolute right-0 z-10 bottom-8 w-auto visible h-[20vw] md:h-[15vw] max-h-[500px]"
-          src="/Activities Machine 2.png"
-          alt="right workout Machine"
-          width={200}
-          height={500}
-        />
-        <div className="h-[10px] bg-[#7C2D36]"></div>
-        <Image
-          className="relative object-contain w-full bg-[#9C6363]"
-          src="/Activities floor pattern.png"
-          alt="checkerboard floor pattern"
-          width={800}
-          height={100}
-        />
-      </div>
-
-      <Footer />
-    </section>
-  );
+  return <ActivityClient activity={activity} />;
 }
