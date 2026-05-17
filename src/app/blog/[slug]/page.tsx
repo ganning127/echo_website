@@ -138,11 +138,11 @@ const encodedTitle = encodeURIComponent(blog.frontmatter.title);
 
 const shareLinks = {
   facebook: `https://www.facebook.com/sharer/sharer.php?u=${encodedUrl}&quote=${encodeURIComponent(
-  `Check out this article from ECHO: ${blog.frontmatter.title}`
+  `Sharing is caring, and I want to share this blog post by the Early Cardiovascular Health Outreach (ECHO) team: ${blog.frontmatter.title}`
 )}`,x: `https://twitter.com/intent/tweet?url=${encodedUrl}&text=${encodeURIComponent(
-  `Check out "${blog.frontmatter.title}" from ECHO (Early Cardiovascular Health Outreach)!`
+  `Sharing is caring, and I want to share this blog post by the Early Cardiovascular Health Outreach (ECHO) team: "${blog.frontmatter.title}"`
 )}`,
-  email: `mailto:?subject=${encodedTitle}&body=I wanted to share this blog from ECHO (Early Cardiovascular Health Outreach): ${pageUrl}`,
+  email: `mailto:?subject=${encodedTitle}&body=Sharing is caring, and I want to share this blog post by the Early Cardiovascular Health Outreach (ECHO) team: ${pageUrl}`,
 };
 
 const jsonLd = {
