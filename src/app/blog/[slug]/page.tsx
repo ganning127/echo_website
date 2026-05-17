@@ -63,7 +63,7 @@ export default async function BlogPost({
 
           <div className="p-6 w-6/6 md:w-4/6 mx-auto pt-10 md:pt-32">
          
-            <div className="bg-white py-12 px-6 mx-auto border border-24 border-pink-200 rounded-xl ">
+            <div className="bg-white py-12 px-6 mx-auto border border-24 border-purple-200 rounded-xl ">
                       <div className="text-black  text-center">
             <h1 className="text-2xl text-wrap md:text-4xl font-bold">{blog.frontmatter.title}</h1>
             <p className="mt-2 text-sm">
@@ -115,7 +115,7 @@ export default async function BlogPost({
                 Email
               </a>
             </div>
-              <div className="prose prose-lg w-5/6 mx-auto prose-p:text-xl prose-p:leading-relaxed prose-p:mb-6">
+              <div className="prose prose-lg mx-auto prose-p:text-xl prose-p:leading-relaxed prose-p:mb-6">
                 <PostContent />
               </div>
             </div>

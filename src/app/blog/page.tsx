@@ -14,7 +14,8 @@ export default function BlogPage() {
    
          <Suspense fallback={<div>Loading...</div>}>
          <div className="pb-12 text-center lg:pt-36 pt-0">
-         <h1 className="text-4xl">ECHO Blog</h1>
+         <h1 className="text-5xl">Plaqtrick's Chronicles</h1>
+         <h2 className="max-w-3/6 mx-auto text-2xl"> Indulge in Plaqtrick's Chronicles! These ooey-gooey blog posts are sure to stick in your mind and away from your arteries! Check out what the ECHO team has to say by perusing the articles below!</h2>
             <div className="p-6 grid grid-cols-1 md:grid-cols-1 gap-6">
       {blogs.map((blog: Blog) => (
         <BlogCard key={blog.slug} blog={blog} />
