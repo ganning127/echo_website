@@ -6,7 +6,7 @@
     "description": "Join Echo and Friends on a colorful adventure throughout the year! Our free, seasonal coloring pages are updated every month. Fun for kids and creative spirits of all ages! #2026",
     "link": "/make/ECHO_coloring_pages.pdf",
     "downloadLabel": "Print Coloring Pages",
-    "image": "/ActivityPreview/Coloring_Pages.jpg",
+    "image": "/ActivityPreview/ColoringPagesThumbnail.png",
     "order": 5,
     "tags": ["home", "coloring pages"]
   },
@@ -19,7 +19,7 @@
     "downloadLabel": "Print 1 Card",
     "secondaryLink": "/make/ECHO BPAC, Multiple.pdf",
     "secondaryLabel": "Print set of 10 cards",
-    "image": "/ActivityPreview/BPAC Preview.png",
+    "image": "/ActivityPreview/BPACFrontBackThumbnail.png",
     "order": 4,
     "tags": ["home", "echo"]
   },
