@@ -32,7 +32,7 @@ export default function ActivityClient({
           {activity.title}
         </h1>
 
-        <p className="pb-3 text-black text-[4vw] sm:text-[1.5vw] md:text-[2vw]">
+        <p className="pb-3 text-black text-[4vw] sm:text-[1.5vw] md:text-[2vw] pb-10">
           {activity.description}
         </p>
 

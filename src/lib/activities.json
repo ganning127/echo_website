@@ -1,5 +1,15 @@
 [
-  
+  {
+    "title": "Color the Seasons with Echo and Friends!",
+    "slug": "Color-the-seasons",
+    "preview": "/ActivityPreview/color_pages_2026.png",
+    "description": "Join Echo and Friends on a colorful adventure throughout the year! Our free, seasonal coloring pages are updated every month. Fun for kids and creative spirits of all ages! #2026",
+    "link": "/make/ECHO_coloring_pages.pdf",
+    "downloadLabel": "Print Coloring Pages",
+    "image": "/ActivityPreview/Coloring_Pages.jpg",
+    "order": 5,
+    "tags": ["home", "coloring pages"]
+  },
   {
     "title": "Blood Pressure Awareness Card",
     "slug": "BPAC",
