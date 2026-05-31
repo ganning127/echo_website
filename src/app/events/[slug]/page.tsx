@@ -6,9 +6,13 @@ import { MDXRemote } from "next-mdx-remote/rsc";
 import { SignupForm } from "@/components/Events/SignupForm";
 import { EventInfoBox } from "@/components/Events/EventInfoBox";
 import { PaintAndNourishRegistration } from "@/components/Events/registration-paint-and-nourish";
+import { RegistrationButton } from "@/components/Events/registration-button";
 import Image from "next/image";
-
-const components = { SignupForm, EventInfoBox };
+const components = {
+  SignupForm,
+  EventInfoBox,
+  RegistrationButton,
+};
 
 const registrationComponents = {
   "paint-and-nourish": PaintAndNourishRegistration,
@@ -119,7 +123,7 @@ export default async function EventPage({
           <article
             className="  prose-li:marker:text-[#013161]
   prose-blockquote:border-l-[#013161]
- col-span-2 prose prose-lg max-w-none prose-headings:text-[#013161] prose-headings:uppercase prose-headings:tracking-wide prose-a:text-[#1876d0]"
+ col-span-2 prose prose-lg max-w-none prose-headings:text-[#013161] prose-headings:uppercase prose-headings:tracking-wide prose-a:text-white"
           >
             <MDXRemote source={content} components={components} />
           </article>
