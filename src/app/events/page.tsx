@@ -33,7 +33,7 @@ export default function EventsPage() {
       <Suspense fallback={<div>Loading...</div>}>
         {/* HERO */}
         <div className="pb-12 text-center lg:pt-36 pt-10">
-          <h1 className="text-5xl mb-5">Events</h1>
+          <h1 className="text-5xl mb-5 text-[#013161]">Events</h1>
           <p className="max-w-5/6 md:max-w-4/6 mx-auto text-md md:text-2xl mb-10">
             You’re invited! Check out our ECHO events. Gather your friends and
             family, and schedule some heart-healthy plans!
