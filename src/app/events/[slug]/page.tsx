@@ -8,10 +8,80 @@ import { EventInfoBox } from "@/components/Events/EventInfoBox";
 import { PaintAndNourishRegistration } from "@/components/Events/registration-paint-and-nourish";
 import { RegistrationButton } from "@/components/Events/registration-button";
 import Image from "next/image";
+import { Testimonial } from "@/components/Events/Testimonial";
+import type { Metadata } from "next";
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ slug: string }>;
+}): Promise<Metadata> {
+  const { slug } = await params;
+
+  const event = getEventBySlug(slug);
+
+  if (!event) {
+    return {
+      title: "Event Not Found | ECHO",
+    };
+  }
+
+  const fm = event.frontmatter;
+
+  const pageUrl = `https://edecho.org/events/${slug}`;
+
+  const imageUrl = fm.image
+    ? `https://edecho.org${fm.image}`
+    : "https://edecho.org/images/default-event-social.jpg";
+
+  return {
+    title: `${fm.title} Event`,
+
+    description: fm.excerpt || fm.description,
+
+    keywords: [
+      ...(fm.tags || []),
+      "ECHO",
+      "heart health",
+      "community events",
+      "cardiovascular wellness",
+    ],
+
+    alternates: {
+      canonical: pageUrl,
+    },
+
+    openGraph: {
+      title: fm.title,
+      description: fm.excerpt || fm.description,
+      url: pageUrl,
+      siteName: "ECHO",
+      type: "website",
+
+      images: [
+        {
+          url: imageUrl,
+          width: 1200,
+          height: 630,
+          alt: fm.title,
+        },
+      ],
+    },
+
+    twitter: {
+      card: "summary_large_image",
+      title: fm.title,
+      description: fm.excerpt || fm.description,
+      images: [imageUrl],
+    },
+  };
+}
+
 const components = {
   SignupForm,
   EventInfoBox,
   RegistrationButton,
+  Testimonial,
 };
 
 const registrationComponents = {

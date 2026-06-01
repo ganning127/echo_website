@@ -8,6 +8,7 @@ export type Event = {
     date: string;
     endDate?: string;
     location?: string;
+    description?: string;
     image?: string;
     tags?: string[];
     excerpt?: string;
