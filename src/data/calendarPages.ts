@@ -35,5 +35,11 @@ export const calendarPages: CalendarPage[] = [
     title: "May 2026",
     preview: "/calendar/may-2026/preview.jpg",
     pdf: "/calendar/may-2026/ECHO_Calendar_May_2026.pdf"
+  },
+  {
+    slug: "june-2026",
+    title: "June 2026",
+    preview: "/calendar/june-2026/preview.jpg",
+    pdf: "/calendar/june-2026/ECHO_Calendar_June_2026.pdf"
   }
 ];
