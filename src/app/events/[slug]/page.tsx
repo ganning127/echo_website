@@ -114,7 +114,7 @@ export default async function EventPage({
       <NavBar />
 
       {/* HERO */}
-      <div className="lg:pt-24 pt-10 pb-20 px-6 max-w-6xl mx-auto">
+      <div className="lg:pt-21 pt-10 pb-20 px-6 max-w-6xl mx-auto">
         <div className="flex flex-col md:flex-row gap-10 items-center">
           {/* LEFT COLUMN */}
           <div className="flex-1 text-left">
@@ -165,9 +165,9 @@ export default async function EventPage({
           </div>
 
           {/* RIGHT COLUMN — Image */}
-          <div className="flex-1 w-full">
+          <div className="flex-1 w-full p-0 lg:p-16">
             {fm.image ? (
-              <div className="relative w-full h-72 md:h-96 rounded-2xl overflow-hidden shadow-md">
+              <div className="relative w-full aspect-[900/691] rounded-2xl overflow-hidden shadow-md p-24">
                 <Image
                   src={fm.image}
                   alt={fm.title}
@@ -176,7 +176,7 @@ export default async function EventPage({
                 />
               </div>
             ) : (
-              <div className="w-full h-72 md:h-96 rounded-2xl bg-white/50 border border-gray-200 flex items-center justify-center shadow-sm">
+              <div className="w-full aspect-[900/691] rounded-2xl bg-white/50 border border-gray-200 flex items-center justify-center shadow-sm">
                 <span className="text-[#013161]/40 text-sm font-medium">
                   No image provided
                 </span>
