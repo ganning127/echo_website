@@ -1,16 +1,17 @@
 export const NAV_CONTENT = [
-  { title: "About", 
+  {
+    title: "About",
     href: "/about",
     children: [
-      {title: "Mission", href:"/about?tab=mission"},
-      
-      {title: "Newsletter", href:"/about?tab=newsletter"},
-    ]
-   },
+      { title: "Mission", href: "/about?tab=mission" },
+
+      { title: "Newsletter", href: "/about?tab=newsletter" },
+    ],
+  },
   {
     title: "Characters",
     href: "/characters",
-    footerHref: "/characters",      // single link in footer
+    footerHref: "/characters", // single link in footer
     children: [
       { title: "Echo", href: "/characters/echo" },
       { title: "Artie", href: "/characters/artie" },
@@ -28,6 +29,8 @@ export const NAV_CONTENT = [
     ],
   },
   { title: "Activities", href: "/activities" },
-  
+
   { title: "Blog", href: "/blog" },
+
+  { title: "Events", href: "/events" },
 ];
