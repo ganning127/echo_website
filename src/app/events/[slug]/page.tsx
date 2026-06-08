@@ -10,6 +10,26 @@ import { RegistrationButton } from "@/components/Events/registration-button";
 import Image from "next/image";
 import { Testimonial } from "@/components/Events/Testimonial";
 import type { Metadata } from "next";
+import { EmailSignUpRegistration } from "@/components/Events/EmailSignUpRegistration";
+
+function formatEventDate(dateStr: string, endDateStr?: string): string {
+  const date = new Date(dateStr);
+  const formatted = date.toLocaleDateString("en-US", {
+    weekday: "long",
+    year: "numeric",
+    month: "long",
+    day: "numeric",
+  });
+  if (!endDateStr) return formatted;
+
+  const end = new Date(endDateStr);
+  const formattedEnd = end.toLocaleDateString("en-US", {
+    month: "long",
+    day: "numeric",
+    year: "numeric",
+  });
+  return `${formatted} – ${formattedEnd}`;
+}
 
 export async function generateMetadata({
   params,
@@ -82,10 +102,12 @@ const components = {
   EventInfoBox,
   RegistrationButton,
   Testimonial,
+  EmailSignUpRegistration,
 };
 
 const registrationComponents = {
   "paint-and-nourish": PaintAndNourishRegistration,
+  "email-sign-up": EmailSignUpRegistration,
 };
 
 export async function generateStaticParams() {
@@ -137,15 +159,7 @@ export default async function EventPage({
 
             <div className="flex flex-col gap-2 text-[#013161] font-semibold">
               {fm.date && (
-                <span>
-                  📅{" "}
-                  {new Date(fm.date).toLocaleDateString("en-US", {
-                    weekday: "long",
-                    year: "numeric",
-                    month: "long",
-                    day: "numeric",
-                  })}
-                </span>
+                <span>📅 {formatEventDate(fm.date, fm.endDate)}</span>
               )}
 
               {fm.time && <span>⏰ {fm.time}</span>}
@@ -155,12 +169,23 @@ export default async function EventPage({
 
             {/* MOBILE/TABLET CTA — hidden on lg+ where sidebar is visible */}
             {fm.hasRegistration && (
-              <a
-                href="#registration"
-                className="lg:hidden inline-block mt-6 px-6 py-3 rounded-xl bg-[#013161] text-white font-bold uppercase tracking-wide text-sm transition-colors hover:bg-[#1876d0]"
-              >
-                Reserve Your Spot →
-              </a>
+              <div className="lg:hidden mt-6">
+                {EmailSignUpRegistration ? (
+                  <a
+                    href="mailto:info@edecho.org"
+                    className="inline-block px-6 py-3 rounded-xl bg-[#013161] text-white font-bold uppercase tracking-wide text-sm transition-colors hover:bg-[#1876d0]"
+                  >
+                    Email Us to Sign Up →
+                  </a>
+                ) : (
+                  <a
+                    href="#registration"
+                    className="inline-block px-6 py-3 rounded-xl bg-[#013161] text-white font-bold uppercase tracking-wide text-sm transition-colors hover:bg-[#1876d0]"
+                  >
+                    Reserve Your Spot →
+                  </a>
+                )}
+              </div>
             )}
           </div>
 
@@ -209,15 +234,7 @@ export default async function EventPage({
 
                   <div className="flex flex-col gap-2 text-sm text-[#013161] font-semibold mb-4">
                     {fm.date && (
-                      <span>
-                        📅{" "}
-                        {new Date(fm.date).toLocaleDateString("en-US", {
-                          weekday: "long",
-                          year: "numeric",
-                          month: "long",
-                          day: "numeric",
-                        })}
-                      </span>
+                      <span>📅 {formatEventDate(fm.date, fm.endDate)}</span>
                     )}
 
                     {fm.time && <span>⏰ {fm.time}</span>}
@@ -225,12 +242,21 @@ export default async function EventPage({
                     {fm.ticketPrice && <span>🎟️ {fm.ticketPrice}</span>}
                   </div>
 
-                  <a
-                    href="#registration"
-                    className="block text-center rounded-xl bg-[#013161] text-white font-bold uppercase tracking-wide text-sm py-3 transition-colors hover:bg-[#1876d0]"
-                  >
-                    Reserve Your Spot →
-                  </a>
+                  {fm.registrationComponent === "email-sign-up" ? (
+                    <a
+                      href="mailto:info@edecho.org"
+                      className="block text-center rounded-xl bg-[#013161] text-white font-bold uppercase tracking-wide text-sm py-3 transition-colors hover:bg-[#1876d0]"
+                    >
+                      Email Us to Sign Up →
+                    </a>
+                  ) : (
+                    <a
+                      href="#registration"
+                      className="block text-center rounded-xl bg-[#013161] text-white font-bold uppercase tracking-wide text-sm py-3 transition-colors hover:bg-[#1876d0]"
+                    >
+                      Reserve Your Spot →
+                    </a>
+                  )}
                 </div>
               </div>
             </aside>

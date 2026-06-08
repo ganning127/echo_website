@@ -8,11 +8,7 @@ import { Footer } from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 
-export default function ActivityClient({
-  activity,
-}: {
-  activity: any;
-}) {
+export default function ActivityClient({ activity }: { activity: any }) {
   const router = useRouter();
 
   if (!activity) return null;
@@ -35,6 +31,22 @@ export default function ActivityClient({
         <p className="pb-3 text-black text-[4vw] sm:text-[1.5vw] md:text-[2vw] pb-10">
           {activity.description}
         </p>
+
+        <div className="flex flex-wrap gap-4 justify-center mb-10">
+          <Button className="bg-[#7C2D36] hover:bg-[#013161] text-xl font-heading">
+            <Link href={activity.link}>
+              {activity.downloadLabel ?? "Download Activity"}
+            </Link>
+          </Button>
+
+          {"secondaryLink" in activity && activity.secondaryLink && (
+            <Button className="bg-[#7C2D36] hover:bg-[#013161] text-xl font-heading">
+              <Link href={activity.secondaryLink}>
+                {activity.secondaryLabel ?? "Download Activity"}
+              </Link>
+            </Button>
+          )}
+        </div>
 
         <Image
           src={activity.preview}

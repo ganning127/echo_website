@@ -1,4 +1,15 @@
 [
+    {
+    "title": "Placemat Placeholder",
+    "slug": "Color-the-seasons",
+    "preview": "/ActivityPreview/Echo_and_friends_placemat.png",
+    "description": "Description Placeholder",
+    "link": "/make/Explorations_With_ECHO_and_Friends_Food_Bank_Activity_Sheet.pdf",
+    "downloadLabel": "Print Placemat",
+    "image": "/ActivityPreview/PlacematsThumbnail.png",
+    "order": 5,
+    "tags": ["home", "eat-well"]
+  },
   {
     "title": "Color the Seasons with Echo and Friends!",
     "slug": "Color-the-seasons",
