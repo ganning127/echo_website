@@ -274,7 +274,9 @@ export default async function EventPage({
       {fm.hasRegistration && RegistrationComponent && (
         <div id="registration" className="max-w-6xl mx-auto px-6 pb-20">
           <h2 className="text-3xl font-extrabold uppercase tracking-wide text-[#013161] mb-8 border-b-2 border-[#013161]/20 pb-4">
-            Registration
+            {fm.registrationComponent === "email-sign-up"
+              ? "Volunteer With Us"
+              : "Registration"}
           </h2>
           <RegistrationComponent />
         </div>
