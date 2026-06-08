@@ -170,7 +170,7 @@ export default async function EventPage({
             {/* MOBILE/TABLET CTA — hidden on lg+ where sidebar is visible */}
             {fm.hasRegistration && (
               <div className="lg:hidden mt-6">
-                {EmailSignUpRegistration ? (
+                {fm.registrationComponent === "email-sign-up" ? (
                   <a
                     href="mailto:info@edecho.org"
                     className="inline-block px-6 py-3 rounded-xl bg-[#013161] text-white font-bold uppercase tracking-wide text-sm transition-colors hover:bg-[#1876d0]"

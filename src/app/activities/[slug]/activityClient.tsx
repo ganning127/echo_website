@@ -1,7 +1,6 @@
 "use client";
 
 import Image from "next/image";
-import { useRouter } from "next/navigation";
 import React from "react";
 import { NavBar } from "@/components/NavBar";
 import { Footer } from "@/components/Footer";
@@ -9,8 +8,6 @@ import { Button } from "@/components/ui/button";
 import Link from "next/link";
 
 export default function ActivityClient({ activity }: { activity: any }) {
-  const router = useRouter();
-
   if (!activity) return null;
 
   return (
