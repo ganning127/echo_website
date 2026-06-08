@@ -68,12 +68,18 @@ export function splitEvents(events: Event[]) {
     now.setHours(0, 0, 0, 0);
 
     const upcoming = events
-        .filter((e) => new Date(e.date) >= now)
+        .filter((e) => {
+            const end = e.endDate ? new Date(e.endDate) : new Date(e.date);
+            return end >= now;
+        })
         .sort((a, b) => new Date(a.date).getTime() - new Date(b.date).getTime());
 
     const past = events
-        .filter((e) => new Date(e.date) < now)
-        .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime()); // newest first
+        .filter((e) => {
+            const end = e.endDate ? new Date(e.endDate) : new Date(e.date);
+            return end < now;
+        })
+        .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
 
     return { upcoming, past };
 }

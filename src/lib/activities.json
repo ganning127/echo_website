@@ -1,4 +1,15 @@
 [
+    {
+    "title": "Echo and Friends Picnic Placemat",
+    "slug": "echo-and-friends-picnic-placemat",
+    "preview": "/ActivityPreview/Echo_and_friends_placemat.png",
+    "description": "Print out and color in your very own picnic placemat!",
+    "link": "/make/Explorations_With_ECHO_and_Friends_Food_Bank_Activity_Sheet.pdf",
+    "downloadLabel": "Print Placemat",
+    "image": "/ActivityPreview/PlacematsThumbnail.png",
+    "order": 5,
+    "tags": ["home", "eat-well", "echo", "game", "coloring pages"]
+  },
   {
     "title": "Color the Seasons with Echo and Friends!",
     "slug": "Color-the-seasons",
