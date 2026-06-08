@@ -7,7 +7,17 @@ import { Footer } from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 
-export default function ActivityClient({ activity }: { activity: any }) {
+type Activity = {
+  title: string;
+  description: string;
+  preview: string;
+  link: string;
+  downloadLabel?: string;
+  secondaryLink?: string;
+  secondaryLabel?: string;
+};
+
+export default function ActivityClient({ activity }: { activity: Activity }) {
   if (!activity) return null;
 
   return (
