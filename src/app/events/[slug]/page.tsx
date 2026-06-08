@@ -228,9 +228,15 @@ export default async function EventPage({
             <aside className="col-span-1 hidden lg:block">
               <div className="sticky top-24">
                 <div className="bg-white rounded-2xl p-6 shadow-md">
-                  <h3 className="text-2xl font-bold text-gray-900">
-                    Register Today
-                  </h3>
+                  {fm.registrationComponent === "email-sign-up" ? (
+                    <h3 className="text-2xl font-bold text-gray-900">
+                      Volunteer With Us
+                    </h3>
+                  ) : (
+                    <h3 className="text-2xl font-bold text-gray-900">
+                      Register Today
+                    </h3>
+                  )}
 
                   <div className="flex flex-col gap-2 text-sm text-[#013161] font-semibold mb-4">
                     {fm.date && (
