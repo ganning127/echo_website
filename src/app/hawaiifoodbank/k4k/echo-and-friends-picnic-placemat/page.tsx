@@ -43,7 +43,7 @@ export default function Page() {
                    height="500"
                  />
                  
-        <a href="/Explorations with ECHO & Friends - Food Bank Activity Sheet - CIRCULATION.pdf" download>
+        <a href="/placemat/Explorations with ECHO & Friends - Food Bank Activity Sheet - CIRCULATION.pdf" target="_blank" rel="noopener noreferrer">
         <button
           className="bg-[#013161] font-heading text-white px-12 py-3 rounded-xl shadow-md shrink-0 hover:opacity-90 transition-opacity mt-6"
           style={{
