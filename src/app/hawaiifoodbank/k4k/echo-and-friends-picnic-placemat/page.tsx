@@ -5,6 +5,7 @@ import { Footer } from "@/components/Footer";
 import { Metadata } from "next";
 import Image from "next/image";
 import {SubmitPlacematsCTA} from "@/components/Sections/PicnicPlacemats/SubmitPlacematsCTA";
+import { PlacematBlogCallout } from "@/components/Sections/PicnicPlacemats/PlacematBlogCallout";
 
 export const metadata: Metadata = {
   title: 'Echo and Friends Picnic Placemat - Hawai‘i Foodbank K4K',
@@ -20,7 +21,7 @@ export default function Page() {
     
           <Suspense fallback={<div>Loading...</div>}>
           <section className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5/6 mx-auto pt-10">
-            <div className="col-span-3 lg:col-span-2 lg:pb-12 lg:pt-36 mx-auto lg:pr-24">
+            <div className="col-span-3 lg:col-span-2 lg:pb-12 lg:pt-24 mx-auto lg:pr-24">
               <div className="text-[#013161] text-center sm:text-left font-heading mb-4"
               style={{
                 fontSize: "clamp(1.4rem, 3vw, 1rem)",
@@ -57,6 +58,7 @@ export default function Page() {
             </div>
             </section>
             <SubmitPlacematsCTA />
+            <PlacematBlogCallout />
           </Suspense>
     
           <Footer />
