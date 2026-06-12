@@ -4,7 +4,6 @@ import { Suspense } from "react";
 import { Footer } from "@/components/Footer";
 import { Metadata } from "next";
 import Image from "next/image";
-import { Section } from 'lucide-react';
 import {SubmitPlacematsCTA} from "@/components/Sections/PicnicPlacemats/SubmitPlacematsCTA";
 
 export const metadata: Metadata = {
@@ -21,14 +20,21 @@ export default function Page() {
     
           <Suspense fallback={<div>Loading...</div>}>
           <section className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5/6 mx-auto pt-10">
-            <div className="col-span-2 pb-12 lg:pt-36 pt-10 mx-auto pr-24">
+            <div className="col-span-3 lg:col-span-2 lg:pb-12 lg:pt-36 mx-auto lg:pr-24">
+              <div className="text-[#013161] text-center sm:text-left font-heading mb-4"
+              style={{
+                fontSize: "clamp(1.4rem, 3vw, 1rem)",
+              }}
+              >
+                <p>LAST UPDATED: 06/12/2026</p>
+              </div>
               <h1 className="text-5xl mb-5">Echo and Friends Picnic Placemat</h1>
               <p className=" mx-auto text-md md:text-2xl mb-10">
                 {" "}
                 Early Cardiovascular Health Outreach (ECHO) is proud to partner with Hawaiʻi Foodbank's Kaukau 4 Keiki summer meal box program to bring heart health education directly to children and families across the island. In order to achieve this goal, ECHO is providing a series of interactive and comprehensive placemats, geared toward making mealtimes not only filling, but also fun!
               </p>
             </div>
-            <div className="col-span-1 pb-12 lg:pt-36 pt-10 mx-auto text-center">
+            <div className="col-span-3 lg:col-span-1 pb-12 lg:pt-24 pt-10 mx-auto text-center content-center">
          <Image
                    className=""
                    src="/placemat/Explorations with ECHO & Friends - Food Bank Activity Sheet - CIRCULATION.png"
