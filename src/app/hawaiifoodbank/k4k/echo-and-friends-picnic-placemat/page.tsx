@@ -29,7 +29,7 @@ export default function Page() {
               >
                 <p>LAST UPDATED: 06/12/2026</p>
               </div>
-              <h1 className="text-5xl mb-5">Echo and Friends Picnic Placemat</h1>
+              <h1 className="text-5xl mb-5">Placemat 2: Circulation</h1>
               <p className=" mx-auto text-md md:text-2xl mb-10">
                 {" "}
                 Early Cardiovascular Health Outreach (ECHO) is proud to partner with Hawaiʻi Foodbank's Kaukau 4 Keiki summer meal box program to bring heart health education directly to children and families across the island. In order to achieve this goal, ECHO is providing a series of interactive and comprehensive placemats, geared toward making mealtimes not only filling, but also fun!
