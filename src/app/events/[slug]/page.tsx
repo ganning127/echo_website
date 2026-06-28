@@ -216,9 +216,9 @@ export default async function EventPage({
         <div className={fm.hasRegistration ? "grid lg:grid-cols-3 gap-12" : ""}>
           {/* MAIN CONTENT */}
           <article
-            className="  prose-li:marker:text-[#013161]
+            className="prose-a:text-[#013161] prose-li:marker:text-[#013161]
   prose-blockquote:border-l-[#013161]
- col-span-2 prose prose-lg max-w-none prose-headings:text-[#013161] prose-headings:uppercase prose-headings:tracking-wide prose-a:text-white"
+ col-span-2 prose prose-lg max-w-none prose-headings:text-[#013161] prose-headings:uppercase prose-headings:tracking-wide"
           >
             <MDXRemote source={content} components={components} />
           </article>
