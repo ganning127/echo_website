@@ -27,9 +27,9 @@ export default function Page() {
                 fontSize: "clamp(1.4rem, 3vw, 1rem)",
               }}
               >
-                <p>LAST UPDATED: 06/20/2026</p>
+                <p>LAST UPDATED: 06/27/2026</p>
               </div>
-              <h1 className="text-5xl mb-5">Placemat 3: Escape the Risk</h1>
+              <h1 className="text-5xl mb-5">Placemat 4: MoveWell</h1>
               <p className=" mx-auto text-md md:text-2xl mb-10">
                 {" "}
                 Early Cardiovascular Health Outreach (ECHO) is proud to partner with Hawaiʻi Foodbank's Kaukau 4 Keiki summer meal box program to bring heart health education directly to children and families across the island. In order to achieve this goal, ECHO is providing a series of interactive and comprehensive placemats, geared toward making mealtimes not only filling, but also fun!
@@ -38,13 +38,13 @@ export default function Page() {
             <div className="col-span-3 lg:col-span-1 pb-12 lg:pt-24 pt-10 mx-auto text-center content-center">
          <Image
                    className=""
-                   src="/placemat/Explorations with ECHO & Friends - Food Bank Activity Sheet - ESCAPE THE RISK.png"
-                   alt="Escape the Risk Placemat"
+                   src="/placemat/Explorations with ECHO & Friends - Food Bank Activity Sheet - MOVEWELL.png"
+                   alt="Move Well Placemat"
                    width="700"
                    height="500"
                  />
                  
-        <a href="/placemat/Explorations with ECHO & Friends - Food Bank Activity Sheet - ESCAPE THE RISK.pdf" target="_blank" rel="noopener noreferrer">
+        <a href="/placemat/Explorations with ECHO & Friends - Food Bank Activity Sheet - MOVEWELL.pdf" target="_blank" rel="noopener noreferrer">
         <button
           className="bg-[#013161] font-heading text-white px-12 py-3 rounded-xl shadow-md shrink-0 hover:opacity-90 transition-opacity mt-6"
           style={{
