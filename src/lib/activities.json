@@ -1,4 +1,15 @@
 [
+   {
+    "title": "Save Your Spot With A Heart!",
+    "slug": "save-your-spot-with-a-heart-instructions",
+    "preview": "/ActivityPreview/Save_Your_Spot_With_A_Heart_Activity.png",
+    "description": "Create your own unique origami heart shaped bookmark. Once you complete your heart bookmark, make a wish upon it to set intentions for your heart-healthy life!",
+    "link": "/make/Save_your_spot_with_a_heart_instructions.pdf",
+    "downloadLabel": "View Instructions",
+    "image": "/ActivityPreview/Save_Your_Spot_With_A_Heart_Featured_Thumbnail.png",
+    "order": 6,
+    "tags": ["home", "mind-well", "echo", "crafts"]
+  },
     {
     "title": "Echo and Friends Picnic Placemat",
     "slug": "echo-and-friends-picnic-placemat",
