@@ -38,7 +38,7 @@ export default function Page() {
             <div className="col-span-3 lg:col-span-1 pb-12 lg:pt-24 pt-10 mx-auto text-center content-center">
          <Image
                    className=""
-                   src="/placemat/Explorations with ECHO Friends - Food Bank Activity Sheet - RESTWELL.png"
+                   src="/placemat/RestWell.png"
                    alt="Rest Well Placemat"
                    width="700"
                    height="500"
