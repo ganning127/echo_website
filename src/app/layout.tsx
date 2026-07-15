@@ -4,6 +4,8 @@ import { GoogleAnalytics } from "@next/third-parties/google";
 import { lato } from "./fonts";
 import Silktide from "@/components/Tracking/Silktide";
 import GoogleConsent from "@/components/Tracking/GoogleConsent";
+import Script from "next/script";
+import Klaviyo from "@/components/Tracking/Klaviyo";
 
 export const metadata: Metadata = {
   title: {
@@ -29,6 +31,8 @@ export default function RootLayout({
 
         {/* Google Analytics (always loaded, consent-controlled) */}
         <GoogleAnalytics gaId="G-S3G9CP9H0H" />
+<Klaviyo/>
+    
       </body>
     </html>
   );
