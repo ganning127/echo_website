@@ -18,6 +18,13 @@
   background-position: center;
 }
 
+.bg-origami {
+  background-image: url("/Patterns/Origami Pattern.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
 .bg-heroes{
     background-image: url("/Echo Heroes Background.webp");
   background-size: cover;
