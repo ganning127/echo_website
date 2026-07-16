@@ -9,7 +9,7 @@ import { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Plaqtrick's Chronicles | Blogs by ECHO",
   description:
-    "Indulge in Plaqtrick's Chronicles! These ooey-gooey blog posts are sure to stick in your mind and away from your arteries! Check out what the ECHO team has to say by perusing the articles below!",
+    "Indulge in Plaqtrick's Chronicles! These ooey-gooey blog posts are sure to stick in your mind and away from your arteries! Check out what the ECHO team has to say by perusing the articles.",
   keywords: [
     "ECHO blog",
     "Echo articles",
@@ -32,7 +32,7 @@ export default function BlogPage() {
             {" "}
             Indulge in Plaqtrick&apos;s Chronicles! These ooey-gooey blog posts
             are sure to stick in your mind and away from your arteries! Check
-            out what the ECHO team has to say by perusing the articles below!
+            out what the ECHO team has to say by perusing the articles below.
           </p>
           <div className="p-6 grid grid-cols-1 md:grid-cols-1 gap-6">
             {blogs.map((blog: Blog) => (
