@@ -10,7 +10,8 @@ type SitemapEntry = {
 const DISALLOW: string[] = [
   '/hawaiifoodbank/k4k/echo-and-friends-picnic-placemat',
   '/contact/story-submission',
-  '/contact/question'
+  '/contact/question',
+  '/echo-wishing-well-pillar-count'
 ];
 
 // explicit individual paths to include even if they don't appear via normal page file scanning

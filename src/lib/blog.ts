@@ -9,7 +9,7 @@ export type Blog = {
   author: string;
   excerpt: string;
   image: string;
-  tags?: string[];
+  tags: string[];
 };
 
 export type BlogWithContent = {
@@ -36,7 +36,7 @@ export function getAllBlogs(): Blog[] {
         author: data.author ?? "",
         excerpt: data.excerpt ?? "",
         image: data.image ?? "",
-        tags: data.tags,
+        tags: data.tags ?? [],
       } as Blog;
     })
     .sort((a, b) => (a.date < b.date ? 1 : -1)); // newest first
