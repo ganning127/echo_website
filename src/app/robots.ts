@@ -9,6 +9,7 @@ export default function robots(): MetadataRoute.Robots {
         '/hawaiifoodbank/k4k/echo-and-friends-picnic-placemat',
         '/contact/story-submission',
         '/contact/question',
+  '/echo-wishing-well-pillar-count'
       ],
     },
     sitemap: '/sitemap.xml',
