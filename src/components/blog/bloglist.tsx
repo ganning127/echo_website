@@ -29,9 +29,24 @@ export default function BlogList({ blogs }: BlogListProps) {
   const filteredBlogs = useMemo(() => {
     let results = [...blogs];
 
+
+    
     // Search
     if (search.trim()) {
-      const query = search.toLowerCase();
+      const query = search.trim().toLowerCase();
+
+if (query) {
+  results = results.filter((blog) => {
+    return (
+      blog.title.toLowerCase().includes(query) ||
+      blog.excerpt.toLowerCase().includes(query) ||
+      blog.author.toLowerCase().includes(query) ||
+      blog.tags.some((tag) =>
+        tag.toLowerCase().includes(query)
+      )
+    );
+  });
+}
 
       results = results.filter((blog) => {
         return (
