@@ -8,7 +8,7 @@ import { Suspense } from "react";
 import { Footer } from "@/components/Footer";
 import Link from "next/link";
 import type { Metadata } from "next";
-
+import { ResponsiveImage } from "@/components/blog/ResponsiveImage";
 import { headers } from "next/headers";
 
 export async function generateStaticParams() {
@@ -26,7 +26,7 @@ function getBorderColorByMonth(dateStr: string): string {
     3: "border-amber-400",
     4: "border-violet-300",
     5: "border-red-400",
-    6: "border-red-950",
+    6: "border-[#AB5061]",
     7: "border-red-950",
     8: "border-emerald-400",
   };
@@ -121,9 +121,13 @@ export default async function BlogPost({
   let PostContent: React.ComponentType;
   try {
     const { default: Content } = await evaluate(blog.content, {
-      ...(runtime as any),
-      baseUrl: import.meta.url,
-    });
+  ...(runtime as any),
+  baseUrl: import.meta.url,
+
+  useMDXComponents: () => ({
+    ResponsiveImage,
+  }),
+});
     PostContent = Content;
   } catch (e) {
     console.error("MDX compile error:", e);
