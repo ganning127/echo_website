@@ -52,7 +52,7 @@ export const calendarPages: CalendarPage[] = [
   {
     slug: "august-2026",
     title: "August 2026",
-    preview: "/calendar/august-2026/preview.png",
+    preview: "/calendar/august-2026/preview.jpg",
     pdf: "/calendar/august-2026/ECHO_Calendar_August_2026.pdf"
   }
 ];
