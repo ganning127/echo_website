@@ -3,6 +3,7 @@ import { Suspense } from "react";
 import { Footer } from "@/components/Footer";
 import { Metadata } from "next";
 import ZeffyDonationForm from "@/components/Donate/ZeffyDonationForm";
+import Image from "next/image";
 
 export const metadata: Metadata = {
   title: "Donate to ECHO",
@@ -21,7 +22,7 @@ export default function Donate() {
 
       <Suspense fallback={<div>Loading...</div>}>
         <div className="text-center mx-auto mb-5 lg:pt-36 pt-0">
-         <h1 className="text-5xl mb-5"> Invest in a Heart Healthy Future
+         <h1 className="text-5xl mb-5">  Let Your Impact ECHO!
         </h1>
         <p className="text-xl">Our youth will use what they learn with ECHO in their everyday lives to increase heart health in their generation.<br></br> You can help strengthen our programs and activities by making a donation today!
 </p>
@@ -61,6 +62,18 @@ export default function Donate() {
             IRS regulations.
           </p>
           <p> ECHO’s Federal Tax ID number is 99-3101733.</p>
+
+          <h2 className="text-3xl font-heading mt-5">With Heartfelt Gratitude
+</h2>
+<p className="max-w-[70ch] mx-auto">Thank you to our donors and funders! With your support, we're helping youth develop lifelong heart-healthy habits that lead to stronger communities and heart-healthy futures. 
+</p>
+          <Image
+          className="w-sm justify-self-center pt-5"
+          src="/HMSA_Foundation_Logo_-_Blue.jpg"
+          alt="HMSA Foundation Logo"
+          width="500"
+          height="100"
+        />
         </div>
       </Suspense>
 
