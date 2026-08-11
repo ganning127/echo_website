@@ -25,9 +25,9 @@ export default function QuoteWithIcon({
           <Image
             src={icon}
             alt=""
-            width={30}
-            height={30}
-            className="h-[30px] w-[30px] object-contain mt-0 mb-0"
+            width={25}
+            height={25}
+            className="h-[25px] w-[25px] object-contain mt-0 mb-0"
           />
         )}
       </footer>
