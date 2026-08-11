@@ -9,6 +9,7 @@ import { Footer } from "@/components/Footer";
 import Link from "next/link";
 import type { Metadata } from "next";
 import { ResponsiveImage } from "@/components/blog/ResponsiveImage";
+import QuoteWithIcon from "@/components/blog/quoteWithIcon";
 import { headers } from "next/headers";
 
 export async function generateStaticParams() {
@@ -126,6 +127,7 @@ export default async function BlogPost({
 
   useMDXComponents: () => ({
     ResponsiveImage,
+    QuoteWithIcon,
   }),
 });
     PostContent = Content;
