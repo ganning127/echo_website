@@ -1,4 +1,5 @@
 "use client";
+
 import { useState } from "react";
 import { ChevronDown } from "lucide-react";
 
@@ -33,7 +34,9 @@ export default function Accordion({ items }: { items: FAQItem[] }) {
                 <path d="M12 21s-6.7-4.3-10-9c-1.7-2.4-1-5.9 1.5-7.7 2.2-1.5 5.2-.9 6.9 1C12.3 3.4 15.3 2.8 17.5 4.3c2.5 1.8 3.2 5.3 1.5 7.7-3.3 4.7-10 9-10 9z" />
               </svg>
 
-              <span className="text-lg font-semibold">{item.question}</span>
+              <span className="text-lg font-semibold">
+                {item.question}
+              </span>
             </div>
 
             <ChevronDown
@@ -43,12 +46,19 @@ export default function Accordion({ items }: { items: FAQItem[] }) {
             />
           </button>
 
+          {/* Accordion Content */}
           <div
-            className={`transition-all duration-300 overflow-hidden ${
-              openIndex === index ? "max-h-[500px] p-5 pt-0" : "max-h-0 p-0"
+            className={`grid transition-[grid-template-rows] duration-300 ease-in-out ${
+              openIndex === index
+                ? "grid-rows-[1fr]"
+                : "grid-rows-[0fr]"
             }`}
           >
-            <div className="text-gray-700 leading-relaxed">{item.answer}</div>
+            <div className="overflow-hidden">
+              <div className="p-5 pt-0 text-gray-700 leading-relaxed">
+                {item.answer}
+              </div>
+            </div>
           </div>
         </div>
       ))}

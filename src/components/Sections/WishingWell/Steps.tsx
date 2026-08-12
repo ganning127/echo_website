@@ -26,7 +26,9 @@ export default function FAQSection() {
       answer: (
           <><ul className="list-disc pl-6 space-y-2 pb-2">
               <li>
-                  Read through the Four Pillars.
+                  <a href="/about?tab=mission" className="underline hover:no-underline">
+                    Read through the Four Pillars.
+                  </a>
               </li>
               <li>
                   Choose your own unique origami heart bookmark. On each
