@@ -13,7 +13,7 @@ export function ConclusionSection() {
                   Make a wish upon your heart, then let the librarian know which Pillar you have set an intention for. Pillar stickers will be added to your heart bookmark by the librarian or an ECHO team member before being put into The ECHO Wishing Well. 
                 </p>
                 <p className="mt-6 text-lg text-gray-700 leading-relaxed">
-                  Together, we can encourage one another, one heart at a time. Let your impact ECHO and wish your neighbors well with <b>The ECHO Wishing Well: Save Your Spot With a Heart Bookmark Project!</b> 
+                  Together, we can encourage one another, one heart at a time. Let your impact ECHO and wish your neighbors well with <b>The ECHO Wishing Well: Save Your Spot With A Heart Bookmark Project!</b> 
                 </p>
 
                 <h2 className="pt-10 text-1xl md:text-3xl font-heading text-[#013161]">

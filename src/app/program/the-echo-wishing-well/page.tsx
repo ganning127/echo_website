@@ -10,6 +10,7 @@ import { GallerySection } from "@/components/Sections/WishingWell/Gallery";
 import { ViewInstructionsSection } from "@/components/Sections/WishingWell/ViewInstructions";
 import { ConclusionSection } from "@/components/Sections/WishingWell/Conclusion";
 import { WellnessGoalSection } from "@/components/Sections/WishingWell/wellness-goal";
+import FAQSection from "@/components/Sections/WishingWell/Steps";
 
 export const metadata: Metadata = {
   title: "The ECHO Wishing Well: Save Your Spot With A Heart!",
@@ -34,6 +35,7 @@ export default function WishingWellProgramPage() {
         <main className="bg-origami pt-12 pb-10">
           <HeroSection />
           <WellnessGoalSection />
+          <FAQSection />
           <ViewInstructionsSection />
           <ConclusionSection />
         </main>
