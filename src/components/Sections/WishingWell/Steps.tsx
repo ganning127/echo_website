@@ -123,16 +123,15 @@ my body and find fun ways to stay active.”
             forward.
           </li>
           <li>
-            Be sure to visit our website at edecho.org, email us at{" "}
+            Share your story with us! Send us an email at {" "}
             <a
               href="mailto:info@edecho.org"
               className="underline hover:no-underline"
             >
               info@edecho.org
-            </a>
-            , or follow us on Instagram <a className="underline hover:no-underline" href="https://www.instagram.com/edechoorg/" target="_blank" rel="noopener noreferrer">
+            </a> or follow us on Instagram <a className="underline hover:no-underline" href="https://www.instagram.com/edechoorg/" target="_blank" rel="noopener noreferrer">
               @edechoorg
-            </a>
+            </a>.
           </li>
         </ul>
       ),
