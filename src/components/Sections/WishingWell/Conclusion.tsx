@@ -19,7 +19,7 @@ export function ConclusionSection() {
                 <h2 className="pt-10 text-1xl md:text-3xl font-heading text-[#013161]">
                   Participating Location
                 </h2>
-                <div className="flex items-start justify-center items-center gap-3 text-[#013161]">
+                <div className="flex justify-center items-center gap-3 text-[#013161]">
                   <div className="shrink-0 pt-1">
                     <Image
                       src="/programs/the-echo-wishing-well/majesticons_library-line.svg"
