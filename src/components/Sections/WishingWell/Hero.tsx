@@ -10,7 +10,7 @@ export function HeroSection() {
                   The ECHO Wishing Well: <br></br>Save Your Spot With A Heart!
                 </h1>
                 <p className="mt-6 text-lg text-gray-700 leading-relaxed pb-2">
-                  Receive a wish by picking up a Save Your Spot With a Heart Bookmark! Friends of Early Cardiovascular Health Outreach (ECHO) have folded origami heart bookmarks for the library. When you visit the library, ask the librarian for The ECHO Wishing Well. Each bookmark features a different colored sticker representing one of ECHO’s Four Pillars:
+                  Receive a wish by picking up a Save Your Spot With A Heart Bookmark! Friends of Early Cardiovascular Health Outreach (ECHO) have folded origami heart bookmarks for the library. When you visit the library, ask the librarian for The ECHO Wishing Well. Each bookmark features a different colored sticker representing one of ECHO’s Four Pillars:
                 </p>
                 <div className="grid md:gap-4 md:grid-cols-4 pt-2">
 <div className="md:col-span-1">

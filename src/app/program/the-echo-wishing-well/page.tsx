@@ -15,7 +15,7 @@ import FAQSection from "@/components/Sections/WishingWell/Steps";
 export const metadata: Metadata = {
   title: "The ECHO Wishing Well: Save Your Spot With A Heart!",
   description:
-    "Receive a wish by picking up a Save Your Spot With a Heart Bookmark! Friends of Early Cardiovascular Health Outreach have folded origami heart bookmarks for the library.",
+    "Receive a wish by picking up a Save Your Spot With A Heart Bookmark! Friends of Early Cardiovascular Health Outreach have folded origami heart bookmarks for the library.",
   keywords: [
     "Echo Wishing Well",
     "Heart Health",
