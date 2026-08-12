@@ -19,18 +19,20 @@ export function ConclusionSection() {
                 <h2 className="pt-10 text-1xl md:text-3xl font-heading text-[#013161]">
                   Participating Location
                 </h2>
-                <div className="grid gap-4 grid-cols-8 md:grid-cols-12 justify-center items-center text-[#013161]">
-                    <div className="col-span-1">
+                <div className="flex items-start justify-center items-center gap-3 text-[#013161]">
+                  <div className="shrink-0 pt-1">
                     <Image
-                  src="/programs/the-echo-wishing-well/majesticons_library-line.svg"
-                  alt="ECHO Wishing Well"
-                  width={20}
-                  height={20}
-                  className="w-[40px] md:w-full h-auto"
+                      src="/programs/the-echo-wishing-well/majesticons_library-line.svg"
+                      alt="ECHO Wishing Well"
+                      width={20}
+                      height={20}
+                      className="w-10 h-10"
                     />
-                    </div>
-                    <div className="col-span-7 md:col-span-11">Mōʻiliʻili Public Library
-                    </div>
+                  </div>
+                
+                  <div className="flex-1">
+                    Mōʻiliʻili Public Library
+                  </div>
                 </div>
                 </div>
                 <div className="md:col-span-1 flex"></div>

@@ -15,14 +15,75 @@ export function HeroSection() {
                 <div className="grid md:gap-4 md:grid-cols-4 pt-2">
 <div className="md:col-span-1">
                 <ul className="list-disc list-inside text-gray-700 leading-relaxed">
-                  <li>Mind-Well</li>
-                  <li>Eat-Well</li>
+                   {/* Mind-Well Pillar */}
+                            <div className=" flex items-center gap-3 text-[#013161]">
+                    <div className="shrink-0 pt-1">
+                      <Image
+                        src="/programs/the-echo-wishing-well/MindWell.png"
+                        alt="ECHO Wishing Well"
+                        width={20}
+                        height={20}
+                        className="w-10 h-10"
+                      />
+                    </div>
+                  
+                    <div className="flex-1 font-bold">
+                      Mind-Well
+                    </div>
+                  </div>
+                   {/* Eat-Well Pillar */}
+                            <div className="flex items-center gap-3 text-[#013161]">
+                    <div className="shrink-0 pt-1">
+                      <Image
+                        src="/programs/the-echo-wishing-well/EatWell.png"
+                        alt="ECHO Wishing Well"
+                        width={20}
+                        height={20}
+                        className="w-10 h-10"
+                      />
+                    </div>
+                  
+                    <div className="flex-1 font-bold">
+                      Eat-Well
+                    </div>
+                  </div>
                   </ul>
 </div>
 <div className="md:col-span-3">
                 <ul className="list-disc list-inside text-gray-700 leading-relaxed">
-                  <li>Rest-Well</li>
-                  <li>Move-Well</li>
+               
+                 {/* Rest-Well Pillar */}
+                           <div className="flex items-center gap-3 text-[#013161]">
+                   <div className="shrink-0 pt-1">
+                     <Image
+                       src="/programs/the-echo-wishing-well/RestWell.png"
+                       alt="ECHO Wishing Well"
+                       width={20}
+                       height={20}
+                       className="w-10 h-10"
+                     />
+                   </div>
+                 
+                   <div className="flex-1 font-bold">
+                     Rest-Well
+                   </div>
+                 </div>
+                 {/* Move-Well Pillar */}
+                           <div className=" flex items-center gap-3 text-[#013161]">
+                   <div className="shrink-0 pt-1">
+                     <Image
+                       src="/programs/the-echo-wishing-well/MoveWell.png"
+                       alt="ECHO Wishing Well"
+                       width={20}
+                       height={20}
+                       className="w-10 h-10"
+                     />
+                   </div>
+                 
+                   <div className="flex-1 font-bold">
+                     Move-Well
+                   </div>
+                 </div>
                   </ul>
 </div>
                 </div>

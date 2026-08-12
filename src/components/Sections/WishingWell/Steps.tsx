@@ -1,4 +1,5 @@
 import Accordion from "@/components/ui/Accordion";
+import Image from "next/image";
 
 export default function FAQSection() {
   const faq = [
@@ -23,10 +24,88 @@ export default function FAQSection() {
     {
       question: "2. Carry A Pledge",
       answer: (
-          <p>
-            During your library visit, you can pledge to live a heart-healthy
-            life, then take heart bookmark from The ECHO Wishing Well.
-          </p>
+          <><ul className="list-disc pl-6 space-y-2 pb-2">
+              <li>
+                  Read through the Four Pillars.
+              </li>
+              <li>
+                  Choose your own unique origami heart bookmark. On each
+                  bookmark, you will see a Pillar sticker.
+              </li>
+              <li>
+                  Hold the heart bookmark in your hand, then recite the
+                  pledge for the Pillar on the heart bookmark you have
+                  chosen:
+              </li>
+          </ul>
+          {/* Mind-Well Pillar */}
+          <div className="pl-5 flex items-center gap-3 text-[#013161]">
+  <div className="shrink-0 pt-1">
+    <Image
+      src="/programs/the-echo-wishing-well/MindWell.png"
+      alt="ECHO Wishing Well"
+      width={20}
+      height={20}
+      className="w-5 h-5"
+    />
+  </div>
+
+  <div className="flex-1">
+    <b>Mind-Well:</b> Put your heart over head and say, “I pledge to practice
+    mindfulness and to respect myself and others.”
+  </div>
+</div>
+ {/* Eat-Well Pillar */}
+          <div className="pl-5 flex items-center gap-3 text-[#013161]">
+  <div className="shrink-0 pt-1">
+    <Image
+      src="/programs/the-echo-wishing-well/EatWell.png"
+      alt="ECHO Wishing Well"
+      width={20}
+      height={20}
+      className="w-5 h-5"
+    />
+  </div>
+
+  <div className="flex-1">
+    <b>Eat-Well:</b> Put your Heart over belly and say, “I pledge to eat
+foods that fuel me and fill my body with nutrients.”
+  </div>
+</div>
+{/* Rest-Well Pillar */}
+          <div className="pl-5 flex items-center gap-3 text-[#013161]">
+  <div className="shrink-0 pt-1">
+    <Image
+      src="/programs/the-echo-wishing-well/RestWell.png"
+      alt="ECHO Wishing Well"
+      width={20}
+      height={20}
+      className="w-5 h-5"
+    />
+  </div>
+
+  <div className="flex-1">
+    <b>Rest-Well:</b> Put your Heart over chest and say, “I pledge to give my
+body the rest it needs and prioritize my sleep.”
+  </div>
+</div>
+{/* Move-Well Pillar */}
+          <div className="pl-5 flex items-center gap-3 text-[#013161]">
+  <div className="shrink-0 pt-1">
+    <Image
+      src="/programs/the-echo-wishing-well/MoveWell.png"
+      alt="ECHO Wishing Well"
+      width={20}
+      height={20}
+      className="w-5 h-5"
+    />
+  </div>
+
+  <div className="flex-1">
+    <b>Move-Well:</b> Put your Heart over heart and say “I pledge to move
+my body and find fun ways to stay active.”
+  </div>
+</div></>
       ),
     },
     {
