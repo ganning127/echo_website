@@ -7,7 +7,7 @@ export default function FAQSection() {
       answer: (
         <ul className="list-disc pl-6 space-y-2">
           <li>
-            Fold an origami heart bookmark using the <a className="underline hover:no-underline" href="/activities/save-your-spot-with-a-heart-instructions">instructions on our website</a>
+            Fold an origami heart bookmark using the <a className="underline hover:no-underline" href="/activities/save-your-spot-with-a-heart-instructions">instructions on our website.</a>
           </li>
           <li>
             As you fold your heart, make a heart-healthy wish or intention. When you're finished, bring your heart bookmark to a participating
