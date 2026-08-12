@@ -26,6 +26,7 @@ export const NAV_CONTENT = [
     children: [
       { title: "Echo Explorers", href: "/program/echo-explorers" },
       { title: "Echo Heroes", href: "/program/echo-heroes" },
+      { title: "The ECHO Wishing Well", href: "/program/the-echo-wishing-well" },
     ],
   },
   { title: "Activities", href: "/activities" },
