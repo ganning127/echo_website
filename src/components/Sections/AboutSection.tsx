@@ -296,7 +296,7 @@ const TEAM_MEMBERS = [
    {
     name: "Elani Scott",
     role: "Illustrator",
-    image: "/people/Elani.jpg",
+    image: "/people/Elani.JPG",
     icon: "/people/icons/echo_logo.png",
   },
   {
