@@ -293,6 +293,12 @@ const TEAM_MEMBERS = [
     image: "/people/Jamie.jpg",
     icon: "/people/icons/jamie.png",
   },
+   {
+    name: "Elani Scott",
+    role: "Illustrator",
+    image: "/people/Elani.JPG",
+    icon: "/people/icons/echo_logo.png",
+  },
   {
     name: "Bella Rose Kelly",
     role: "Music Composer",
