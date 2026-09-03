@@ -1,5 +1,16 @@
 [
-   {
+        {
+    "title": "Color Our Birthday Celebration!",
+    "slug": "color-our-birthday-celebration",
+    "preview": "/ActivityPreview/echo_bday_coloring_preview.png",
+    "description": "Help Echo and Friends celebrate one year! Grab your favorite crayons, markers, or colored pencils and bring this special birthday pages to life. 🖍️ ",
+    "link": "/make/Echo's_Birthday_coloring_sheets.pdf",
+    "downloadLabel": "Print Coloring Sheets",
+    "image": "/ActivityPreview/coloring_pages_thumbnail.png",
+    "order": 7,
+    "tags": ["home", "mind-well", "echo", "crafts", "coloring pages"]
+  },
+  {
     "title": "Save Your Spot With A Heart!",
     "slug": "save-your-spot-with-a-heart-instructions",
     "preview": "/ActivityPreview/Save_Your_Spot_With_A_Heart_Activity.png",
