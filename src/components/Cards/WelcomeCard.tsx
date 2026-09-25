@@ -10,7 +10,7 @@ export const WelcomeCard = () => {
         Welcome to Echoville - the land inside a body! It&apos;s a thriving and
         bustling city; we can&apos;t wait to show you around! We&apos;ll start
         out at the <strong>HEART</strong>, the place where all the action of
-        life meets rest and care. In Echoville, we have four main values that
+        life meets self-care. In Echoville, we have four main values that
         keep all of us here healthy and flourishing:{" "}
         <strong>mindfulness</strong>,<strong> nutrition</strong>,{" "}
         <strong>rest</strong>, and <strong>movement</strong>.
