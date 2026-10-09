@@ -1,4 +1,15 @@
 [
+          {
+    "title": "Color Echo Heroes",
+    "slug": "echo-heroes-coloring-sheet",
+    "preview": "/ActivityPreview/heroes_coloring_pages_preview.png",
+    "description": "Bring the Echo Heroes to life by coloring them however your heart desires!",
+    "link": "/make/ECHO_Heroes_Coloring_Sheet.pdf",
+    "downloadLabel": "Print Coloring Sheets",
+    "image": "/ActivityPreview/heroes_coloring_pages_thumbnail.png",
+    "order": 8,
+    "tags": ["home", "mind-well", "echo", "crafts", "coloring pages"]
+  },
         {
     "title": "Color Our Birthday Celebration!",
     "slug": "color-our-birthday-celebration",
