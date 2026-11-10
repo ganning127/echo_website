@@ -108,7 +108,8 @@ const components = {
   MemoryGardenRegistration,
 };
 
-const registrationComponents = {
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+const registrationComponents: Record<string, any> = {
   "paint-and-nourish": PaintAndNourishRegistration,
   "email-sign-up": EmailSignUpRegistration,
   "memory-garden": MemoryGardenRegistration,
@@ -128,7 +129,15 @@ export default async function EventPage({
   const event = getEventBySlug(slug);
   if (!event) notFound();
 
-  const { frontmatter: fm, content } = event;
+  const { content } = event;
+  const fm = event.frontmatter as typeof event.frontmatter & {
+    hasPDF?: boolean;
+    pdfUrl?: string;
+    pdfTitle?: string;
+    registrationButtonText?: string;
+    hasRegistration?: boolean | string;
+    registrationComponent?: string;
+  };
 
   const RegistrationComponent =
     registrationComponents[
@@ -293,7 +302,7 @@ export default async function EventPage({
           <RegistrationComponent
             {...(fm.registrationComponent === "external-registration"
               ? {
-                  url: fm.registrationUrl,
+                  url: fm.hasRegistration,
                   buttonText: fm.registrationButtonText,
                 }
               : {})}
