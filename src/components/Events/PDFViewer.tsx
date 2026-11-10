@@ -1,4 +1,18 @@
-import { PDFViewer as EmbedPDFViewer } from "@embedpdf/viewer-react";
+"use client";
+
+import dynamic from "next/dynamic";
+
+const EmbedPDFViewer = dynamic(
+  () => import("@embedpdf/viewer-react").then((mod) => mod.PDFViewer),
+  {
+    ssr: false,
+    loading: () => (
+      <div className="flex items-center justify-center min-h-[450px] bg-white rounded-2xl">
+        <p className="text-[#013161] font-medium">Loading PDF viewer...</p>
+      </div>
+    ),
+  },
+);
 
 type PDFViewerProps = {
   src: string;
@@ -17,10 +31,6 @@ export function EventPDFViewer({
             <h2 className="text-2xl md:text-3xl font-extrabold uppercase tracking-wide text-[#013161]">
               {title}
             </h2>
-            <p className="text-sm text-[#013161]/70 mt-2">
-              View the document below. You can zoom in, navigate pages, and
-              download the PDF.
-            </p>
           </div>
 
           <a
@@ -29,7 +39,7 @@ export function EventPDFViewer({
             rel="noopener noreferrer"
             className="inline-flex items-center justify-center px-5 py-3 rounded-xl bg-[#013161] text-white font-bold text-sm hover:bg-[#1876d0] transition-colors"
           >
-            Open PDF in New Tab ↗
+            Download PDF ↗
           </a>
         </div>
 
