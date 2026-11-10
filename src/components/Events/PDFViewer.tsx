@@ -47,6 +47,7 @@ export function EventPDFViewer({
           <EmbedPDFViewer
             src={src}
             theme="light"
+            readOnly={true}
             style={{
               height: "min(850px, 80vh)",
               minHeight: "650px",
