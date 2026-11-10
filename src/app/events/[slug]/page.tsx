@@ -166,9 +166,12 @@ export default async function EventPage({
               </div>
             )}
 
-            <h1 className="text-4xl md:text-5xl font-extrabold uppercase tracking-wide  mb-4 text-[#013161] ">
+            <h1 className="text-4xl md:text-5xl font-extrabold uppercase tracking-wide mb-4 text-[#013161]">
               {fm.title}
             </h1>
+            <h2 className="text-3xl md:text-4xl font-extrabold uppercase tracking-wide mb-4 text-[#013161]">
+              {fm.subtitle}
+            </h2>
 
             <div className="flex flex-col gap-2 text-[#013161] font-semibold">
               {fm.date && (
