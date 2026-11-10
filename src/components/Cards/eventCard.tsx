@@ -87,7 +87,9 @@ export const EventCard = ({
             <h3 className="text-2xl md:text-3xl font-extrabold uppercase tracking-wide text-gray-900 transition-colors duration-200 group-hover:text-[#1876d0] line-clamp-2 text-left">
               {event.title}
             </h3>
-
+            <h4 className="text-1xl md:text-2xl font-extrabold uppercase tracking-wide text-gray-900 transition-colors duration-200 group-hover:text-[#1876d0] line-clamp-2 text-left">
+              {event.subtitle}
+            </h4>
             {/* DATE & LOCATION */}
             <div className="flex flex-col sm:flex-row gap-1 sm:gap-4 mt-3 text-sm font-medium text-[#013161]">
               <span>📅 {formatEventDate(event.date, event.endDate)}</span>

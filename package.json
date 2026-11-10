@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@embedpdf/viewer-react": "^3.1.0",
     "@mdx-js/loader": "^3.1.1",
     "@mdx-js/mdx": "^3.1.1",
     "@mdx-js/react": "^3.1.1",
@@ -21,6 +22,8 @@
     "clsx": "^2.1.1",
     "embla-carousel-react": "^8.6.0",
     "gray-matter": "^4.0.3",
+    "html-to-image": "^1.11.13",
+    "i": "^0.3.7",
     "lucide-react": "^0.511.0",
     "mongodb": "^6.16.0",
     "motion": "^12.15.0",
@@ -29,7 +32,8 @@
     "react": "^19.1.0",
     "react-dom": "^19.1.0",
     "react-icons": "^5.5.0",
-    "tailwind-merge": "^3.3.0"
+    "tailwind-merge": "^3.3.0",
+    "zod": "^4.6.7"
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3",

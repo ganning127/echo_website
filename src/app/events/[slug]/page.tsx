@@ -7,10 +7,12 @@ import { SignupForm } from "@/components/Events/SignupForm";
 import { EventInfoBox } from "@/components/Events/EventInfoBox";
 import { PaintAndNourishRegistration } from "@/components/Events/registration-paint-and-nourish";
 import { RegistrationButton } from "@/components/Events/registration-button";
+import { MemoryGardenRegistration } from "@/components/Events/memory-garden-registration";
 import Image from "next/image";
 import { Testimonial } from "@/components/Events/Testimonial";
 import type { Metadata } from "next";
 import { EmailSignUpRegistration } from "@/components/Events/EmailSignUpRegistration";
+import { EventPDFViewer } from "@/components/Events/PDFViewer";
 
 function formatEventDate(dateStr: string, endDateStr?: string): string {
   const date = new Date(dateStr);
@@ -103,11 +105,14 @@ const components = {
   RegistrationButton,
   Testimonial,
   EmailSignUpRegistration,
+  MemoryGardenRegistration,
 };
 
-const registrationComponents = {
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+const registrationComponents: Record<string, any> = {
   "paint-and-nourish": PaintAndNourishRegistration,
   "email-sign-up": EmailSignUpRegistration,
+  "memory-garden": MemoryGardenRegistration,
 };
 
 export async function generateStaticParams() {
@@ -124,7 +129,15 @@ export default async function EventPage({
   const event = getEventBySlug(slug);
   if (!event) notFound();
 
-  const { frontmatter: fm, content } = event;
+  const { content } = event;
+  const fm = event.frontmatter as typeof event.frontmatter & {
+    hasPDF?: boolean;
+    pdfUrl?: string;
+    pdfTitle?: string;
+    registrationButtonText?: string;
+    hasRegistration?: boolean | string;
+    registrationComponent?: string;
+  };
 
   const RegistrationComponent =
     registrationComponents[
@@ -153,9 +166,12 @@ export default async function EventPage({
               </div>
             )}
 
-            <h1 className="text-4xl md:text-5xl font-extrabold uppercase tracking-wide  mb-4 text-[#013161] ">
+            <h1 className="text-4xl md:text-5xl font-extrabold uppercase tracking-wide mb-4 text-[#013161]">
               {fm.title}
             </h1>
+            <h2 className="text-3xl md:text-4xl font-extrabold uppercase tracking-wide mb-4 text-[#013161]">
+              {fm.subtitle}
+            </h2>
 
             <div className="flex flex-col gap-2 text-[#013161] font-semibold">
               {fm.date && (
@@ -269,7 +285,15 @@ export default async function EventPage({
           )}
         </div>
       </div>
-
+      {/* OPTIONAL EVENT PDF */}
+      {fm.hasPDF && fm.pdfUrl && (
+        <div className="max-w-6xl mx-auto px-6 pb-12">
+          <EventPDFViewer
+            src={fm.pdfUrl}
+            title={fm.pdfTitle || "Event Information"}
+          />
+        </div>
+      )}
       {/* REGISTRATION EMBED — full width, anchor target */}
       {fm.hasRegistration && RegistrationComponent && (
         <div id="registration" className="max-w-6xl mx-auto px-6 pb-20">
@@ -278,7 +302,14 @@ export default async function EventPage({
               ? "Volunteer With Us"
               : "Registration"}
           </h2>
-          <RegistrationComponent />
+          <RegistrationComponent
+            {...(fm.registrationComponent === "external-registration"
+              ? {
+                  url: fm.hasRegistration,
+                  buttonText: fm.registrationButtonText,
+                }
+              : {})}
+          />
         </div>
       )}
 

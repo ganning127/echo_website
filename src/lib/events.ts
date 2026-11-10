@@ -5,6 +5,7 @@ import matter from "gray-matter";
 export type Event = {
     slug: string;
     title: string;
+    subtitle?: string;
     date: string;
     endDate?: string;
     location?: string;
@@ -33,6 +34,7 @@ export function getAllEvents(): Event[] {
         return {
             slug,
             title: data.title ?? "Untitled Event",
+            subtitle: data.subtitle ?? "",
             date: data.date ?? "",
             time: data.time ?? "",
             endDate: data.endDate,
