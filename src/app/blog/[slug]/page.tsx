@@ -31,6 +31,7 @@ function getBorderColorByMonth(dateStr: string): string {
     7: "border-[#5a669e]",
     8: "border-[#bb753e]",
     9: "border-[#7d438c]",
+    10: "border-[#82885a]",
   };
   return colors[month] ?? "border-purple-200"; // fallback for months 6–11
 }
