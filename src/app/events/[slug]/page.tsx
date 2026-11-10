@@ -7,6 +7,7 @@ import { SignupForm } from "@/components/Events/SignupForm";
 import { EventInfoBox } from "@/components/Events/EventInfoBox";
 import { PaintAndNourishRegistration } from "@/components/Events/registration-paint-and-nourish";
 import { RegistrationButton } from "@/components/Events/registration-button";
+import { MemoryGardenRegistration } from "@/components/Events/memory-garden-registration";
 import Image from "next/image";
 import { Testimonial } from "@/components/Events/Testimonial";
 import type { Metadata } from "next";
@@ -103,11 +104,13 @@ const components = {
   RegistrationButton,
   Testimonial,
   EmailSignUpRegistration,
+  MemoryGardenRegistration,
 };
 
 const registrationComponents = {
   "paint-and-nourish": PaintAndNourishRegistration,
   "email-sign-up": EmailSignUpRegistration,
+  "memory-garden": MemoryGardenRegistration,
 };
 
 export async function generateStaticParams() {
@@ -278,7 +281,14 @@ export default async function EventPage({
               ? "Volunteer With Us"
               : "Registration"}
           </h2>
-          <RegistrationComponent />
+          <RegistrationComponent
+            {...(fm.registrationComponent === "external-registration"
+              ? {
+                  url: fm.registrationUrl,
+                  buttonText: fm.registrationButtonText,
+                }
+              : {})}
+          />
         </div>
       )}
 
