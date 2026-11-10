@@ -12,6 +12,7 @@ import Image from "next/image";
 import { Testimonial } from "@/components/Events/Testimonial";
 import type { Metadata } from "next";
 import { EmailSignUpRegistration } from "@/components/Events/EmailSignUpRegistration";
+import { EventPDFViewer } from "@/components/Events/PDFViewer";
 
 function formatEventDate(dateStr: string, endDateStr?: string): string {
   const date = new Date(dateStr);
@@ -272,7 +273,15 @@ export default async function EventPage({
           )}
         </div>
       </div>
-
+      {/* OPTIONAL EVENT PDF */}
+      {fm.hasPDF && fm.pdfUrl && (
+        <div className="max-w-6xl mx-auto px-6 pb-12">
+          <EventPDFViewer
+            src={fm.pdfUrl}
+            title={fm.pdfTitle || "Event Information"}
+          />
+        </div>
+      )}
       {/* REGISTRATION EMBED — full width, anchor target */}
       {fm.hasRegistration && RegistrationComponent && (
         <div id="registration" className="max-w-6xl mx-auto px-6 pb-20">
